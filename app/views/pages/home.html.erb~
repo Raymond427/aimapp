@@ -1,0 +1,23 @@
+<%= render 'header'%>
+<div>
+  <div id="ghost">&nbsp;</div>
+
+  <div class="Home_Img"><img id="Home Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" /></div>
+
+  <div id="overlay">Turning Creative Thinkers, Into Business Leaders</div>
+
+  <div class="Intro">
+    <h1 id="head">Welcome!</h1>
+
+    <p>Advancing Innovative Minds (AIM) is UNC Charlotte&#39;s most active and dedicated entrepreneurial club.</p>
+
+    <p>Our mission is <span id="mission">&quot;to provide visionaries with a business, technology, and networking knowledge base in a means to encourage entrepreneurial influence&quot;</span>. We plan on using the booming development of the Charlotte area as a catalyst to create truly effective ideas that will culminate into thriving businesses.</p>
+
+    <p>You can contact AIM via email: <span id="email">aimcharlotte@uncc.edu</span></p>
+
+    <p>We hope you enjoy your visit to our website!</p>
+  </div>
+</div>
+</div>
+</body>
+</html>

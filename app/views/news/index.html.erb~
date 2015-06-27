@@ -1,0 +1,22 @@
+<h1>News#index</h1>
+<p>Find me in app/views/news/index.html.erb</p>
+<%= link_to 'News', new_news_path %>
+<%= render 'header'%>
+<% @news.each do |news| %>
+<div class="event"><img id="event_pic" src= <%= news.thumburl %> />
+<div id="event_desc">
+<h1><%= news.title %></h1>
+
+<p><%= news.date %></p>
+
+<p><%= news.description %></p>
+
+
+<%= link_to 'Edit', edit_news_path(news) %>
+
+<%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure you want to delete ' + news.title + '?'}%>
+</div>
+</div>
+<% end %>
+
+

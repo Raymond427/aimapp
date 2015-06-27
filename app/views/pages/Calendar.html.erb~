@@ -1,0 +1,8 @@
+<%= render 'header'%>
+
+<div id="ghost">&nbsp;</div>
+
+<div class="Events"><iframe frameborder="0" height="600" id="Calendar" scrolling="no" src="https://www.google.com/calendar/embed?title=AIM%20Calendar&amp;height=900&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=aimunccvicepresident%40gmail.com&amp;color=%230D7813&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800"></iframe></div>
+
+</body>
+</html>

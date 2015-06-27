@@ -1,0 +1,435 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#head
+{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 36px;
+}
+
+#logo
+{
+    float: left;
+    height: 50px;
+    border: 0;
+    margin-top: 1%;
+    margin-left: 1%;
+    z-index: 5;
+}
+.soc_links
+{
+    float: right;
+    margin-top: 20px;
+    margin-right: 5px;
+    border: 0;
+    z-index: 5;
+}
+#soc_net
+{
+    display: inline-block;
+    height: 25px;
+    border: 0;
+    z-index: 5;
+}
+
+.nav_bar
+{
+    position: fixed;
+    display: block;
+    margin-top: -8px;
+    right: -8px;
+    width: 101%;
+    min-width: 60%
+    height: 80px;
+    max-height: 80px;
+    border-bottom: 5px solid #66AA33;
+    background-color: #FFFFFF;
+    z-index: 5;
+}
+#nav_links
+{
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
+    z-index: 5;
+}
+#nav_links a:link
+{
+    text-decoration: none;
+    font-family: Arial;
+    color: #919191;
+    z-index: 5;
+}
+#nav_links a:hover
+{
+    color:#66AA33;
+}
+#nav_links a:visited
+{
+    color: #919191;
+    font-family: Arial;
+    z-index: 5;
+}
+.nav_container
+{
+    
+    float:left;
+    margin-top: 40px;
+    z-index: 1;
+    margin-left: 30px;
+    z-index: 5;
+}
+
+a:link
+{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+#ghost
+{
+    height: 70px;
+    width: 100%;
+}
+
+
+/*HOME*/
+
+
+#overlay
+{
+    color: #66AA33;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32%;
+    width: 90%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.Home_Img img
+{
+    position: absolute;
+    margin-right: 1%;
+    width: 101%;
+    right: -13px;
+}
+.Home_Img
+{
+    height: auto;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.Intro
+{
+    margin-top: 25px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #66AA33;
+    color: #FFFFFF;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 5px 20px 20px;
+}
+#mission
+{
+    font-weight: bold;
+}
+
+#email
+{
+    font-weight: bold;
+}
+
+/*HOME*/
+
+/*EVENTS*/
+
+.Events
+{
+    padding-top: 10px;
+    width: 60%;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+/*EVENTS*/
+
+/*NEWS*/
+
+.news_head
+{
+    width: 90%;
+    top: 75px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #66AA33;
+}
+
+.event
+{
+    margin-top: 25px;
+    border-radius: 3px;
+    background-color: #66AA33;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+#event_pic
+{
+    width: 250px;
+    height: 250px;
+}
+
+#event_desc
+{
+    float: right;
+    font-size: 18px;
+    text-align: left;
+    width: 60%
+}
+
+/*NEWS*/
+
+/*EXECUTIVE BOARD*/
+#Founders
+{
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+
+.Exec_head
+{
+    margin-top: 15px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 5px 0;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #66AA33;
+}
+
+.Board
+{
+    padding: -5px;
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+    color: #919191;
+    text-align: center;
+}
+
+#Exec_Head
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+}
+
+#exec_title
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div.img /*All Exec blocks*/
+{
+    display: inline-block;
+    border-radius: 3px;
+    margin: 1%;
+    padding: 0.5%;
+    width: 500px;
+    height: 200px;
+    background-color: #66AA33;
+    height: auto;
+}	
+
+div.img img /*Exec pics*/{
+
+    width: 170px;
+    height: 170px;
+    margin: 5px;
+}
+
+.desc {
+  float: right;
+  font-size: 15px;
+  position: relative;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+  width: 300px;
+  height: auto;
+  margin: 5px;
+  z-index: 1;
+}
+
+#linkedin:links
+{
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+
+/*EXECUTIVE BOARD*/
+
+/*GET INVOLVED*/
+
+.corporate_head
+{
+    color: #66AA33;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+#companies
+{
+    margin-top: 25px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    padding-right: 10px;
+    color: #FFFFFF;
+    padding: 10px;
+    background-color: #66AA33;
+}
+
+#corporate_button
+{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 5px #FFFFFF;
+    background-color: #66AA33;
+    text-align: center;
+}
+
+
+/*GET INVOLVED*/
+
+/*STUDENT & BUSINESSES*/
+
+.involved_body
+{
+    margin-top: 5%;
+    text-align: center;
+}
+#involved_button a
+{
+    font-family: 'Open Sans', sans-serif;
+    color: #8AE62E;
+    display: block;
+    font-size: 200%;
+    font-weight: bold;
+    top: 50%;
+    width: 30%;
+    z-index: 1;
+    text-align: center;
+    margin-top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.99;
+}
+#involved_students
+{
+    position: absolute;
+    display: block;
+    background-image: url(https://d1q9wbuypc40mm.cloudfront.net/libgnh5vgt41g4l.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    left: 0;
+    width: 50%;
+    height:100%;
+    bottom: 0;
+    float: left;
+    top: 5%;
+}
+#involved_business
+{
+    position: absolute;
+    display: block;
+    background-image: url(https://d1q9wbuypc40mm.cloudfront.net/ghnmpc7viw7o40f.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    right: 0;
+    width: 50%;
+    height:100%;
+    bottom: 0;
+    float: right;
+    top: 5%;
+}
+#students_shade
+{
+    background-color: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height:100%;
+    bottom: 0;
+    float: right;
+    top: 0;
+    opacity: 0.5;
+}
+#business_shade
+{
+    background-color: black;
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height:100%;
+    bottom: 0;
+    float: left;
+    top: 0;
+    opacity: 0.5;
+}
+
+/*STUDENT & BUSINESSES*/
+
+.footer
+{
+    margin-top: 20px;
+    clear:both;
+    font-family: 'Open Sans', sans-serif;
+    color: #919191;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: -8px;
+    margin-bottom: -8px;
+    width: 101.2%;
+    text-align: center;
+    border-top: 2px solid #919191;
+    background-color: #ECECEC;
+}
