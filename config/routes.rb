@@ -1,23 +1,23 @@
 Rails.application.routes.draw do
-  get 'news/index', :as => :news
+  
+  resources :members
 
-  #get 'news/show'
+  get 'members/index'
 
-  #get 'news/new'
+  get 'members/show'
 
-  #get 'news/edit'
+  get 'members/new'
 
-  #get 'news/delete'
+  get 'members/edit'
 
-  #resoucres :news do
-   # post 'create'
-   # delete 'delete'
-  post 'news/index' => 'news#create'#takes what is entered into _form.html.erb and sends it to the create method in the controller
+  get 'members/delete'
+
+  get 'news/index', :as => :news #Used to go back to index from forms
 
   resources :news
-  get 'news/:id/delete' => 'news#delete'
-  get 'news/:id/edit' => 'news#edit'
 
+  get 'news/:id/delete' => 'news#delete'
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

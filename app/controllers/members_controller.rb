@@ -1,18 +1,18 @@
-class NewsController < ApplicationController
+class MembersController < ApplicationController
   def index
-    @news = News.order('created_at DESC').all #sorts the news entries so that the latest feeds are on top
+    @members = Members.all
   end
 
-  def show #This is form filtering entries, this method won't be needed for news entries
+  def show #for filtering entries
   end
 
   def new
-    @news = News.new #creates new News entry
+    @members = Members.new
   end
 
   def create
-    @news = News.new(news_params) #the new News entry is recreated through the strong params method
-      if @news.save #if the entry saves
+    @members = Members.new(members_params) #the new News entry is recreated through the strong params method
+      if @members.save #if the entry saves
         redirect_to(:action => 'index') #show all of the present entries
         #flash[:notice] => "Your news entry was saved!"
       else
@@ -22,12 +22,12 @@ class NewsController < ApplicationController
   end
 
   def edit
-    @news = News.find(params[:id])
+    @members = Members.find(params[:id])
   end
 
   def update
-    @news = News.find(params[:id])
-      if @news.update_attributes(news_params)
+    @members = Members.find(params[:id])
+      if @members.update_attributes(news_params)
         redirect_to('index')
         #flash[:notice] => "News post was edited"
       else
@@ -36,17 +36,17 @@ class NewsController < ApplicationController
   end
 
   def delete
-    @news = News.find(params[:id])
+    @members = Members.find(params[:id])
   end
-
+  
   def destroy
     News.find(params[:id]).destroy
     redirect_to(:action => 'index')
     #flash[:notice] => "The news post was erased"
   end
-  
+
   private
     def news_params
-      params.require(:news).permit(:title, :date, :thumburl, :description)
+      params.require(:members).permit(:first_name, :last_name, :major, :graduation_date, :is_executive, :executive_position)
     end
 end

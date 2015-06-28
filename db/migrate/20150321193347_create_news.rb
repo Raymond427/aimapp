@@ -5,7 +5,7 @@ class CreateNews < ActiveRecord::Migration
       t.string :date
       t.string :thumburl
       t.string :description
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end

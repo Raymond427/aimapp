@@ -5,3 +5,4 @@
 <% if flash[:notice] %>
     <div id="notice"><%= flash[:notice] %></div>
 <% end %>
+<%= link_to 'Back', news_path %>

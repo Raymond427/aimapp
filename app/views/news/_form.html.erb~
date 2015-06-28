@@ -1,5 +1,5 @@
 <%= form_for(@news) do |news| %>
-  <%= news.label :title Enter a title %><br>
+  <%= news.label :title %><br>
   <%= news.text_field :title %><br>
   <%= news.label :date %><br>
   <%= news.text_field :date %><br>
@@ -7,5 +7,5 @@
   <%= news.text_field :thumburl %><br>
   <%= news.label :description %><br>
   <%= news.text_field :description %><br>
-  <br><%= news.submit %><br>
+  <br><%= #news.submit %><br>
 <% end %>
