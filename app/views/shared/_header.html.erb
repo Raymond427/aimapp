@@ -18,7 +18,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 	
 	<div class= "nav_bar">
-	    <a href= "<% link_to 'HOME', :action => 'home' %>" title= "AIM | Home"><img id= "logo" src= "https://d1q9wbuypc40mm.cloudfront.net/xy332ag7s8dv0d0.jpg"/></a><!--add a link to home-->
+	    <a href= "<% link_to 'HOME', :action => 'home', :controller => 'pages' %>" title= "AIM | Home"><img id= "logo" src= "https://d1q9wbuypc40mm.cloudfront.net/xy332ag7s8dv0d0.jpg"/></a><!--add a link to home-->
         <ul class="nav_container"
             <li id= "nav_links"><%= link_to "HOME", :controller => 'pages', :action => 'home' %></li>
             <li id= "nav_links"><a href= "[[page:Executives]]">EXECUTIVE BOARD</a></li>

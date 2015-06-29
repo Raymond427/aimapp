@@ -1,7 +1,7 @@
+<%= render 'shared/header'%>
 <h1>News#index</h1>
 <p>Find me in app/views/news/index.html.erb</p>
 <%= link_to 'Post an Update', new_news_path %>
-<%= render 'header'%>
 <% @news.each do |news| %>
 <div class="event"><img id="event_pic" src= <%= news.thumburl %> />
 <div id="event_desc">

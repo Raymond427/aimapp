@@ -19,11 +19,6 @@
 
 <p><%= member.email %></p>
 
-<%= link_to 'Show', member %>
-
-<%= link_to 'Edit', edit_member_path(member) %>
-
-<%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure you want to delete ' + member.first_name + '?'}%>
 </div>
 </div>
 </div>

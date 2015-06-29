@@ -1,3 +1,2 @@
 <%= render 'shared/header'%>
-<div id="ghost">&nbsp;</div>
 <%= render 'form' %>
