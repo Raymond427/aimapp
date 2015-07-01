@@ -1,11 +1,15 @@
 <%= render 'shared/header'%>
 <div id="ghost">&nbsp;</div>
 <div class="Exec_head">
-<h1 id="Exec_Head">Members</h1>
+<h1 id="Exec_Head">Executive Board</h1>
 
 <p id="Exec_para">AIM&#39;s team consists of highly talented and creative individuals who are passionate about improving the world through teamwork and innovation.</p>
 </div>
-<%= link_to 'Add a New Member', new_member_path %></br>
+<%= form_for(@members) do |member| %>
+<% @members.each do |member| %>
+<%= member.label :graduation_date %><br>
+<%= select_tag(:city_id, options_for_select(['Dec 2016', 'May 2016' ])) %><br>
+<% end %>
 <div class="Board">
 <% @members.each do |member| %>
 <% full_name = member.first_name + member.last_name %>

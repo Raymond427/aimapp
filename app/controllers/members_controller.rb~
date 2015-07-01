@@ -16,7 +16,7 @@ class MembersController < ApplicationController
         redirect_to(:action => 'index') #show all of the present entries
         #flash[:notice] => "Your news entry was saved!"
       else
-        render('new') #redisplay the create an entry page
+        render(:action => 'new') #redisplay the create an entry page
         #flash[:notice] => "There was an error, fill out the form carefully and try again"
       end
   end
@@ -27,11 +27,11 @@ class MembersController < ApplicationController
 
   def update
     @members = Member.find(params[:id])
-      if @members.update_attributes(news_params)
-        redirect_to('index')
+      if @members.update_attributes(members_params)
+        redirect_to(:action => 'index')
         #flash[:notice] => "News post was edited"
       else
-        render('index')
+        redirect_to(:action => 'index')
       end
   end
 
@@ -45,8 +45,12 @@ class MembersController < ApplicationController
     #flash[:notice] => "The news post was erased"
   end
 
+  def executives
+    @members = Member.all.where(:is_executive == true)
+  end
+
   private
     def members_params
-      params.require(:members).permit(:first_name, :last_name, :thumb_url, :linkedin_url, :major, :email, :graduation_date, :is_executive, :executive_position)
+      params.require(:member).permit(:first_name, :last_name, :thumb_url, :linkedin_url, :major, :email, :graduation_date, :is_executive, :executive_position)
     end
 end

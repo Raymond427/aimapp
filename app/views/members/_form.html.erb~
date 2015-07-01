@@ -8,13 +8,13 @@
   <%= member.label :thumb_url %><br>
   <%= member.text_field :thumb_url %><br>
   <%= member.label :major %><br>
-  <%= select_tag(:major, options_for_select([['Mechanical Engnieering', 1], ['Computer Science', 2]])) %><br>
+  <%= select_tag(:major, options_for_select('Mechanical Engnieering', 'Computer Science')) %><br>
   <%= member.label :email %><br>
   <%= member.text_field :email %><br>
   <%= member.label :graduation_date %><br>
   <%= select_tag(:city_id, options_for_select(['Dec 2016', 'May 2016' ])) %><br>
   <%= label_tag(:is_executive, "Is this member an executive?") %>
-  <%= check_box_tag(:is_executive) %><br>
+  <%= check_box 'member', 'is_executive', {}, true, false %><br>
   <%= member.label :executive_position %><br>
   <%= select_tag(:executive_position, options_for_select([['Mechanical Engnieering', 1], ['Computer Science', 2]])) %>
   <br><%= member.submit %><br>

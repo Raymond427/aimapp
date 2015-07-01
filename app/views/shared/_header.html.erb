@@ -21,7 +21,7 @@
 	    <a href= "<% link_to 'HOME', :action => 'home', :controller => 'pages' %>" title= "AIM | Home"><img id= "logo" src= "https://d1q9wbuypc40mm.cloudfront.net/xy332ag7s8dv0d0.jpg"/></a><!--add a link to home-->
         <ul class="nav_container"
             <li id= "nav_links"><%= link_to "HOME", :controller => 'pages', :action => 'home' %></li>
-            <li id= "nav_links"><a href= "[[page:Executives]]">EXECUTIVE BOARD</a></li>
+            <li id= "nav_links"><%= link_to "EXECUTIVE BOARD", :controller => 'members', :action => 'executives' %></li>
             <li id= "nav_links"><%= link_to "MEMBERS", :controller => 'members', :action => 'index' %></li>
             <li id= "nav_links"><%= link_to "NEWS", :controller => 'news', :action => 'index' %></li>
             <li id= "nav_links"><%= link_to "CALENDAR", :controller => 'pages', :action => 'Calendar' %></li>

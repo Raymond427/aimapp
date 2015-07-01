@@ -10,6 +10,7 @@ class CreateMembers < ActiveRecord::Migration
       t.string :graduation_date
       t.boolean :is_executive
       t.string :executive_position
+      t.Hash :executive_career
       t.timestamps
     end
   end

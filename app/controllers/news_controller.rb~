@@ -28,10 +28,10 @@ class NewsController < ApplicationController
   def update
     @news = News.find(params[:id])
       if @news.update_attributes(news_params)
-        redirect_to('index')
+        redirect_to(:action => 'index')
         #flash[:notice] => "News post was edited"
       else
-        render('index')
+        render(:action => 'index')
       end
   end
 

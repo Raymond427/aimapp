@@ -6,7 +6,7 @@
 <p id="Exec_para">AIM&#39;s team consists of highly talented and creative individuals who are passionate about improving the world through teamwork and innovation.</p>
 </div>
 <%= link_to 'Add a New Member', new_member_path %></br>
-<div class="Board">
+<div id="Founders">
 <% @members.each do |member| %>
 <% full_name = member.first_name + member.last_name %>
 <div class="img">
@@ -19,6 +19,11 @@
 
 <p><%= member.email %></p>
 
+<%= link_to 'Show', member_path(member) %>
+
+<%= link_to 'Edit', edit_member_path(member) %>
+
+<%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure you want to delete ' + member.first_name + '?'}%>
 </div>
 </div>
 </div>

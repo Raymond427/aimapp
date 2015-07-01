@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   
+  get 'show/executives' => 'members#executives'
+
   resources :members
 
-  get 'news/index', :as => :news #Used to go back to index from forms
-
   resources :news
-
-  #get 'news/:id/delete', to: 'news#delete'
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
