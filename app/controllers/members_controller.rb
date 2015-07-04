@@ -46,7 +46,9 @@ class MembersController < ApplicationController
   end
 
   def executives
-    @members = Member.where(:is_executive == true).all
+    @members = Member.where(is_executive: true)
+
+    @major = ['Computer Science', 'Mechanical Engineering']
   end
 
   private

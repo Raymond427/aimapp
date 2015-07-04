@@ -6,7 +6,7 @@
 <p id="Exec_para">AIM&#39;s team consists of highly talented and creative individuals who are passionate about improving the world through teamwork and innovation.</p>
 </div>
 <%= link_to 'Add a New Member', new_member_path %></br>
-<div id="Founders">
+<div class="Board">
 <% @members.each do |member| %>
 <% full_name = member.first_name + member.last_name %>
 <div class="img">
@@ -14,6 +14,8 @@
 <div class="desc">
 <p id="exec_title"><%= member.executive_position %></p>
 <script id= "linkedin" src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/MemberProfile" data-id= <% member.linkedin_url %> data-format="hover" data-text= <%= full_name %> data-related="false"></script>
+
+<p><%= member.is_executive %></p>
 
 <p><%= member.major %></p>
 

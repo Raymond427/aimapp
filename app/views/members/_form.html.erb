@@ -8,14 +8,26 @@
   <%= member.label :thumb_url %><br>
   <%= member.text_field :thumb_url %><br>
   <%= member.label :major %><br>
-  <%= select_tag(:major, options_for_select([['Mechanical Engnieering', 1], ['Computer Science', 2]])) %><br>
+  <%= member.select(:major) do %>
+  <% [[1, 'Mechanical Engineering'], [2, 'Computer Science']].each do |c| -%>
+    <%= content_tag(:option, c.last, value: c.last) %>
+  <% end %>
+<% end %></br>
   <%= member.label :email %><br>
   <%= member.text_field :email %><br>
   <%= member.label :graduation_date %><br>
-  <%= select_tag(:city_id, options_for_select(['Dec 2016', 'May 2016' ])) %><br>
-  <%= label_tag(:is_executive, "Is this member an executive?") %>
-  <%= check_box 'member', 'is_executive', {}, true, false %><br>
+  <%= member.select(:graduation_date) do %>
+  <% [[1, 'Fall 2016'], [2, 'Spring 2016']].each do |c| -%>
+    <%= content_tag(:option, c.last, value: c.last) %>
+  <% end %>
+<% end %></br>
+  <%= member.label(:is_executive, "Is this member an executive?") %>
+  <%= member.check_box(:is_executive) %></br>
   <%= member.label :executive_position %><br>
-  <%= select_tag(:executive_position, options_for_select([['Mechanical Engnieering', 1], ['Computer Science', 2]])) %>
+  <%= member.select(:executive_position) do %>
+  <% [[1, 'President'], [2, 'Vice President']].each do |c| -%>
+    <%= content_tag(:option, c.last, value: c.last) %>
+  <% end %>
+<% end %></br>
   <br><%= member.submit %><br>
 <% end %>
