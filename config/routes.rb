@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   get 'members/executives' => 'members#executives'
 
+  post 'members/executives' => 'memebers#set_term_to'
+
   resources :members
 
   resources :news

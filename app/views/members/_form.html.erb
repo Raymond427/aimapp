@@ -9,8 +9,8 @@
   <%= member.text_field :thumb_url %><br>
   <%= member.label :major %><br>
   <%= member.select(:major) do %>
-  <% [[1, 'Mechanical Engineering'], [2, 'Computer Science']].each do |c| -%>
-    <%= content_tag(:option, c.last, value: c.last) %>
+  <% @majors.each do |major| -%>
+    <%= content_tag(:option, major, value: major) %>
   <% end %>
 <% end %></br>
   <%= member.label :email %><br>
@@ -25,9 +25,21 @@
   <%= member.check_box(:is_executive) %></br>
   <%= member.label :executive_position %><br>
   <%= member.select(:executive_position) do %>
-  <% [[1, 'President'], [2, 'Vice President']].each do |c| -%>
+  <% @executive.each do |c| -%>
     <%= content_tag(:option, c.last, value: c.last) %>
   <% end %>
 <% end %></br>
+  <table>
+    <th>
+      <td>Semester</td>
+      <td>Position</td>
+    </th>
+    <% member.executive_career.each do |semester, position| -%>
+    <tr>
+      <td><%= member.text_field :semester %></td>
+      <td><%= member.text_field :position %></td>
+    </tr>
+    <% end %>
+  </table>
   <br><%= member.submit %><br>
 <% end %>

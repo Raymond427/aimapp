@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+
   def index
     @members = Member.all
   end
@@ -8,6 +9,9 @@ class MembersController < ApplicationController
 
   def new
     @members = Member.new
+    @majors = ['Computer Science', 'Mechanical Engineering']
+    @executive = [[1, 'President'], [2, 'Vice President'], [3, 'Treasurer'], [4, 'Director of Programs'], [5, 'Director of Strategic Partnerships'], [6, 'Director of Public Relations'], [7, 'Director of Publications'], [8, 'Director of Community Service'], [9, 'Director of Fundraising'], [10, 'Historian'], [11, 'Digital Administrator']]
+    @grad_year = [[1, 'Fall 2016'], [2, 'Spring 2016']]
   end
 
   def create
@@ -23,6 +27,9 @@ class MembersController < ApplicationController
 
   def edit
     @members = Member.find(params[:id])
+    @executive = [[1, 'President'], [2, 'Vice President'], [3, 'Treasurer'], [4, 'Director of Programs'], [5, 'Director of Strategic Partnerships'], [6, 'Director of Public Relations'], [7, 'Director of Publications'], [8, 'Director of Community Service'], [9, 'Director of Fundraising'], [10, 'Historian'], [11, 'Digital Administrator']]
+    @majors = ['Computer Science', 'Mechanical Engineering']
+    @grad_year = [[1, 'Fall 2016'], [2, 'Spring 2016']]      
   end
 
   def update
@@ -47,8 +54,18 @@ class MembersController < ApplicationController
 
   def executives
     @members = Member.where(is_executive: true)
+    @executive_semester = [['Fall 2016', 1], ['Spring 2016', 2]]
+    #@executive_semester.first[0]
+  end
+  
+  def set_term_to
+      @current_term = params[:current_term]
+      redirect_to(:action => 'executives')
+  end
 
-    @major = ['Computer Science', 'Mechanical Engineering']
+
+  def self.add_executive(e)
+    Member.find(params[:id]).executive_career.merge(e)
   end
 
   private

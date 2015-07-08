@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-  get 'show/executives' => 'members#executives'
+  get 'members/executives' => 'members#executives'
+
+  post 'members/executives'
 
   resources :members
 
