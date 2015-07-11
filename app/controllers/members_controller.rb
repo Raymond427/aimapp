@@ -1,5 +1,8 @@
 class MembersController < ApplicationController
 
+  before_action :require_editor, only: [:show, :edit]
+  before_action :require_editor, only: [:delete, :destroy]
+
   def index
     @members = Member.all
   end
@@ -56,16 +59,6 @@ class MembersController < ApplicationController
     @members = Member.where(is_executive: true)
     @executive_semester = [['Fall 2016', 1], ['Spring 2016', 2]]
     #@executive_semester.first[0]
-  end
-  
-  def set_term_to
-      @current_term = params[:current_term]
-      redirect_to(:action => 'executives')
-  end
-
-
-  def self.add_executive(e)
-    Member.find(params[:id]).executive_career.merge(e)
   end
 
   private

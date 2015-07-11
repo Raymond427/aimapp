@@ -1,8 +1,18 @@
 Rails.application.routes.draw do
-  
-  get 'members/executives' => 'members#executives'
 
-  post 'members/executives' => 'memebers#set_term_to'
+  get 'login' => 'sessions#new'
+
+  post 'login' => 'sessions#create'
+
+  delete 'logout' => 'sessions#destroy'
+
+  get 'signup' => 'users#new'
+
+  post 'signup' => 'users#create'
+
+  resources :users
+
+  get '/members/executives' => 'members#executives'
 
   resources :members
 

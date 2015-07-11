@@ -34,12 +34,12 @@
       <td>Semester</td>
       <td>Position</td>
     </th>
+    <% member.executive_career.each do |semester, position| -%>
     <tr>
-      <% member.executive_career.each do |semester, position| -%>
       <td><%= member.text_field :semester %></td>
       <td><%= member.text_field :position %></td>
-      <% end %>
     </tr>
+    <% end %>
   </table>
   <br><%= member.submit %><br>
 <% end %>

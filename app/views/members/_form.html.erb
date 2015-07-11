@@ -29,17 +29,5 @@
     <%= content_tag(:option, c.last, value: c.last) %>
   <% end %>
 <% end %></br>
-  <table>
-    <th>
-      <td>Semester</td>
-      <td>Position</td>
-    </th>
-    <% member.executive_career.each do |semester, position| -%>
-    <tr>
-      <td><%= member.text_field :semester %></td>
-      <td><%= member.text_field :position %></td>
-    </tr>
-    <% end %>
-  </table>
   <br><%= member.submit %><br>
 <% end %>

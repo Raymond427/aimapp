@@ -5,9 +5,9 @@
 
 <p id="Exec_para">AIM&#39;s team consists of highly talented and creative individuals who are passionate about improving the world through teamwork and innovation.</p>
 </div>
-  <%= select_tag(:current_semester, options_for_select(@executive_semester)) %></br>
-  <%= button_to "Update", set_term_to %>
-  <%= @current_term %>
+  <%= select_tag(:current_semester, options_for_select(@executive_semester)) %></br></br>
+  <%= button_to "Update" %>
+<%= button_to 'Add a New Member', new_member_path %></br>
 <div class="Board">
 <% @members.each do |member| %>
 <% full_name = member.first_name + member.last_name %>
@@ -28,6 +28,7 @@
 <%= link_to 'Edit', edit_member_path(member) %>
 
 <%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure you want to delete ' + member.first_name + '?'}%>
+
 </div>
 </div>
 </div>

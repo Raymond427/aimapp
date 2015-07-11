@@ -21,7 +21,7 @@
 	    <a href= "<% link_to 'HOME', :action => 'home', :controller => 'pages' %>" title= "AIM | Home"><img id= "logo" src= "https://d1q9wbuypc40mm.cloudfront.net/xy332ag7s8dv0d0.jpg"/></a><!--add a link to home-->
         <ul class="nav_container"
             <li id= "nav_links"><%= link_to "HOME", :controller => 'pages', :action => 'home' %></li>
-            <li id= "nav_links"><a href= "[[page:Executives]]">EXECUTIVE BOARD</a></li>
+            <li id= "nav_links"><%= link_to "EXECUTIVE BOARD", :controller => 'members', :action => 'executives' %></li>
             <li id= "nav_links"><%= link_to "MEMBERS", :controller => 'members', :action => 'index' %></li>
             <li id= "nav_links"><%= link_to "NEWS", :controller => 'news', :action => 'index' %></li>
             <li id= "nav_links"><%= link_to "CALENDAR", :controller => 'pages', :action => 'Calendar' %></li>
@@ -33,6 +33,18 @@
             <li id= "nav_links"><a href= "https://www.linkedin.com/groups/Advancing-Innovative-Minds-8104445/about" title= "Join AIM on LinkedIn!"><img id= "soc_net" id="linkedin" src= "https://d1q9wbuypc40mm.cloudfront.net/ughjm7k8coiskx9.png"/></a></li>
             <li id= "nav_links"><a href= "https://twitter.com/aimuncc" title= "Follow AIM on Twitter!"><img id= "soc_net" id="twitter" src= "https://d1q9wbuypc40mm.cloudfront.net/b6wp6r8eps2ukhe.png"/></a></li>
             <li id= "nav_links"><a href= "http://instagram.com/uncc_aim" title= "Follow AIM on Instagram!"><img id= "soc_net"  id="instagram"src= "https://d1q9wbuypc40mm.cloudfront.net/okujfqu9nlkly5p.png"/></a></li>
+            <li>
+              <% if current_user %>
+<ul>
+  <li><%= link_to "current_user.email", controller: 'users', action => 'show' %></li>
+  <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+</ul> <% else %> 
+<ul>
+  <li><button><%= link_to "Login", 'login' %></a></button></li>
+  <li><button><%= link_to "Signup", 'signup' %></a></button></li>
+</ul>
+<% end %>
+            </li>
         </ul>
         </div>
 	</div>
