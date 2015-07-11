@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<link href='css/bootstap.min.css' rel='stylesheet'>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -19,7 +20,7 @@
 	
 	<div class= "nav_bar">
 	    <a href= "<% link_to 'HOME', :action => 'home', :controller => 'pages' %>" title= "AIM | Home"><img id= "logo" src= "https://d1q9wbuypc40mm.cloudfront.net/xy332ag7s8dv0d0.jpg"/></a><!--add a link to home-->
-        <ul class="nav_container"
+        <ul class="nav nav-tabs">
             <li id= "nav_links"><%= link_to "HOME", :controller => 'pages', :action => 'home' %></li>
             <li id= "nav_links"><%= link_to "EXECUTIVE BOARD", :controller => 'members', :action => 'executives' %></li>
             <li id= "nav_links"><%= link_to "MEMBERS", :controller => 'members', :action => 'index' %></li>
@@ -36,12 +37,12 @@
             <li>
               <% if current_user %>
 <ul>
-  <li><%= link_to "current_user.email", controller: 'users', action => 'show' %></li>
+  <li><%= current_user.email %></li>
   <li><%= link_to "Log out", logout_path, method: "delete" %></li>
 </ul> <% else %> 
 <ul>
-  <li><button><%= link_to "Login", 'login' %></a></button></li>
-  <li><button><%= link_to "Signup", 'signup' %></a></button></li>
+  <li><%= link_to "Login", 'login' %></a></li>
+  <li><%= link_to "Signup", 'signup' %></a></li>
 </ul>
 <% end %>
             </li>

@@ -7,7 +7,7 @@
 </div>
   <%= select_tag(:current_semester, options_for_select(@executive_semester)) %></br></br>
   <%= button_to "Update" %>
-<%= button_to 'Add a New Member', new_member_path %></br>
+<%= link_to 'Add a New Member', new_member_path %></br>
 <div class="Board">
 <% @members.each do |member| %>
 <% full_name = member.first_name + member.last_name %>
@@ -23,7 +23,9 @@
 
 <p><%= member.email %></p>
 
-<%= link_to 'Show', member_path(member) %>
+<i calss='glyphicon glyphicon-briefcase'>
+  <%= link_to , member_path(member) %>
+</i>
 
 <%= link_to 'Edit', edit_member_path(member) %>
 
