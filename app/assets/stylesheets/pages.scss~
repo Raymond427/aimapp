@@ -4,32 +4,6 @@
 html {
   font-family: 'Open Sans', sans-serif;
 }
-button {
-  color: white;
-  background-color: #65A933;
-  border: none;
-}
-nav {
-  background-color: white;
-  height: 75px;
-  border-bottom: 5px solid #65A933;
-}
-nav a:link, a:visited {
-  font-weight: bold;
-  text-decoration: none;
-  color: #919191;
-}
-nav a:hover {
-  color: #65A933;
-}
-nav ul {
-  margin-top: 15px;
-  display: inline-block;
-}
-nav ul li {
-  display: inline;
-  padding: 0 10px 0 10px;
-}
 form {
   font-family: 'Open Sans', sans-serif;
   margin-left: auto;

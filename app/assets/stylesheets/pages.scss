@@ -9,9 +9,8 @@ button {
   background-color: #65A933;
   border: none;
 }
-nav {
+nav{
   background-color: white;
-  height: 75px;
   border-bottom: 5px solid #65A933;
 }
 nav a:link, a:visited {
@@ -19,7 +18,7 @@ nav a:link, a:visited {
   text-decoration: none;
   color: #919191;
 }
-nav a:hover {
+nav ul li a:hover {
   color: #65A933;
 }
 nav ul {
@@ -27,7 +26,6 @@ nav ul {
 }
 nav ul li {
   display: inline;
-  padding: 0 10px 0 10px;
 }
 form {
   font-family: 'Open Sans', sans-serif;
