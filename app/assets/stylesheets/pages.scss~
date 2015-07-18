@@ -4,6 +4,29 @@
 html {
   font-family: 'Open Sans', sans-serif;
 }
+button {
+  color: white;
+  background-color: #65A933;
+  border: none;
+}
+nav{
+  background-color: white;
+  border-bottom: 5px solid #65A933;
+}
+nav a:link, a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #919191;
+}
+nav ul li a:hover {
+  color: #65A933;
+}
+nav ul {
+  display: inline-block;
+}
+nav ul li {
+  display: inline;
+}
 form {
   font-family: 'Open Sans', sans-serif;
   margin-left: auto;
@@ -181,128 +204,74 @@ a:link
 
 /*EVENTS*/
 
-/*NEWS*/
-
-.news_head
-{
-    width: 90%;
-    top: 75px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    color: #66AA33;
-}
-
-.event
-{
-    margin-top: 25px;
-    border-radius: 3px;
-    background-color: #66AA33;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 10px;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color: #FFFFFF;
-}
-
-#event_pic
-{
-    width: 250px;
-    height: 250px;
-}
-
-#event_desc
-{
-    float: right;
-    font-size: 18px;
-    text-align: left;
-    width: 60%
-}
-
-/*NEWS*/
-
 /*EXECUTIVE BOARD*/
-#Founders
+section
 {
     font-size: 25px;
     font-family: 'Open Sans', sans-serif;
     width: 100%;
 }
 
-.Exec_head
+header
 {
     margin-top: 15px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 0 5px 0;
     font-size: 25px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: #66AA33;
 }
 
-.Board
+main
 {
     padding: -5px;
     display: inline;
     font-family: 'Open Sans', sans-serif;
-    color: #919191;
+    color: white;
     text-align: center;
 }
 
-#Exec_Head
+header h1
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 36px;
 }
 
-#exec_title
+header p
 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
 }
 
-div.img /*All Exec blocks*/
+.board_member /*All Exec blocks*/
 {
     display: inline-block;
     border-radius: 3px;
     margin: 1%;
-    padding: 0.5%;
     width: 500px;
-    height: 200px;
     background-color: #66AA33;
-    height: auto;
 }	
 
-div.img img /*Exec pics*/{
-
-    width: 170px;
-    height: 170px;
-    margin: 5px;
+.board_member figure img{
+  float: left;
+  width: 50%;
+  height: 200px;
+  width: 200px;
 }
 
-.desc {
+figcaption {
   float: right;
-  font-size: 15px;
-  position: relative;
+  font-size: 16px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #FFFFFF;
   width: 300px;
-  height: auto;
-  margin: 5px;
-  z-index: 1;
+  padding-top: 30px;
 }
 
-#linkedin:links
+#linkedin a:link
 {
     text-decoration: none;
     color:#FFFFFF;
@@ -310,6 +279,35 @@ div.img img /*Exec pics*/{
 
 
 /*EXECUTIVE BOARD*/
+
+/*NEWS*/
+
+.news figure img {
+  float: left;
+  width: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.news figcaption {
+  float: right;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+  width: 300px;
+  padding-top: 30px;
+}
+
+.news /*All News blocks*/
+{
+    display: inline-block;
+    border-radius: 3px;
+    margin: 1%;
+    width: 500px;
+    background-color: #66AA33;
+}
+/*NEWS*/
 
 /*GET INVOLVED*/
 

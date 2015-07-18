@@ -1,8 +1,10 @@
 <%= render 'shared/header'%>
 <div>
+
   <div class="Home_Img">
     <img id="Home Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" />
   </div>
+
   <div id="overlay">Turning Creative Thinkers, Into Business Leaders</div>
 
   <div class="Intro">

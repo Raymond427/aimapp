@@ -10,7 +10,7 @@
     <!-- This is a favicon (the icon you see when you bookmark a website). Link to the favicon from your university's website, or upload one to the Images section and use the quickurl to link to it here. Favicons must have .ico extension. -->
     <link rel="icon" src="AIM_TRANS.png" type="image/x-icon" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css"/>
-    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/stylesheets/pages.scss" type="text/css">
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -24,7 +24,7 @@
         <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
           <li>
             <a>
-              <img class="hidden-xs" src="/images/logo.jpg" />
+              <img class="hidden-xs" src="/assets/images/logo.jpg" />
             </a>
           </li>
           <li class="a"><%= link_to "HOME", :controller => 'pages', :action => 'home' %></li>
@@ -45,7 +45,7 @@
         <% end %>  
           <li>
             <a class="hidden-xs" href= "https://www.uncc.edu" title= "Visit UNCC">
-              <img src="logo.png" />
+              <img src="/assets/images/School_Logo.gif"/>
             </a>
           </li>
         </div>
