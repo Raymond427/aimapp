@@ -1,10 +1,10 @@
 <%= render 'shared/header'%>
 <header>
   <h1>
-    Executive Board
+    News
   </h1>
   <p>
-  AIM&#39;s team consists of highly talented and creative individuals who are passionate about improving the world through teamwork and innovation.
+    See what AIM&#39;s been up to!
   </p>
 </header>
 <main>

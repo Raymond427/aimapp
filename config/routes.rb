@@ -75,7 +75,9 @@ Rails.application.routes.draw do
 
   get 'pages/home' #refers to the controller Pages and the method within it 'home'
   get 'pages/erb_demo'
-  get 'pages/Get_Involved'
-  get 'pages/Calendar'
+  get 'pages/getinvolved'
+  get 'pages/calendar'
+  get 'pages/students'
+  get 'pages/businesses'
   root 'pages#home' #makes the home page our default webpage
 end

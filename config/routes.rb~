@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
-  get '/login' => 'sessions#new'
+  get 'login' => 'sessions#new'
 
-  post '/login' => 'sessions#create'
+  post 'login' => 'sessions#create'
 
   delete 'logout' => 'sessions#destroy'
 
-  get '/signup' => 'users#new'
+  get 'signup' => 'users#new'
 
-  post '/signup' => 'users#create'
+  post 'signup' => 'users#create'
 
   resources :users
 
@@ -77,5 +77,7 @@ Rails.application.routes.draw do
   get 'pages/erb_demo'
   get 'pages/Get_Involved'
   get 'pages/Calendar'
+  get 'pages/Students'
+  get 'pages/Businesses'
   root 'pages#home' #makes the home page our default webpage
 end

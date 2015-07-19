@@ -5,9 +5,15 @@ class PagesController < ApplicationController
   def erb_demo
   end
   
-  def Get_Involved
+  def getinvolved
   end
 
-  def Calendar
+  def calendar
+  end
+
+  def students
+  end
+
+  def businesses
   end
 end
