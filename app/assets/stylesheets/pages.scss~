@@ -4,33 +4,22 @@
 html {
   font-family: 'Open Sans', sans-serif;
 }
-button {
-  color: white;
-  background-color: #65A933;
-  border: none;
-}
-nav{
-  background-color: white;
-  border-bottom: 5px solid #65A933;
-}
-nav a:link, a:visited {
-  font-weight: bold;
-  text-decoration: none;
-  color: #919191;
-}
-nav ul li a:hover {
-  color: #65A933;
-}
-nav ul {
-  display: inline-block;
-}
-nav ul li {
-  display: inline;
-}
 form {
-  font-family: 'Open Sans', sans-serif;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 200px;
+  font-family: 'Open Sans', sans-serif;
+}
+form input, textarea {
+  border: #919191 solid 1px;
+  border-radius: 5px;
+}
+button, .btn-submit, input[type="submit"] {
+  border: none;
+  padding: 10px;
+  background-color: #65A933;
+  color: #FFFFFF;
 }
 footer {
   background-color: gray;
@@ -255,7 +244,7 @@ figcaption {
   font-family: 'Open Sans', sans-serif;
   color: #FFFFFF;
   width: 300px;
-  padding-top: 30px;
+  padding-top: 25px;
 }
 
 #linkedin a:link
@@ -392,7 +381,7 @@ figcaption {
     bottom: 0;
     float: right;
     top: 0;
-    opacity: 0.5;
+    opacity: 0.25;
 }
 #business_shade
 {
@@ -405,7 +394,7 @@ figcaption {
     bottom: 0;
     float: left;
     top: 0;
-    opacity: 0.5;
+    opacity: 0.25;
 }
 
 /*STUDENT & BUSINESSES*/

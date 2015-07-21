@@ -1,6 +1,8 @@
-<h1>News#edit</h1>
-<p>Find me in app/views/news/edit.html.erb</p>
-<%= render 'header'%>
-<h1>Edit Category</h1>
+<%= render 'shared/header'%>
+<header>
+  <h1>
+    Edit News
+  </h1>
+</header>
 <%= render 'form' %>
-<%= link_to 'Back', news_path %>
+<%= link_to 'Back', index %>

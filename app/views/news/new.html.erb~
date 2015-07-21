@@ -1,6 +1,6 @@
 <h1>News#new</h1>
 <p>Find me in app/views/news/new.html.erb</p>
-<%= render 'header'%>
+<%= render 'shared/header'%>
 <%= render 'form' %>
 <% if flash[:notice] %>
     <div id="notice"><%= flash[:notice] %></div>

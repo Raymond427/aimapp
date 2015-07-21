@@ -36,12 +36,12 @@
         </ul>
         <% if current_user %>
         <div class="nav navbar-nav navbar-right collapse navbar-collapse">
-          <li><%= current_user.email %></li>
+          <li><%= link_to current_user.email %></li>
           <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
-        </div> <% else %>
+        <% else %>
         <div class="nav navbar-nav navbar-right collapse navbar-collapse">
-          <li><%= link_to "Log In", 'login' %></a></li>
-     <!-- <li><%= link_to "Sign Up", 'signup' %></a></li> -->
+          <li><%= link_to "Log In", 'login' %></li>
+     <!-- <li><%= link_to "Sign Up", 'signup' %></li> -->
         <% end %>  
           <li>
             <a class="hidden-xs" href= "https://www.uncc.edu" title= "Visit UNCC">

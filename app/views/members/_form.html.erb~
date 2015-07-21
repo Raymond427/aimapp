@@ -4,7 +4,7 @@
   <%= member.label :last_name %><br>
   <%= member.text_field :last_name %><br>
   <%= member.label :linkedin_url %><br>
-  <%= member.text_field :linkedin_url %><br>
+  <%= member.text_area :linkedin_url %><br>
   <%= member.label :thumb_url %><br>
   <%= member.text_field :thumb_url %><br>
   <%= member.label :major %><br>
@@ -20,7 +20,7 @@
   <% [[1, 'Fall 2016'], [2, 'Spring 2016']].each do |c| -%>
     <%= content_tag(:option, c.last, value: c.last) %>
   <% end %>
-<% end %></br>
+<% end %>
   <%= member.label(:is_executive, "Is this member an executive?") %>
   <%= member.check_box(:is_executive) %></br>
   <%= member.label :executive_position %><br>
@@ -29,17 +29,5 @@
     <%= content_tag(:option, c.last, value: c.last) %>
   <% end %>
 <% end %></br>
-  <table>
-    <th>
-      <td>Semester</td>
-      <td>Position</td>
-    </th>
-    <% member.executive_career.each do |semester, position| -%>
-    <tr>
-      <td><%= member.text_field :semester %></td>
-      <td><%= member.text_field :position %></td>
-    </tr>
-    <% end %>
-  </table>
   <br><%= member.submit %><br>
 <% end %>

@@ -4,8 +4,8 @@
   <%= news.label :date %><br>
   <%= news.text_field :date %><br>
   <%= news.label :thumburl %><br>
-  <%= news.text_field :thumburl %><br>
+  <%= news.text_area :thumburl %><br>
   <%= news.label :description %><br>
   <%= news.text_field :description %><br>
-  <br><%= #news.submit %><br>
+  <br><%= news.submit %><br>
 <% end %>
