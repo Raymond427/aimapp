@@ -20,7 +20,7 @@ class MembersController < ApplicationController
   def create
     @members = Member.new(members_params) #the new News entry is recreated through the strong params method
       if @members.save #if the entry saves
-        redirect_to(:action => 'index') #show all of the present entries
+        redirect_to(:action => 'executives') #show all of the present entries
         #flash[:notice] => "Your news entry was saved!"
       else
         render(:action => 'new') #redisplay the create an entry page
@@ -38,10 +38,10 @@ class MembersController < ApplicationController
   def update
     @members = Member.find(params[:id])
       if @members.update_attributes(members_params)
-        redirect_to(:action => 'index')
+        redirect_to(:action => 'executives') #change for members
         #flash[:notice] => "News post was edited"
       else
-        redirect_to(:action => 'index')
+        redirect_to(:action => 'executives') #change for members
       end
   end
 
@@ -51,7 +51,7 @@ class MembersController < ApplicationController
   
   def destroy
     Member.find(params[:id]).destroy
-    redirect_to(:action => 'index')
+    redirect_to(:action => 'executives') #change for members
     #flash[:notice] => "The news post was erased"
   end
 

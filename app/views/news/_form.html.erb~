@@ -6,6 +6,7 @@
   <%= news.label :thumburl %><br>
   <%= news.text_area :thumburl %><br>
   <%= news.label :description %><br>
-  <%= news.text_field :description %><br>
-  <br><%= news.submit %><br>
+  <%= news.text_area :description %><br>
+  <br><%= news.submit, controller => :executives, :action => :executives %>
+  <%= button_to "Cancel", :controller => :news, :action => :index %>
 <% end %>

@@ -11,7 +11,7 @@ form {
   width: 200px;
   font-family: 'Open Sans', sans-serif;
 }
-form input, textarea {
+form input, textarea, select {
   border: #919191 solid 1px;
   border-radius: 5px;
 }
@@ -21,84 +21,16 @@ button, .btn-submit, input[type="submit"] {
   background-color: #65A933;
   color: #FFFFFF;
 }
+input[value="Cancel"] {
+  background-color: #919191;
+  color: #FFFFFF;
+}
 footer {
   background-color: gray;
 }
 footer ul li {
   display: inline;
   padding: 0 10px 0 10px;
-}
-
-#logo
-{
-    float: left;
-    height: 50px;
-    border: 0;
-    margin-top: 1%;
-    margin-left: 1%;
-    z-index: 5;
-}
-.soc_links
-{
-    float: right;
-    margin-top: 20px;
-    margin-right: 5px;
-    border: 0;
-    z-index: 5;
-}
-#soc_net
-{
-    display: inline-block;
-    height: 25px;
-    border: 0;
-    z-index: 5;
-}
-
-.nav_bar
-{
-    position: fixed;
-    display: block;
-    margin-top: -8px;
-    right: -8px;
-    width: 101%;
-    min-width: 60%;
-    height: 80px;
-    max-height: 80px;
-    border-bottom: 5px solid #66AA33;
-    background-color: #FFFFFF;
-    z-index: 5;
-}
-#nav_links
-{
-    display: inline-block;
-    padding: 0px 10px 0px 10px;
-    z-index: 5;
-}
-#nav_links a:link
-{
-    text-decoration: none;
-    font-family: Arial;
-    color: #919191;
-    z-index: 5;
-}
-#nav_links a:hover
-{
-    color:#66AA33;
-}
-#nav_links a:visited
-{
-    color: #919191;
-    font-family: Arial;
-    z-index: 5;
-}
-.nav_container
-{
-    
-    float:left;
-    margin-top: 40px;
-    z-index: 1;
-    margin-left: 30px;
-    z-index: 5;
 }
 
 a:link
@@ -126,33 +58,8 @@ a:link
     font-size: 25px;
 }
 
-.Home_Img img
-{
-    position: absolute;
-    margin-right: 1%;
-    width: 101%;
-    right: -13px;
-}
-.Home_Img
-{
-    height: auto;
-    text-align: center;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.Intro
-{
-    margin-top: 25px;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #66AA33;
-    color: #FFFFFF;
-    border-radius: 3px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    padding: 5px 20px 20px;
+.Home_Img {
+  width: 100%;
 }
 #mission
 {
@@ -198,6 +105,10 @@ header
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: #66AA33;
+}
+
+header p {
+  color: #919191;
 }
 
 main
@@ -287,7 +198,7 @@ figcaption {
 /*NEWS*/
 
 /*GET INVOLVED*/
-#companies
+article
 {
     margin-top: 25px;
     width: 70%;
@@ -298,8 +209,10 @@ figcaption {
     padding: 10px;
     background-color: #66AA33;
 }
-
-#companies ol {
+article p {
+  text-align: left;
+}
+article ol {
   text-align: left;
 }
 

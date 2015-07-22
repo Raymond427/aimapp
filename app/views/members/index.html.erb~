@@ -8,17 +8,16 @@
 <%= link_to 'Add a New Member', new_member_path %></br>
 <div class="Board">
 <% @members.each do |member| %>
-<% full_name = member.first_name + member.last_name %>
 <div class="img">
-<img alt= <%= member.first_name %> <%= member.last_name %> height="90" src="https://d1q9wbuypc40mm.cloudfront.net/pfv5n8898qr83xj.jpg" width="110" />
+<img alt= "<%= member.first_name %> <%= member.last_name %>" height="90" src="https://d1q9wbuypc40mm.cloudfront.net/pfv5n8898qr83xj.jpg" width="110" />
 <div class="desc">
 <script id= "linkedin" src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/MemberProfile" data-id= <% member.linkedin_url %> data-format="hover" data-text= <%= full_name %> data-related="false"></script>
 
 <p><%= member.major %></p>
 
 <p><%= member.email %></p>
-<% if current_user && current_user.editor? || current_user.admin? %>
-<%= link_to 'Show', member_path(member) %>
+<% if current_user && current_user.editor? || current_user && current_user.admin? %>
+<!-- <%= link_to 'Show', member_path(member) %> -->
 
 <%= link_to 'Edit', edit_member_path(member) %>
 

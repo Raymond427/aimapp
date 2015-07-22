@@ -1,3 +1,8 @@
 <%= render 'shared/header'%>
-<div id="ghost">&nbsp;</div>
+<header>
+  <h1>
+    New Executive
+  </h1>
+</header>
+<%= link_to "Label", :controller => :members, :action => :executives %>
 <%= render 'form' %>

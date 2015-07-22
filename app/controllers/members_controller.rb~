@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
 
-  before_action :require_user, only: [:edit]
   before_action :require_editor, only: [:show, :edit]
+  before_action :require_editor, only: [:delete, :destroy]
 
   def index
     @members = Member.all

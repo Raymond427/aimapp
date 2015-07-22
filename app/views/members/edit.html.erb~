@@ -1,3 +1,8 @@
 <%= render 'shared/header'%>
-<div id="ghost">&nbsp;</div>
+<header>
+  <h1>
+    Edit Executive <%= @members.first_name + " " %> <%= @members.last_name %>
+  </h1>
+</header>
 <%= render 'form' %>
+<li><%= button_to "EXECUTIVE BOARD", members_executives %></li>

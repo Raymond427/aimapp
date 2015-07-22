@@ -6,7 +6,7 @@
   <%= member.label :linkedin_url %><br>
   <%= member.text_area :linkedin_url %><br>
   <%= member.label :thumb_url %><br>
-  <%= member.text_field :thumb_url %><br>
+  <%= member.text_area :thumb_url %><br>
   <%= member.label :major %><br>
   <%= member.select(:major) do %>
   <% @majors.each do |major| -%>
@@ -21,13 +21,14 @@
     <%= content_tag(:option, c.last, value: c.last) %>
   <% end %>
 <% end %>
-  <%= member.label(:is_executive, "Is this member an executive?") %>
-  <%= member.check_box(:is_executive) %></br>
+  <!-- <%= member.label(:is_executive, "Is this member an executive?") %>
+  <%= member.check_box(:is_executive) %></br> -->
   <%= member.label :executive_position %><br>
   <%= member.select(:executive_position) do %>
   <% @executive.each do |c| -%>
     <%= content_tag(:option, c.last, value: c.last) %>
   <% end %>
 <% end %></br>
-  <br><%= member.submit %><br>
+  <br><%= member.submit %>
+<%= button_to "Cancel" %>
 <% end %>

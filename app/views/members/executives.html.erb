@@ -8,36 +8,40 @@
   </p>
 </header>
 <main>
-<!-- <%= select_tag(:current_semester, options_for_select(@executive_semester)) %></br></br>
-<%= button_to "Update" %> UNCOMMENT FOR NEW FEATURE-->
-<%= link_to 'Add a New Executive', new_member_path %></br>
+<% if current_user && current_user.editor? || current_user && current_user.admin? %>
+  <!-- <%= select_tag(:current_semester, options_for_select(@executive_semester)) %></br></br>
+  <%= button_to "Update" %> UNCOMMENT FOR NEW FEATURE-->
+  <%= button_to "New Executive", new_member_path, :class => "button", :method => :get  %></br>
+<% end %>
 <% @members.each do |member| %>
   <% full_name = member.first_name + member.last_name %>
   <section class="board_member">
     <figure>
-      <img alt= <%= member.first_name %>
-        <%= member.last_name %> height="90" src="https://d1q9wbuypc40mm.cloudfront.net/pfv5n8898qr83xj.jpg" width="110" />
+      <img alt= "<%= member.first_name + " " %> <%= member.last_name %>" height="90" src="https://d1q9wbuypc40mm.cloudfront.net/pfv5n8898qr83xj.jpg" width="110" />
       <figcaption>
         <p>
         <b><%= member.executive_position %></b>
         </p>
+           <% if member.linkedin_url == nil %>
+        <p><%= member.first_name + " " %> <%= member.last_name %></p>
+           <% else %>
         <p>
-          <script aid= "linkedin" src="//platform.linkedin.com/in.js" type="text/javascript">
-          </script>
-          <script type="IN/MemberProfile" data-id= <% member.linkedin_url %> data-format="hover" data-text= <%= full_name %> data-related="false">
-          </script>
+          <% member.linkedin_url %>
         </p>
+           <% end %>
         <p>
           <%= member.email %>
         </p>
         <p>
           <%= member.major %>
         </p>
-        <i>
-          <%= link_to 'Show', member_path(member) %>
-        </i>
-        <%= link_to 'Edit', edit_member_path(member) %>
-        <%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure you want to delete ' + member.first_name + '?'}%>
+          <% if current_user && current_user.editor? || current_user && current_user.admin? %>
+            <!-- <%= link_to 'Show', member_path(member) %> -->
+            <%= link_to 'Edit', edit_member_path(member) %>
+          <% end %>
+          <% if current_user && current_user.admin? %>
+            <%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure you want to delete ' + member.first_name + '?'}%>
+          <% end %>
       </figcaption>
     </figure>
   </section>

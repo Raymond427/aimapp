@@ -1,8 +1,11 @@
-<h1>News#new</h1>
-<p>Find me in app/views/news/new.html.erb</p>
 <%= render 'shared/header'%>
+<header>
+  <h1>
+    Post News
+  </h1>
+</header>
 <%= render 'form' %>
+<%= link_to "Label", :controller => :news, :action => :index %>
 <% if flash[:notice] %>
     <div id="notice"><%= flash[:notice] %></div>
 <% end %>
-<%= link_to 'Back', news_path %>
