@@ -1,17 +1,56 @@
 <%= render 'shared/header'%>
-<img id="Home_Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" />
-<header>
-  <h2>
-    Turning Creative Thinkers, Into Business Leaders
-  </h2>
-</header>
-<main>
-  <article>
-    <h2>Welcome!</h2>
-    <p>Advancing Innovative Minds (AIM) is UNC Charlotte&#39;s most active and dedicated entrepreneurial club.</p>
-    <p>Our mission is <b>&quot;to provide visionaries with a business, technology, and networking knowledge base in a means to encourage entrepreneurial influence&quot;</b>. We plan on using the booming development of the Charlotte area as a catalyst to create truly effective ideas that will culminate into thriving businesses.</p>
-    <p>You can contact AIM via email: <b>aimcharlotte@uncc.edu<b></p>
-    <p>We hope you enjoy your visit to our website!</p>
+<mian>  
+  <div class="home_div">
+    <img class="Home_Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" />
+    <div>
+      <h2>
+        Turning Creative Thinkers, Into Business Leaders
+      </h2>
+      <p>Advancing Innovative Minds (AIM) is one of UNC Charlotte&#39;s most active and dedicated entrepreneurial club. Our mission is <b>&quot;to provide visionaries with a business, technology, and networking knowledge base in a means to encourage entrepreneurial influence&quot;</b></p>
+        <%= button_to "Join Now", {:controller => :join_mailers, :action => :new}, {:method => :get } %>
+        <%= button_to "Contact Us", :controller => :join_mailers, :action => :new, :method => :get %>
+    </div>
+  </div>
+  <article class="mid_home">
+    <h2>Have You Ever Wanted to Start a Business?</h2>
+    <p>Maybe you didn&#39;t have the resources, maybe you didn't know where to start, or maybe you just didn&#39;t have the confidence to try. Whether you have an idea for the next big start-up or are just curious about entrepreneurship AIM is the right place to start!</p>
+    <div>
+      <figure>
+        <img src="https://d1q9wbuypc40mm.cloudfront.net/qcdr3carqcj5cem.png" />
+        <figcaption>
+          <h3>The Most Innovative Minds</h3>
+          <p>AIM collects the most creative minds at UNC Charlotte to discuss innovative business ideas.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <div>
+      <figure>
+        <img src="https://d1q9wbuypc40mm.cloudfront.net/w7tjjk5z0np362j.jpg" />
+        <figcaption>
+          <h3>Choose Your Own Path</h3>
+          <p>Even if you don&#39;t have an idea, you can join a team that is developing something that piques your interest.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <div>
+      <figure>
+        <img src="https://d1q9wbuypc40mm.cloudfront.net/3gb2btdvx9034ou.jpg" />
+        <figcaption>
+          <h3>Learn From The Best</h3>
+          <p>Successful small business owners host seminars regularly about how to suceed. Workshops on important skills are also included.</p>
+        </figcaption>
+      </figure>
+    </div>
+      <p>You can contact AIM via email: <b>aimcharlotte@uncc.edu<b></p>
   </article>
+  <div class="home_div">
+    <img class="Home_Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" />
+    <div>
+      <h2>
+        Giving Back
+      </h2>
+      <p>AIM also dedicate monthly time to the community through numerous campus outreach events for pre-college students, as well as volunteer work for the less fourtunate.</p>
+    </div>
+  </div>
 </main>
 <!-- <%= render 'shared/footer'%> -->
