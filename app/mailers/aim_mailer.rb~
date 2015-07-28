@@ -7,7 +7,7 @@ class AimMailer < ApplicationMailer
     @phone_number = phone_number
     @email = email
     @major = major
-    @grad_date = @grad_date
+    @grad_date = grad_date
     @message = message
     mail(to: 'aimunccpresident@gmail.com', subject: '#{first_name} #{last_name} wants to join Advancing Innovative Minds!') #The actual email message, we are passing the :to and :subject headers in.
   end

@@ -1,6 +1,6 @@
 <%= render 'shared/header'%>
 <mian>  
-  <div class="home_div">
+  <!-- <div class="home_div">
     <img class="Home_Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" />
     <div>
       <h2>
@@ -8,13 +8,15 @@
       </h2>
       <p>Advancing Innovative Minds (AIM) is one of UNC Charlotte&#39;s most active and dedicated entrepreneurial club. Our mission is <b>&quot;to provide visionaries with a business, technology, and networking knowledge base in a means to encourage entrepreneurial influence&quot;</b></p>
         <%= button_to "Join Now", {:controller => :join_mailers, :action => :new}, {:method => :get } %>
-        <%= button_to "Contact Us", :controller => :join_mailers, :action => :new, :method => :get %>
+        <%= button_to "Contact Us", {:controller => :join_mailers, :action => :new}, {:method => :get } %>
     </div>
-  </div>
-  <article class="mid_home">
-    <h2>Have You Ever Wanted to Start a Business?</h2>
-    <p>Maybe you didn&#39;t have the resources, maybe you didn't know where to start, or maybe you just didn&#39;t have the confidence to try. Whether you have an idea for the next big start-up or are just curious about entrepreneurship AIM is the right place to start!</p>
-    <div>
+  </div> -->
+  <section class="home_mid">
+    <header>
+      <h2>Have You Ever Wanted to Start a Business?</h2>
+      <p>Maybe you didn&#39;t have the resources, maybe you didn't know where to start, or maybe you just didn&#39;t have the confidence to try. Whether you have an idea for the next big start-up or are just curious about entrepreneurship AIM is the right place to start!</p>
+    </header>
+    <div class= "col-md-4 col-sm-6">
       <figure>
         <img src="https://d1q9wbuypc40mm.cloudfront.net/qcdr3carqcj5cem.png" />
         <figcaption>
@@ -23,7 +25,7 @@
         </figcaption>
       </figure>
     </div>
-    <div>
+    <div class= "col-md-4 col-md-6">
       <figure>
         <img src="https://d1q9wbuypc40mm.cloudfront.net/w7tjjk5z0np362j.jpg" />
         <figcaption>
@@ -32,7 +34,7 @@
         </figcaption>
       </figure>
     </div>
-    <div>
+    <div class= "col-md-4">
       <figure>
         <img src="https://d1q9wbuypc40mm.cloudfront.net/3gb2btdvx9034ou.jpg" />
         <figcaption>
@@ -41,9 +43,9 @@
         </figcaption>
       </figure>
     </div>
-      <p>You can contact AIM via email: <b>aimcharlotte@uncc.edu<b></p>
-  </article>
-  <div class="home_div">
+    <h3>You can contact AIM via email: <b>aimcharlotte@uncc.edu<b></h3>
+  </section>
+  <!-- <div class="home_div">
     <img class="Home_Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" />
     <div>
       <h2>
@@ -51,6 +53,6 @@
       </h2>
       <p>AIM also dedicate monthly time to the community through numerous campus outreach events for pre-college students, as well as volunteer work for the less fourtunate.</p>
     </div>
-  </div>
+  </div> -->
 </main>
 <!-- <%= render 'shared/footer'%> -->

@@ -28,7 +28,7 @@ class JoinMailersController < ApplicationController
 
     respond_to do |format|
       if @join_mailer.save
-        AimMailer.join_email(@join_emailer).deliver_later
+        AimMailer.join_email.deliver_later
         format.html { redirect_to @join_mailer, notice: 'Join mailer was successfully created.' }
         format.json { render :show, status: :created, location: @join_mailer }
       else
