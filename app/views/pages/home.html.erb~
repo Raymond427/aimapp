@@ -1,36 +1,28 @@
 <%= render 'shared/header'%>
-<mian>  
-  <!-- <div class="home_div">
-    <img class="Home_Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" />
+<main>  
+  <div class="home_div">
+    <figure class= "home_img">
+    </figure>
     <div>
       <h2>
         Turning Creative Thinkers, Into Business Leaders
       </h2>
-      <p>Advancing Innovative Minds (AIM) is one of UNC Charlotte&#39;s most active and dedicated entrepreneurial club. Our mission is <b>&quot;to provide visionaries with a business, technology, and networking knowledge base in a means to encourage entrepreneurial influence&quot;</b></p>
-        <%= button_to "Join Now", {:controller => :join_mailers, :action => :new}, {:method => :get } %>
-        <%= button_to "Contact Us", {:controller => :join_mailers, :action => :new}, {:method => :get } %>
+      <h4>Advancing Innovative Minds (AIM) is one of UNC Charlotte&#39;s most active and dedicated entrepreneurial club. Our mission is <b>&quot;to provide visionaries with a business, technology, and networking knowledge base in a means to encourage entrepreneurial influence&quot;</b></h4>
+      <%= button_to "Join Now", {:controller => :join_mailers, :action => :new}, {:method => :get } %>
+      <%= button_to "Contact Us", {:controller => :join_mailers, :action => :new}, {:method => :get } %>
     </div>
-  </div> -->
+  </div>
   <section class="home_mid">
     <header>
-      <h2>Have You Ever Wanted to Start a Business?</h2>
-      <p>Maybe you didn&#39;t have the resources, maybe you didn't know where to start, or maybe you just didn&#39;t have the confidence to try. Whether you have an idea for the next big start-up or are just curious about entrepreneurship AIM is the right place to start!</p>
+      <h1>Have You Ever Wanted to Start a Business?</h1>
+      <h3>Maybe you didn&#39;t have the resources, maybe you didn't know where to start, or maybe you just didn&#39;t have the confidence to try. Whether you have an idea for the next big start-up or are just curious about entrepreneurship AIM is the right place to start!</h3>
     </header>
     <div class= "col-md-4 col-sm-6">
       <figure>
         <img src="https://d1q9wbuypc40mm.cloudfront.net/qcdr3carqcj5cem.png" />
         <figcaption>
           <h3>The Most Innovative Minds</h3>
-          <p>AIM collects the most creative minds at UNC Charlotte to discuss innovative business ideas.</p>
-        </figcaption>
-      </figure>
-    </div>
-    <div class= "col-md-4 col-md-6">
-      <figure>
-        <img src="https://d1q9wbuypc40mm.cloudfront.net/w7tjjk5z0np362j.jpg" />
-        <figcaption>
-          <h3>Choose Your Own Path</h3>
-          <p>Even if you don&#39;t have an idea, you can join a team that is developing something that piques your interest.</p>
+          <p>AIM collects the most creative minds at UNC Charlotte to discuss innovative business ideas. Even if you don&#39;t have an idea, you can join a team that is developing something that piques your interest.</p>
         </figcaption>
       </figure>
     </div>
@@ -43,7 +35,16 @@
         </figcaption>
       </figure>
     </div>
-    <h3>You can contact AIM via email: <b>aimcharlotte@uncc.edu<b></h3>
+    <div class= "col-md-4 col-sm-6">
+      <figure>
+        <img src="https://d1q9wbuypc40mm.cloudfront.net/w7tjjk5z0np362j.jpg" />
+        <figcaption>
+          <h3>Give Back</h3>
+          <p>Aim also dedicated monthly time to the </p>
+        </figcaption>
+      </figure>
+    </div>
+    <h4>You can contact AIM via email: <b>aimcharlotte@uncc.edu<b></h4>
   </section>
   <!-- <div class="home_div">
     <img class="Home_Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" />

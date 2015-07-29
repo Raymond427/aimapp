@@ -4,6 +4,7 @@
 html {
   font-family: 'Open Sans', sans-serif;
   height: 100%;
+  font-size: 16px;
 }
 body {
   height: 100%;
@@ -54,15 +55,6 @@ a:link
   height: 90%;
 }
 
-.home_div div {
-  float: left;
-  width: 30%;
-  height: 100%;
-  padding: 15px;
-  background-color: #919191;
-  color: white;
-}
-
 .home_div img {
   right: 0;
   width: 70%;
@@ -88,11 +80,31 @@ a:link
   height: 15%;
 } */
 
+.home_img {
+  float: right;
+  background-image: url(https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center center;
+  width: 70%;
+}
+
+.home_div div {
+  float: left;
+  text-align: left;
+  width: 30%;
+  padding: 15px;
+  background-color: #919191;
+  color: white;
+}
+
 .home_mid {
   background-color: #65A933;
+  padding: 2% 0 3% 0;
   color: #FFFFFF;
   margin-left: auto;
   margin-right: auto;
+  clear: both;
 }
 
 .home_mid figure {
@@ -109,6 +121,12 @@ a:link
 
 .home_mid h3 {
   text-align: center;
+  padding: 2% 0 3% 0;
+}
+
+.home_mid h4 {
+  text-align: center;
+  padding: 30% 0 0 0;
 }
 
 .home_mid img {
@@ -192,7 +210,6 @@ figcaption {
   float: right;
   margin-left: auto;
   margin-right: auto;
-  font-size: 16px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #FFFFFF;
@@ -220,7 +237,6 @@ figcaption {
 
 .news figcaption {
   float: right;
-  font-size: 16px;
   text-align: left;
   font-family: 'Open Sans', sans-serif;
   color: #FFFFFF;
@@ -284,7 +300,6 @@ article ol {
     color: #66AA33;
     text-decoration: none;
     display: block;
-    font-size: 200%;
     font-weight: bold;
     top: 50%;
     width: 30%;
