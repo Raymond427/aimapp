@@ -4,7 +4,20 @@
 html {
   font-family: 'Open Sans', sans-serif;
   height: 100%;
-  font-size: 16px;
+}
+nav {
+  background-color: #FFFFFF !important;
+  border-bottom: solid 3px #65A933 !important;
+  padding-bottom: 0 !important;
+  color: #919191;
+}
+.navbar{
+  margin-bottom: 0 !important;
+}
+.navbar-toggle, .navbar-toggle:hover{
+  background-color: #FFFFFF !important;
+  border: none !important;
+  
 }
 body {
   height: 100%;
@@ -90,18 +103,16 @@ a:link
 }
 
 .home_div div {
-  float: left;
   text-align: left;
-  width: 30%;
-  padding: 15px;
   background-color: #919191;
   color: white;
 }
 
 .home_mid {
   background-color: #65A933;
-  padding: 2% 0 3% 0;
+  padding: 2% 0 2% 0;
   color: #FFFFFF;
+  padding-bottom: 3%;
   margin-left: auto;
   margin-right: auto;
   clear: both;
@@ -113,6 +124,7 @@ a:link
 
 .home_mid figcaption {
   float: none;
+  padding-top: 0;
 }
 
 .home_mid header, .home_mid p {
@@ -121,12 +133,7 @@ a:link
 
 .home_mid h3 {
   text-align: center;
-  padding: 2% 0 3% 0;
-}
-
-.home_mid h4 {
-  text-align: center;
-  padding: 30% 0 0 0;
+  padding: 2% 0 2% 0;
 }
 
 .home_mid img {

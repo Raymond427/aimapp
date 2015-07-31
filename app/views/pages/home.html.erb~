@@ -3,7 +3,7 @@
   <div class="home_div">
     <figure class= "home_img">
     </figure>
-    <div>
+    <div class="col-md-4">
       <h2>
         Turning Creative Thinkers, Into Business Leaders
       </h2>
@@ -26,21 +26,21 @@
         </figcaption>
       </figure>
     </div>
-    <div class= "col-md-4">
+    <div class= "col-md-4 col-sm-6">
       <figure>
         <img src="https://d1q9wbuypc40mm.cloudfront.net/3gb2btdvx9034ou.jpg" />
         <figcaption>
           <h3>Learn From The Best</h3>
-          <p>Successful small business owners host seminars regularly about how to suceed. Workshops on important skills are also included.</p>
+          <p>Successful small business owners give talks on a regular basis, about thier life story and how to suceed as an entrepreneur. Interactive workshops on important skills are also included.</p>
         </figcaption>
       </figure>
     </div>
-    <div class= "col-md-4 col-sm-6">
+    <div class= "col-md-4 col-sm-12 visible-sm">
       <figure>
         <img src="https://d1q9wbuypc40mm.cloudfront.net/w7tjjk5z0np362j.jpg" />
         <figcaption>
           <h3>Give Back</h3>
-          <p>Aim also dedicated monthly time to the </p>
+          <p>We also have a passion for giving back to the community. AIM also dedicates monthly time to the community through numerous campus outreach events for pre-college students, as well as volunteer work for the less fortunate.</p>
         </figcaption>
       </figure>
     </div>
