@@ -5,19 +5,21 @@ html {
   font-family: 'Open Sans', sans-serif;
   height: 100%;
 }
+main p {
+  font-size: 16px !important;
+}
 nav {
   background-color: #FFFFFF !important;
   border-bottom: solid 3px #65A933 !important;
   padding-bottom: 0 !important;
   color: #919191;
 }
-.navbar{
+.navbar, .navbar-default, .navbar-static-top{
   margin-bottom: 0 !important;
 }
 .navbar-toggle, .navbar-toggle:hover{
   background-color: #FFFFFF !important;
   border: none !important;
-  
 }
 body {
   height: 100%;
@@ -105,9 +107,17 @@ a:link
 .home_div div {
   text-align: left;
   background-color: #919191;
+  padding: 10%;
   color: white;
 }
-
+.home_div .button_to {
+  text-align: left;
+  display: inline;
+}
+.home_div h2 {
+  margin-top: 0;
+  padding-top: 2%;
+}
 .home_mid {
   background-color: #65A933;
   padding: 2% 0 2% 0;
