@@ -1,8 +1,6 @@
 <%= render 'shared/header'%>
 <main>  
   <div class="home_div">
-    <figure class= "home_img">
-    </figure>
     <div class="col-md-4">
       <h2>
         Turning Creative Thinkers, Into Business Leaders
@@ -35,7 +33,7 @@
         </figcaption>
       </figure>
     </div>
-    <div class= "col-md-4 col-sm-12 visible-sm">
+    <div class= "col-md-4 col-sm-12">
       <figure>
         <img src="https://d1q9wbuypc40mm.cloudfront.net/w7tjjk5z0np362j.jpg" />
         <figcaption>

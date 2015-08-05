@@ -17,18 +17,14 @@
   <% full_name = member.first_name + member.last_name %>
   <section class="board_member">
     <figure>
-      <img alt= "<%= member.first_name + " " %> <%= member.last_name %>" height="90" src="https://d1q9wbuypc40mm.cloudfront.net/pfv5n8898qr83xj.jpg" width="110" />
+      <img alt= "<%= member.first_name + " " %> <%= member.last_name %>" height="90" src=<%= member.thumb_url %> width="110" />
       <figcaption>
         <p>
         <b><%= member.executive_position %></b>
         </p>
-           <% if member.linkedin_url == nil %>
-        <p><%= member.first_name + " " %> <%= member.last_name %></p>
-           <% else %>
         <p>
           <% member.linkedin_url %>
         </p>
-           <% end %>
         <p>
           <%= member.email %>
         </p>
@@ -40,7 +36,7 @@
             <%= link_to 'Edit', edit_member_path(member) %>
           <% end %>
           <% if current_user && current_user.admin? %>
-            <%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure you want to delete ' + member.first_name + '?'}%>
+            <%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure you want to delete ' + member.first_name + '?'}%>
           <% end %>
       </figcaption>
     </figure>

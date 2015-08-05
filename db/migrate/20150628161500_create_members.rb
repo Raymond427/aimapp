@@ -3,8 +3,8 @@ class CreateMembers < ActiveRecord::Migration
     create_table :members do |t|
       t.string :first_name
       t.string :last_name
-      t.string :thumb_url
-      t.string :linkedin_url
+      t.text :thumb_url
+      t.text :linkedin_url
       t.string :major
       t.string :email
       t.string :graduation_date

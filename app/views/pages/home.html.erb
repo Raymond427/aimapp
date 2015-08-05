@@ -1,8 +1,6 @@
 <%= render 'shared/header'%>
 <main>  
   <div class="home_div">
-    <figure class= "home_img">
-    </figure>
     <div class="col-md-4">
       <h2>
         Turning Creative Thinkers, Into Business Leaders
@@ -19,7 +17,7 @@
     </header>
     <div class= "col-md-4 col-sm-6">
       <figure>
-        <img src="https://d1q9wbuypc40mm.cloudfront.net/qcdr3carqcj5cem.png" />
+        <%= image_tag 'parade.png', :alt => 'Parade' %>
         <figcaption>
           <h3>The Most Innovative Minds</h3>
           <p>AIM collects the most creative minds at UNC Charlotte to discuss innovative business ideas. Even if you don&#39;t have an idea, you can join a team that is developing something that piques your interest.</p>
@@ -28,7 +26,7 @@
     </div>
     <div class= "col-md-4 col-sm-6">
       <figure>
-        <img src="https://d1q9wbuypc40mm.cloudfront.net/3gb2btdvx9034ou.jpg" />
+        <%= image_tag 'brokaw.jpg', :alt => 'Jeff Brokaw' %>
         <figcaption>
           <h3>Learn From The Best</h3>
           <p>Successful small business owners give talks on a regular basis, about thier life story and how to suceed as an entrepreneur. Interactive workshops on important skills are also included.</p>
@@ -37,7 +35,7 @@
     </div>
     <div class= "col-md-4 col-sm-12">
       <figure>
-        <img src="https://d1q9wbuypc40mm.cloudfront.net/w7tjjk5z0np362j.jpg" />
+        <%= image_tag 'CFL.png', :alt => 'Cystic Fibrosis Fundraiser' %>
         <figcaption>
           <h3>Give Back</h3>
           <p>We also have a passion for giving back to the community. AIM also dedicates monthly time to the community through numerous campus outreach events for pre-college students, as well as volunteer work for the less fortunate.</p>

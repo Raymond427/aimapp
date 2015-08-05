@@ -1,7 +1,15 @@
 class MembersController < ApplicationController
 
-  before_action :require_editor, only: [:show, :edit]
-  before_action :require_editor, only: [:delete, :destroy]
+  before_action :require_editor, only: [:new, :show, :edit]
+  before_action :require_admin, only: [:delete, :destroy]
+  before_filter :check_for_cancel, only: [:create, :update]
+
+  def cancel
+    @members,save = false
+    if params[:commit] == "cancel"
+      redirect_to(:action => 'executives')
+    end
+  end
 
   def index
     @members = Member.all
@@ -19,6 +27,7 @@ class MembersController < ApplicationController
 
   def create
     @members = Member.new(members_params) #the new News entry is recreated through the strong params method
+    @members.is_executive = true #Remove for members feature
       if @members.save #if the entry saves
         redirect_to(:action => 'executives') #show all of the present entries
         #flash[:notice] => "Your news entry was saved!"
@@ -38,6 +47,7 @@ class MembersController < ApplicationController
   def update
     @members = Member.find(params[:id])
       if @members.update_attributes(members_params)
+        @members.is_executive = true #Remove for members feature
         redirect_to(:action => 'executives') #change for members
         #flash[:notice] => "News post was edited"
       else

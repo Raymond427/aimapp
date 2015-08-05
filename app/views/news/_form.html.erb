@@ -3,10 +3,10 @@
   <%= news.text_field :title %><br>
   <%= news.label :date %><br>
   <%= news.text_field :date %><br>
-  <%= news.label :thumburl %><br>
+  <b>Image URL</b></br>
   <%= news.text_area :thumburl %><br>
   <%= news.label :description %><br>
   <%= news.text_area :description %><br>
   <br><%= news.submit %>
-  <%= button_to "Cancel", :controller => :news, :action => :index %>
+  <%= button_tag "Cancel", :type => 'cancel', :controller => 'members', :action => 'news' %>
 <% end %>

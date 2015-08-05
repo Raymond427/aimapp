@@ -14,6 +14,13 @@ nav {
   padding-bottom: 0 !important;
   color: #919191;
 }
+.nav_img {
+  padding: 0 !important;
+  margin-top: 5px;
+}
+.nav_img img {
+  height: 36px;
+}
 .navbar, .navbar-default, .navbar-static-top{
   margin-bottom: 0 !important;
 }
@@ -95,18 +102,18 @@ a:link
   height: 15%;
 } */
 
-.home_img {
-  float: right;
-  background-image: url(https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg);
+.home_div {
+  background-image: url(/images/club.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:center center;
-  width: 70%;
+  background-position:top center;
+  width: 100%;
+  z-index: 0;
 }
 
 .home_div div {
   text-align: left;
-  background-color: #919191;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2%;
   color: white;
 }
@@ -147,8 +154,8 @@ a:link
 }
 
 .home_mid img {
-  height: 200px;
-  width: 250px;
+  height: 215px;
+  width: 315px;
 }
 
 /*HOME*/
@@ -186,6 +193,8 @@ header
 }
 
 header p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
   color: #919191;
 }
 
@@ -201,12 +210,6 @@ header h1
 {
     font-family: 'Open Sans', sans-serif;
 }
-
-header p
-{
-  font-family: 'Open Sans', sans-serif;
-}
-
 .board_member /*All Exec blocks*/
 {
     display: inline-block;
@@ -331,7 +334,7 @@ article ol {
 {
     position: absolute;
     display: block;
-    background-image: url(https://d1q9wbuypc40mm.cloudfront.net/libgnh5vgt41g4l.png);
+    background: url(/images/school.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -346,7 +349,7 @@ article ol {
 {
     position: absolute;
     display: block;
-    background-image: url(https://d1q9wbuypc40mm.cloudfront.net/ghnmpc7viw7o40f.png);
+    background-image: url(/images/businesses.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

@@ -8,13 +8,13 @@
     <meta name="keywords" content="Advancing Innovative Minds, AIM, UNCC AIM, AIM UNCC, aim uncc, unccaim, aimuncc, Charlotte, Entrepreneur, Entrepreneurship" />
     <meta name="description" content="Advancing Innovative Minds (AIM) is UNC Charlotte's most active and dedicated entrepreneurial club. We plan on using the booming development of the Charlotte area as a catalyst to create truly effective ideas that will culminate into thriving businesses." />
     <!-- This is a favicon (the icon you see when you bookmark a website). Link to the favicon from your university's website, or upload one to the Images section and use the quickurl to link to it here. Favicons must have .ico extension. -->
-    <link rel="icon" href="http://os_extranet_images.s3.amazonaws.com/299636_original.png" type="image/x-icon" />
+    <link rel="icon" src="icon.png" type="image/x-icon" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="/assets/stylesheets/pages.scss" type="text/css">
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle visible-md hidden-lg" data-toggle="collapse" data-target=".navbar-collapse">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle Navigation</span>
             <span class= "icon-bar"></span>
             <span class= "icon-bar"></span>
@@ -23,8 +23,8 @@
         </div>
         <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
           <li>
-            <a>
-              <img class="hidden-md" href="https://d1q9wbuypc40mm.cloudfront.net/xy332ag7s8dv0d0.jpg" />
+            <a class="nav_img" href= "/" title= "AIM | Home">
+              <%= image_tag 'logo.jpg', :alt => 'logo' %> 
             </a>
           </li>
           <li><%= link_to "HOME", :controller => 'pages', :action => 'home' %></li>
@@ -44,8 +44,8 @@
      <!-- <li><%= link_to "Sign Up", 'signup' %></li> -->
         <% end %>  
           <li>
-            <a class="hidden-xs" href= "https://www.uncc.edu" title= "Visit UNCC">
-              <img href="https://d1q9wbuypc40mm.cloudfront.net/15li81kt3odyzqy.gif"/>
+            <a class="nav_img hidden-sm" href= "https://www.uncc.edu" title= "Visit UNCC">
+              <%= image_tag 'school.gif', :alt => 'school' %>
             </a>
           </li>
         </div>

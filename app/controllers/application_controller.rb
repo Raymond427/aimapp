@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
   def require_editor
-    redirect_to '/' unless current_user.editor?
+    redirect_to '/' unless current_user.editor? || current_user.admin?
   end
   def require_admin
     redirect_to '/' unless current_user.admin?

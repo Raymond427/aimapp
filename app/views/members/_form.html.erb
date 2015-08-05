@@ -3,7 +3,7 @@
   <%= member.text_field :first_name %><br>
   <%= member.label :last_name %><br>
   <%= member.text_field :last_name %><br>
-  <%= member.label :linkedin_url %><br>
+  <a href="https://developer.linkedin.com/plugins/member-profile">Click here</a> to add a link to the executive's LinkedIn Profile<br>
   <%= member.text_area :linkedin_url %><br>
   <%= member.label :thumb_url %><br>
   <%= member.text_area :thumb_url %><br>
@@ -30,5 +30,5 @@
   <% end %>
 <% end %></br>
   <br><%= member.submit %>
-<%= button_to "Cancel", :controller => 'members', :action => 'executives' %>
+<%= button_tag "Cancel", :type => 'cancel', :controller => 'members', :action => 'executives' %>
 <% end %>
