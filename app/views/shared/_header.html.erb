@@ -54,3 +54,10 @@
   </head>
 </html>
 <body>
+<% if flash[:notice] %>
+  <div class="flash">
+    <div class="notice">
+      <%= flash[:notice] %>
+    </div>
+  </div>
+<% end %>

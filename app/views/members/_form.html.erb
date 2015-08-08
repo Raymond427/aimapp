@@ -9,7 +9,7 @@
   <%= member.text_area :thumb_url %><br>
   <%= member.label :major %><br>
   <%= member.select(:major) do %>
-  <% @majors.each do |major| -%>
+  <% @majors.each do |major| %>
     <%= content_tag(:option, major, value: major) %>
   <% end %>
 <% end %></br>
@@ -17,7 +17,7 @@
   <%= member.text_field :email %><br>
   <%= member.label :graduation_date %><br>
   <%= member.select(:graduation_date) do %>
-  <% [[1, 'Fall 2016'], [2, 'Spring 2016']].each do |c| -%>
+  <% [[1, 'Fall 2016'], [2, 'Spring 2016']].each do |c| %>
     <%= content_tag(:option, c.last, value: c.last) %>
   <% end %>
 <% end %>
@@ -25,10 +25,10 @@
   <%= member.check_box(:is_executive) %></br> -->
   <%= member.label :executive_position %><br>
   <%= member.select(:executive_position) do %>
-  <% @executive.each do |c| -%>
+  <% @executive.each do |c| %>
     <%= content_tag(:option, c.last, value: c.last) %>
   <% end %>
 <% end %></br>
   <br><%= member.submit %>
-<%= button_tag "Cancel", :type => 'cancel', :controller => 'members', :action => 'executives' %>
+<%= link_to "Cancel", '/members/executives' %>
 <% end %>

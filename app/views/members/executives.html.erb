@@ -9,22 +9,26 @@
 </header>
 <main>
 <% if current_user && current_user.editor? || current_user && current_user.admin? %>
-  <!-- <%= select_tag(:current_semester, options_for_select(@executive_semester)) %></br></br>
-  <%= button_to "Update" %> UNCOMMENT FOR NEW FEATURE-->
   <%= button_to "New Executive", new_member_path, :class => "button", :method => :get  %></br>
 <% end %>
 <% @members.each do |member| %>
   <% full_name = member.first_name + member.last_name %>
   <section class="board_member">
     <figure>
-      <img alt= "<%= member.first_name + " " %> <%= member.last_name %>" height="90" src=<%= member.thumb_url %> width="110" />
+      <img alt= "<%= member.first_name + " " %> <%= member.last_name %>" height="90" src= <%= member.thumb_url %> width="110" />
       <figcaption>
         <p>
-        <b><%= member.executive_position %></b>
+          <b><%= member.executive_position %></b>
         </p>
-        <p>
-          <% member.linkedin_url %>
-        </p>
+        <% if member.linkedin_url.include? 'scrpit' %>
+          <p>
+            <%= member.linkedin_url %>
+          </p>
+        <% else %>
+          <p>
+            <%= member.first_name + " " %> <%= member.last_name %>
+          </p>
+        <% end %>
         <p>
           <%= member.email %>
         </p>
