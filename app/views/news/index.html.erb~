@@ -10,11 +10,15 @@
 <main>
 <% if current_user && current_user.editor? || current_user && current_user.admin? %>
   <%= button_to "Post an Update", new_news_path, :class => "button", :method => :get  %></br>
-  <% @news.each do |news| %>
 <% end %>
+<% @news.each do |news| %>
   <section class="news">
     <figure>
-      <img src= <%= news.thumburl %> />
+      <% if @news.mediatype == 'Image' %>
+        <img src= <%= news.thumburl %> />
+      <% else %>
+        VIDEO
+      <% end %>
       <figcaption>
         <p>
           <h1><%= news.title %></h1>

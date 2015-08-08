@@ -3,10 +3,13 @@
   <%= news.text_field :title %><br>
   <%= news.label :date %><br>
   <%= news.text_field :date %><br>
-  <b>Image URL</b></br>
+  This news post has a:</br>
+  Image <%= radio_button_tag(mediatype) :mediatype, 'Image' %>
+  Video <%= radio_button_tag(mediatype) :mediatype, 'Video' %></br>
+  <b>Put the Image URL here, or put the embedded YouTube video here:</b></br>
   <%= news.text_area :thumburl %><br>
   <%= news.label :description %><br>
   <%= news.text_area :description %><br>
   <br><%= news.submit %>
-  <%= button_tag "Cancel", :type => 'cancel', :controller => 'members', :action => 'news' %>
+  <%= link_to "Cancel", '/news' %>
 <% end %>

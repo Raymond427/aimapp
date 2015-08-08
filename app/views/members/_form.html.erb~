@@ -4,9 +4,9 @@
   <%= member.label :last_name %><br>
   <%= member.text_field :last_name %><br>
   <a href="https://developer.linkedin.com/plugins/member-profile">Click here</a> to add a link to the executive's LinkedIn Profile<br>
-  <%= member.text_area :linkedin_url %><br>
-  <%= member.label :thumb_url %><br>
-  <%= member.text_area :thumb_url %><br>
+  <%= member.text_area :linkedinurl %><br>
+  <%= member.label :thumburl %><br>
+  <%= member.text_area :thumburl %><br>
   <%= member.label :major %><br>
   <%= member.select(:major) do %>
   <% @majors.each do |major| %>
@@ -17,7 +17,7 @@
   <%= member.text_field :email %><br>
   <%= member.label :graduation_date %><br>
   <%= member.select(:graduation_date) do %>
-  <% [[1, 'Fall 2016'], [2, 'Spring 2016']].each do |c| -%>
+  <% [[1, 'Fall 2016'], [2, 'Spring 2016']].each do |c| %>
     <%= content_tag(:option, c.last, value: c.last) %>
   <% end %>
 <% end %>

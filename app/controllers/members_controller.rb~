@@ -4,16 +4,9 @@ class MembersController < ApplicationController
   before_action :require_editor, only: [:new, :show, :edit]
   before_action :require_admin, only: [:delete, :destroy]
   before_action :form_vars, only: [:new, :edit]
-  before_filter :check_for_cancel, :only => [:new, :update, :edit]
 
   def find_member
     @members = Member.find(params[:id])
-  end
-
-  def check_for_cancel
-    if params.key.empty?
-      redirect_to members_executives_path
-    end
   end
 
   def index
@@ -74,6 +67,6 @@ class MembersController < ApplicationController
 
   private
     def members_params
-      params.require(:member).permit(:first_name, :last_name, :thumb_url, :linkedin_url, :major, :email, :graduation_date, :is_executive, :executive_position)
+      params.require(:member).permit(:first_name, :last_name, :thumb_url, :linkedin_plug, :major, :email, :graduation_date, :is_executive, :executive_position)
     end
 end

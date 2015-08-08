@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20150726193823) do
   create_table "members", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.text     "thumburl"
+    t.text     "linkedinurl"
     t.string   "major"
     t.string   "email"
     t.string   "graduation_date"
@@ -40,10 +42,11 @@ ActiveRecord::Schema.define(version: 20150726193823) do
   create_table "news", force: :cascade do |t|
     t.string   "title"
     t.string   "date"
+    t.string   "mediatype"
     t.string   "thumburl"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|

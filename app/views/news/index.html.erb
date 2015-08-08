@@ -14,7 +14,11 @@
 <% @news.each do |news| %>
   <section class="news">
     <figure>
-      <img src= <%= news.thumburl %> />
+      <% if news.mediatype == 'Image' %>
+        <img src= <%= news.thumburl %> />
+      <% else %>
+        VIDEO
+      <% end %>
       <figcaption>
         <p>
           <h1><%= news.title %></h1>
