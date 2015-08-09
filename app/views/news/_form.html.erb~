@@ -3,9 +3,9 @@
   <%= news.text_field :title %><br>
   <%= news.label :date %><br>
   <%= news.text_field :date %><br>
-  This news post has a:</br>
-  Image <%= radio_button_tag(mediatype) :mediatype, 'Image' %>
-  Video <%= radio_button_tag(mediatype) :mediatype, 'Video' %></br>
+  <%= news.label (:mediatype)</br>
+  Image <%= radio_button_tag :mediatype, 'Image', true %>
+  Video <%= radio_button_tag :mediatype, 'Video' %></br>
   <b>Put the Image URL here, or put the embedded YouTube video here:</b></br>
   <%= news.text_area :thumburl %><br>
   <%= news.label :description %><br>

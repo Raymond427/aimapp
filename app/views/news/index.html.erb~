@@ -14,7 +14,7 @@
 <% @news.each do |news| %>
   <section class="news">
     <figure>
-      <% if @news.mediatype == 'Image' %>
+      <% if news.mediatype == 'Image' %>
         <img src= <%= news.thumburl %> />
       <% else %>
         VIDEO
@@ -34,7 +34,7 @@
           <%= link_to 'Edit', edit_news_path(news) %>
         <% end %>
           <% if current_user && current_user.admin? %>
-          <%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure you want to delete ' + news.title + '?'}%>
+          <%= link_to 'Delete', news, method: :delete, data: { confirm: 'Are you sure you want to delete ' + news.title + '?'}%>
         <% end %>
       </figcaption>
     </figure>

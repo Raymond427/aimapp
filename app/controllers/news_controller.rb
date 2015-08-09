@@ -2,7 +2,12 @@ class NewsController < ApplicationController
 
   before_action :require_editor, only: [:new, :show, :edit]
   before_action :require_admin, only: [:delete, :destroy]
+  before_action :find_news, only: [:edit, :update, :delete, :destroy]
   before_filter :check_for_cancel, only: [:create, :update]
+
+  def find_news
+    @news = News.find(params[:id])
+  end
 
   def check_for_cancel
     if params[:commit] == "Cancel"
@@ -33,11 +38,9 @@ class NewsController < ApplicationController
   end
 
   def edit
-    @news = News.find(params[:id])
   end
 
   def update
-    @news = News.find(params[:id])
       if @news.update_attributes(news_params)
         redirect_to(:action => 'index')
         #flash[:notice] => "News post was edited"
@@ -47,11 +50,10 @@ class NewsController < ApplicationController
   end
 
   def delete
-    @news = News.find(params[:id])
   end
 
   def destroy
-    News.find(params[:id]).destroy
+    @news.destroy
     redirect_to(:action => 'index')
     #flash[:notice] => "The news post was erased"
   end

@@ -2,7 +2,12 @@ class NewsController < ApplicationController
 
   before_action :require_editor, only: [:new, :show, :edit]
   before_action :require_admin, only: [:delete, :destroy]
+  before_action :find_news, only: [:delete, :destroy]
   before_filter :check_for_cancel, only: [:create, :update]
+
+  def find_news
+    @news = News.find(params[:id])
+  end
 
   def check_for_cancel
     if params[:commit] == "Cancel"
@@ -58,6 +63,6 @@ class NewsController < ApplicationController
   
   private
     def news_params
-      params.require(:news).permit(:title, :date, :thumburl, :description)
+      params.require(:news).permit(:title, :date, :mediatype, :thumburl, :description)
     end
 end
