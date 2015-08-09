@@ -22,7 +22,8 @@
         </p>
         <% if member.linkedinurl.length > 3 %>
           <p>
-            <script id= "linkedin" src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/MemberProfile" data-id="<%= member.linkedinurl %>" data-format="hover" data-text="Raymond Ferrell" data-related="false"></script>
+            <script id= "linkedin" src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+            <script type="IN/MemberProfile" data-id="<%= member.linkedinurl %>" data-format="hover" data-text="<%= member.first_name + " " %> <%= member.last_name %>" data-related="false"></script>
           </p>
         <% else %>
           <p>

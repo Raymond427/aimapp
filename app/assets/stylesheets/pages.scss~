@@ -16,10 +16,10 @@ nav {
 }
 .nav_img {
   padding: 0 !important;
-  margin-top: 1px;
+  margin-top: 5px;
 }
 .nav_img img {
-  height: 46px;
+  height: 36px;
 }
 .navbar, .navbar-default, .navbar-static-top{
   margin-bottom: 0 !important;
@@ -69,61 +69,41 @@ a:link
     font-family: 'Open Sans', sans-serif;
     color: #FFFFFF;
 }
-
+#mobile_img {
+  padding-left: 10px !important;
+  margin-top: 5px;
+  height: 36px;
+  display: inline !important;
+  position: absolute;
+}
 /*HOME*/
 
-/* .home_div {
-  width: 100%;
-  height: 90%;
+.row {
+  width: 100% !important;
+  padding: none !important;
+  margin-left: 0 !important;
+  background-color: #919191 !important;
 }
 
-.home_div img {
-  right: 0;
-  width: 70%;
-  height: 100%;
-}
-
-.mid_home{
-  background-color: #65A933;
-  color: #FFFFFF;
-  clear: both;
-  height:100%;
-  width: 100%;
-}
-.mid_home figure {
-  width: 30%;
-  margin: 5px;
-}
-.mid_home figure figcaption {
-  float: none;
-}
-.mid_home img {
-  width: 20%;
-  height: 15%;
-} */
-
-.home_div {
-  background-image: url(/images/club.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position:top center;
-  width: 100%;
-  z-index: 0;
-}
-
-.home_div div {
+.row div {
   text-align: left;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 2%;
   color: white;
 }
-.home_div .button_to {
+.row .button_to {
   text-align: left;
   display: inline;
 }
-.home_div h2 {
+.row h2 {
   margin-top: 0;
   padding-top: 2%;
+}
+#desktop_img {
+  background-image: url(/images/club.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 400px;
 }
 .home_mid {
   background-color: #65A933;
@@ -237,18 +217,11 @@ figcaption {
   padding-top: 25px;
 }
 
-#linkedin a:link
-{
-    text-decoration: none;
-    color:#FFFFFF;
-}
-
-
 /*EXECUTIVE BOARD*/
 
 /*NEWS*/
 
-.news figure img {
+.news figure img, iframe {
   float: left;
   width: 50%;
   height: 300px;
@@ -309,6 +282,32 @@ article ol {
 
 /*STUDENT & BUSINESSES*/
 
+.involved_div {
+  height: 90%;
+  width: 50%;
+  background: url(/images/school.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+  z-index: 0;
+}
+.involved_div:nth-child(2) {
+  border: solid black 5px;
+}
+.shade{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.involved_link
+{
+  font-size: 36px;
+  color: #65A933 !important;
+}
+
+/*
 .involved_body
 {
     margin-top: 5%;
@@ -317,10 +316,10 @@ article ol {
 #involved_button a
 {
     font-family: 'Open Sans', sans-serif;
-    color: #66AA33;
+    font-size: 36px;
+    color: #65A933;
     text-decoration: none;
     display: block;
-    font-weight: bold;
     top: 50%;
     width: 30%;
     z-index: 2;
@@ -328,7 +327,6 @@ article ol {
     margin-top: 30%;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.99;
 }
 #involved_students
 {
@@ -360,6 +358,7 @@ article ol {
     float: right;
     top: 5%;
 }
+
 #students_shade
 {
     background-color: black;
@@ -371,7 +370,7 @@ article ol {
     bottom: 0;
     float: right;
     top: 0;
-    opacity: 0.25;
+    opacity: 0.30;
 }
 #business_shade
 {
@@ -384,24 +383,24 @@ article ol {
     bottom: 0;
     float: left;
     top: 0;
-    opacity: 0.25;
-}
+    opacity: 0.30;
+}*/
 
 /*STUDENT & BUSINESSES*/
 
-.footer
+footer
 {
-    margin-top: 20px;
     clear:both;
     font-family: 'Open Sans', sans-serif;
-    color: #919191;
+    color: #FFFFFF;
     display: inline-block;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin-left: -8px;
-    margin-bottom: -8px;
-    width: 101.2%;
+    width: 100%;
     text-align: center;
     border-top: 2px solid #919191;
-    background-color: #ECECEC;
+    background-color: #919191;
+}
+footer img {
+  height: 36px;
 }

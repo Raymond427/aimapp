@@ -3,10 +3,9 @@
   <%= news.text_field :title %><br>
   <%= news.label :date %><br>
   <%= news.text_field :date %><br>
-  <%= news.label (:mediatype)</br>
-  Image <%= radio_button_tag :mediatype, 'Image', true %>
-  Video <%= radio_button_tag :mediatype, 'Video' %></br>
-  <b>Put the Image URL here, or put the embedded YouTube video here:</b></br>
+  <%= news.radio_button :mediatype, 'Image' %><%= news.label :mediatype, 'Image' %>
+  <%= news.radio_button :mediatype, 'Video' %><%= news.label :mediatype, 'Video' %><br/>
+  <b>Put the Image URL, or the embedded YouTube video here:</b></br>
   <%= news.text_area :thumburl %><br>
   <%= news.label :description %><br>
   <%= news.text_area :description %><br>

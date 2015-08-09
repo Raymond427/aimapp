@@ -1,7 +1,8 @@
 <%= render 'shared/header'%>
 <main>  
-  <div class="home_div">
-    <div class="col-md-4">
+  <div class="row">
+    <div class="col-md-8" id="desktop_img"></div>
+    <div class="col-md-4" id="home_left_div">
       <h2>
         Turning Creative Thinkers, Into Business Leaders
       </h2>
@@ -29,7 +30,7 @@
         <%= image_tag 'brokaw.jpg', :alt => 'Jeff Brokaw' %>
         <figcaption>
           <h3>Learn From The Best</h3>
-          <p>Successful small business owners give talks on a regular basis, about thier life story and how to suceed as an entrepreneur. Interactive workshops on important skills are also included.</p>
+          <p>Successful small business owners give talks on a regular basis about thier life story and how to suceed as an entrepreneur. Interactive workshops on important skills are also included.</p>
         </figcaption>
       </figure>
     </div>
@@ -44,14 +45,5 @@
     </div>
     <h4>You can contact AIM via email: <b>aimcharlotte@uncc.edu<b></h4>
   </section>
-  <!-- <div class="home_div">
-    <img class="Home_Img" src="https://d1q9wbuypc40mm.cloudfront.net/lvcqx9btxa5q2lh.jpg" />
-    <div>
-      <h2>
-        Giving Back
-      </h2>
-      <p>AIM also dedicate monthly time to the community through numerous campus outreach events for pre-college students, as well as volunteer work for the less fourtunate.</p>
-    </div>
-  </div> -->
 </main>
-<!-- <%= render 'shared/footer'%> -->
+<%= render 'shared/footer'%>

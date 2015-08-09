@@ -1,0 +1,11 @@
+<%= render 'shared/header'%>
+  <div class="involved_div">
+    <div class="shade"></div>
+    <%= link_to "Students", {:controller => 'pages', :action => 'students'}, class: 'involved_link' %>
+  </div>
+  <div class="involved_div">
+    <div class="shade"></div>
+    <%= link_to "Businesses", {:controller => 'pages', :action => 'businesses'}, class: 'involved_link' %>
+  </div>
+</body>
+</html>
