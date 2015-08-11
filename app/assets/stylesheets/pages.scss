@@ -6,6 +6,7 @@ html {
   height: 100%;
 }
 main p {
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px !important;
 }
 nav {
@@ -221,6 +222,23 @@ figcaption {
 
 /*NEWS*/
 
+.RECESS {
+  background-image: url(/images/concert.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #FFFFFF;
+  padding: 0;
+  height: 400px;
+  margin-bottom: 15px;
+}
+.shade{
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
 .news figure img, iframe {
   float: left;
   width: 50%;
@@ -248,7 +266,7 @@ figcaption {
 }
 /*NEWS*/
 
-/*GET INVOLVED*/
+/*SPONSORSHIP*/
 article
 {
     margin-top: 25px;
@@ -257,134 +275,23 @@ article
     margin-right: auto;
     font-family: 'Open Sans', sans-serif;
     color: #FFFFFF;
-    padding: 10px;
+    padding: 20px;
     background-color: #66AA33;
 }
-article p {
+article p, ol {
   text-align: left;
 }
-article ol {
-  text-align: left;
-}
-
 #corporate_button
 {
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 5px #FFFFFF;
-    background-color: #66AA33;
-    text-align: center;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0;
+  border: solid 5px #FFFFFF;
+  background-color: #66AA33;
+  text-align: center;
 }
-
-
-/*GET INVOLVED*/
-
-/*STUDENT & BUSINESSES*/
-
-.involved_div {
-  height: 95%;
-  width: 50%;
-  background: url(/images/school.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  float: left;
-  z-index: 0;
-}
-.involved_div:nth-child(2) {
-  border: solid black 5px;
-}
-.shade{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-.involved_link
-{
-  font-size: 36px;
-  color: #65A933 !important;
-}
-
-/*
-.involved_body
-{
-    margin-top: 5%;
-    text-align: center;
-}
-#involved_button a
-{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 36px;
-    color: #65A933;
-    text-decoration: none;
-    display: block;
-    top: 50%;
-    width: 30%;
-    z-index: 2;
-    text-align: center;
-    margin-top: 30%;
-    margin-left: auto;
-    margin-right: auto;
-}
-#involved_students
-{
-    position: absolute;
-    display: block;
-    background: url(/images/school.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    left: 0;
-    width: 50%;
-    height:95%;
-    bottom: 0;
-    float: left;
-    top: 5%;
-}
-#involved_business
-{
-    position: absolute;
-    display: block;
-    background-image: url(/images/businesses.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    right: 0;
-    width: 50%;
-    height:95%;
-    bottom: 0;
-    float: right;
-    top: 5%;
-}
-
-#students_shade
-{
-    background-color: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    width: 100%;
-    height:100%;
-    bottom: 0;
-    float: right;
-    top: 0;
-    opacity: 0.30;
-}
-#business_shade
-{
-    background-color: black;
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height:100%;
-    bottom: 0;
-    float: left;
-    top: 0;
-    opacity: 0.30;
-}*/
+/*SPONSORSHIP*/
 
 /*STUDENT & BUSINESSES*/
 

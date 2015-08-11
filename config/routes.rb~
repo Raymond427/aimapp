@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :join_mailers
+
   get 'login' => 'sessions#new'
 
   post 'login' => 'sessions#create'
@@ -74,10 +76,9 @@ Rails.application.routes.draw do
   #   end
 
   get 'pages/home' #refers to the controller Pages and the method within it 'home'
-  get 'pages/erb_demo'
-  get 'pages/Get_Involved'
-  get 'pages/Calendar'
-  get 'pages/Students'
-  get 'pages/Businesses'
+  get 'pages/sponsorship'
+  get 'pages/calendar'
+  get 'pages/students'
+  get 'pages/businesses'
   root 'pages#home' #makes the home page our default webpage
 end

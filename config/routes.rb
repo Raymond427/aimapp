@@ -76,10 +76,10 @@ Rails.application.routes.draw do
   #   end
 
   get 'pages/home' #refers to the controller Pages and the method within it 'home'
-  get 'pages/erb_demo'
-  get 'pages/getinvolved'
+  get 'pages/sponsorship'
   get 'pages/calendar'
   get 'pages/students'
   get 'pages/businesses'
+  get 'pages/recess'
   root 'pages#home' #makes the home page our default webpage
 end

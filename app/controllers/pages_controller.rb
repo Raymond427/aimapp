@@ -2,10 +2,10 @@ class PagesController < ApplicationController
   def home
   end
   
-  def erb_demo
+  def sponsorship
   end
-  
-  def getinvolved
+
+  def recess
   end
 
   def calendar

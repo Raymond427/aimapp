@@ -8,6 +8,14 @@
   </p>
 </header>
 <main>
+    <div class="RECESS">
+      <div class="shade">
+        <h1>INSPIRATION. INNOVATION. CELEBRATION.</h1>
+        <h2>Entreprenurial Music Festival RECESS</h2>
+        <h2>October, 7th 2015</h2>
+        <%= button_to "Learn More", {:controller => :pages, :action => :recess}, {:method => :get } %>
+      </div>
+    </div>
 <% if current_user && current_user.editor? || current_user && current_user.admin? %>
   <%= button_to "Post an Update", new_news_path, :class => "button", :method => :get  %></br>
 <% end %>
