@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20150726193823) do
   create_table "members", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.text     "thumburl"
-    t.text     "linkedinurl"
+    t.string   "thumburl"
+    t.string   "linkedinurl"
     t.string   "major"
     t.string   "email"
     t.string   "graduation_date"

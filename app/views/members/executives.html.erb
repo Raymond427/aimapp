@@ -20,7 +20,7 @@
         <p>
           <b><%= member.executive_position %></b>
         </p>
-        <% if member.linkedinurl.length > 3 %>
+        <% if member.linkedinurl == nil %>
           <p>
             <script id= "linkedin" src="//platform.linkedin.com/in.js" type="text/javascript"></script>
             <script type="IN/MemberProfile" data-id="<%= member.linkedinurl %>" data-format="hover" data-text="<%= member.first_name + " " %> <%= member.last_name %>" data-related="false"></script>

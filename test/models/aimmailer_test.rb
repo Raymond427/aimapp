@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class JoinMailerTest < ActiveSupport::TestCase
+class AimmailerTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

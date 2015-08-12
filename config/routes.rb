@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :join_mailers
-
   get 'login' => 'sessions#new'
 
   post 'login' => 'sessions#create'
