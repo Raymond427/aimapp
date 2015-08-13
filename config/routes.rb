@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'aimmailer/index'
+
+  get 'aimmailer/edit'
+
+  get 'aimmailer/update'
+
+  get 'aimmailer/destroy'
+
+  get 'aimmailer/delete'
+
   get 'login' => 'sessions#new'
 
   post 'login' => 'sessions#create'

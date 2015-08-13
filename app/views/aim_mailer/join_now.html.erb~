@@ -1,5 +1,0 @@
-<h1>AimMailer#join_now</h1>
-
-<p>
-  <%= @greeting %>, find me in app/views/aim_mailer/join_now.html.erb
-</p>

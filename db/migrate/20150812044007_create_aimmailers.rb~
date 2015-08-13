@@ -1,6 +1,6 @@
 class CreateAimMailers < ActiveRecord::Migration
   def change
-    create_table :aimmailers do |t|
+    create_table :aim_mailers do |t|
       t.string :type
       t.string :first_name
       t.string :last_name

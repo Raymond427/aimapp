@@ -1,0 +1,25 @@
+<%= form_for(@mail) do |mail| %>
+  <%= mail.label :first_name %><br>
+  <%= mail.text_field :first_name %><br>
+  <%= mail.label :last_name %><br>
+  <%= mail.text_field :last_name %><br>
+  <% if @mail.type == 'contact_us' %>
+    <%= mail.label :company %></br>
+    <%= mail.text_field :comany %></br>
+    <%= mail.label :subject %><br>
+    <%= mail.text_field :subject %><br>
+  <% else @mail.type == 'join_now' %>
+    <%= member.label :major %><br>
+    <%= member.select(:major) do %>
+      <% @majors.each do |major| %>
+        <%= content_tag(:option, major, value: major) %>
+      <% end %>
+    <% end %>
+  <% end %></br>
+  <%= mail.label :phone_number %>
+  <%= mail.phone_number :phone_number %>
+  <%= mail.label :message %><br>
+  <%= mail.text_area :message %><br><br>
+  <%= mail.submit %>
+<%= link_to "Cancel", '/' %>
+<% end %>
