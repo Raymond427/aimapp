@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :join_mailers
+  get 'aimmailers/index'
+
+  get 'aimmailers/edit'
+
+  get 'aimmailers/update'
+
+  get 'aimmailers/destroy'
+
+  get 'aimmailers/delete'
 
   get 'login' => 'sessions#new'
 
@@ -80,5 +88,6 @@ Rails.application.routes.draw do
   get 'pages/calendar'
   get 'pages/students'
   get 'pages/businesses'
+  get 'pages/recess'
   root 'pages#home' #makes the home page our default webpage
 end

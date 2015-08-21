@@ -39,8 +39,19 @@
         </ul>
         <% if current_user %>
         <div class="nav navbar-nav navbar-right collapse navbar-collapse">
-          <li><%= link_to current_user.email %></li>
-          <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= current_user.email %>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><%= link_to 'Mail Database', :controller => 'guests', :action => 'index' %></li>
+                <li><%= link_to 'Log Out', logout_path, method: 'delete' %></li>
+              </ul>
+            </div>
+          </li>
+        </div>
         <% else %>
         <div class="nav navbar-nav navbar-right collapse navbar-collapse">
           <li><%= link_to "Administrator Log In", :controller => 'sessions', :action => 'new' %></li>

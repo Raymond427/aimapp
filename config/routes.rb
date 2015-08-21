@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
 
-  get 'aimmailer/index'
+  resources :guests
 
-  get 'aimmailer/edit'
+  get 'aimmailers/index'
 
-  get 'aimmailer/update'
+  get 'aimmailers/new'
 
-  get 'aimmailer/destroy'
+  get 'aimmailers/edit'
 
-  get 'aimmailer/delete'
+  get 'aimmailers/update'
+
+  get 'aimmailers/destroy'
+
+  get 'aimmailers/delete'
 
   get 'login' => 'sessions#new'
 

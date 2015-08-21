@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @guest.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @guest.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @guest.email %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @guest.phone_number %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @guest.company %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @guest.subject %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @guest.message %>
+</p>
+
+<p>
+  <strong>Major:</strong>
+  <%= @guest.major %>
+</p>
+
+<p>
+  <strong>Grad date:</strong>
+  <%= @guest.grad_date %>
+</p>
+
+<%= link_to 'Edit', edit_guest_path(@guest) %> |
+<%= link_to 'Back', guests_path %>

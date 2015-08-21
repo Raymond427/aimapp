@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= @guest.first_name + ' ' + guest.last_name %> wants to join Advancing Innovative Minds!</h1>
+      <p>E-Mail: <%= @guest.email %></p>
+      <p>Major: <%= @guest.major %></p>
+      <p>Graduation Date: <%= @guest.grad_date %></p>
+      <p>Phone Number: <%= @guest.phone_number %></p>
+      <p><%= @guest.message %></p>
+    <p>
+      Add <%= @guest.first_name %> to our GroupMe and master email list.
+    </p>
+  </body>
+</html>

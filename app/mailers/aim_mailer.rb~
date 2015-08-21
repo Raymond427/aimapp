@@ -5,13 +5,13 @@ class AimMailer < ApplicationMailer
   #
   #   en.aim_mailer.join_now.subject
   #
-  def join_now(sender)
-    sender.type = 'join_now'
-    @sender = sender
-    @full_name = sender.first_name + ' ' + sender.last_name
-    @email = @sender.email
-    @message = @sender.message
-    @phone_number = @sender.phone_number
+  def join_now(aim_mailers)
+    aim_mailers.type = 'join_now'
+    @aim_mailers = aim_mailers
+    @full_name = aim_mailers.first_name + ' ' + aim_mailers.last_name
+    @email = @aim_mailers.email
+    @message = @aim_mailers.message
+    @phone_number = @aim_mailers.phone_number
     mail to: 'aimunccpresident@gmail.com', subject: '#{@full_name} + wants to join AIM!'
   end
 
@@ -20,14 +20,14 @@ class AimMailer < ApplicationMailer
   #
   #   en.aim_mailer.contact_us.subject
   #
-  def contact_us(sender)
-    sender.type = 'contact_us'
-    @sender = sender
-    @full_name = sender.first_name + ' ' + sender.last_name
-    @subject = @sender.subject
-    @email = @sender.email
-    @message = @sender.message
-    @company = @sender.company
-    @phone_number = @sender.phone_number
+  def contact_us(aim_mailers)
+    aim_mailers.type = 'contact_us'
+    @aim_mailers = aim_mailers
+    @full_name = aim_mailers.first_name + ' ' + aim_mailers.last_name
+    @subject = @aim_mailers.subject
+    @email = @aim_mailers.email
+    @message = @aim_mailers.message
+    @company = @aim_mailers.company
+    @phone_number = @aim_mailers.phone_number
     mail to: 'aimunccpresident@gmail.com', subject: @subject
 end

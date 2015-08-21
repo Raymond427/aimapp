@@ -1,5 +1,5 @@
 class AimMailer < ActiveRecord::Base
-after_save :send_mail
+after_save :send_mail, only: [:new, :create]
 
 def send_mail
   if type == 'contact_us'

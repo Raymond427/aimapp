@@ -3,11 +3,11 @@ class AimMailersController < ApplicationController
   before_action :form_vars, only: [:new, :edit]
 
   def find_mail
-    @mail = Aimmailer.find(params[:id])
+    @mail = AimMailers.find(params[:id])
   end
 
   def index
-    @mail = Aimmailer.all
+    @mail = AimMailers.all
   end
 
   def form_vars
@@ -15,11 +15,11 @@ class AimMailersController < ApplicationController
   end
 
   def new
-    @mail = Aimmailer.new
+    @mail = AimMailers.new
   end
 
   def create
-    @mail = Aimmailer.new(mail_params)
+    @mail = AimMailers.new(mail_params)
     if @mail.save
       @mail
       redirect_to(:controller => 'pages', :action => 'root')

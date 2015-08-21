@@ -1,0 +1,36 @@
+<%= form_for(@guest) do |f| %>
+  <% if @guest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+
+      <ul>
+      <% @guest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %>
+  <% if @guest.type == 'corporate' %>
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  <% elsif @guest.type == 'member' %>
+    <%= f.label :major %><br>
+    <%= f.text_field :major %>
+    <%= f.label :grad_date %><br>
+    <%= f.month_field :grad_date %>
+    <%= f.year_field :grad_date %>
+  <% end %>
+  <%= f.label :email %><br>
+  <%= f.text_field :email %>
+  <%= f.label :phone_number %><br>
+  <%= f.telephone_field :phone_number %>
+  <%= f.label :message %><br>
+  <%= f.text_area :message %>
+  <%= f.submit %>
+<% end %>

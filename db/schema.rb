@@ -11,16 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150726193823) do
+ActiveRecord::Schema.define(version: 20150821170459) do
 
-  create_table "join_mailers", force: :cascade do |t|
+  create_table "aim_mailers", force: :cascade do |t|
+    t.string   "type"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "major"
+    t.string   "subject"
+    t.string   "message"
+    t.string   "company"
+    t.string   "phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "guests", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.string   "phone_number"
+    t.string   "company"
+    t.string   "subject"
+    t.string   "message"
     t.string   "major"
     t.string   "grad_date"
-    t.string   "message"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
