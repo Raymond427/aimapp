@@ -10,27 +10,32 @@
       </ul>
     </div>
   <% end %>
-  <%= f.label :first_name %><br>
+  <b><%= 'First Name' %></b><br>
   <%= f.text_field :first_name %>
-  <%= f.label :last_name %><br>
+  <b><%= 'Last Name' %></b><br>
   <%= f.text_field :last_name %>
-  <% if @guest.type == 'corporate' %>
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
-    <%= f.label :subject %><br>
-    <%= f.text_field :subject %>
-  <% elsif @guest.type == 'member' %>
-    <%= f.label :major %><br>
-    <%= f.text_field :major %>
-    <%= f.label :grad_date %><br>
-    <%= f.month_field :grad_date %>
-    <%= f.year_field :grad_date %>
+  <%= f.label :major %><br>
+  <%= f.select(:major) do %>
+  <% @majors.each do |c| %>
+    <%= content_tag(:option, c, value: c) %>
   <% end %>
-  <%= f.label :email %><br>
+  <% end %>
+  <b><%= 'Graduation Date' %></b><br>
+  <%= f.select(:grad_date) do %>
+  <% @grad_month.each do |c| %>
+    <%= content_tag(:option, c, value: c) %>
+  <% end %>
+  <% end %>
+  <%= f.select(:grad_date) do %>
+  <% @grad_year.each do |c| %>
+    <%= content_tag(:option, c, value: c) %>
+  <% end %>
+  <% end %><br>
+  <b><%= 'Email' %></b> <%= 'UNCC studnet emails only (****@uncc.edu)' %><br>
   <%= f.text_field :email %>
-  <%= f.label :phone_number %><br>
+  <b><%= 'Phone Number' %></b><br>
   <%= f.telephone_field :phone_number %>
   <%= f.label :message %><br>
-  <%= f.text_area :message, size: "24x6" %>
+  <%= f.text_area :message, size: "24x5" %><br><br>
   <%= f.submit %>
 <% end %>

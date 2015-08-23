@@ -26,7 +26,7 @@
   <%= member.label :executive_position %><br>
   <%= member.select(:executive_position) do %>
   <% @executive.each do |c| %>
-    <%= content_tag(:option, c.last, value: c.last) %>
+    <%= content_tag(:option, c, value: c) %>
   <% end %>
 <% end %></br>
   <br><%= member.submit %>

@@ -1,10 +1,17 @@
 class GuestsController < ApplicationController
   before_action :set_guest, only: [:show, :edit, :update, :destroy]
+  before_action :form_vars, only: [:new, :edit]
 
   # GET /guests
   # GET /guests.json
   def index
     @guests = Guest.all
+  end
+
+  def form_vars
+    @majors = ['Accounting', 'Africana Studies', 'Anthropology', 'Architecture', 'Art', 'Art History', 'Athletic Training', 'Biology', 'Chemistry', 'Child and Family Development', 'Civil Engineering', 'Civil Engineering Technology', 'Computer Science', 'Computer Engineering', 'Construction Management', 'Criminal Justice', 'Dance', 'Earth and Environmental Sciences', 'Economics', 'Electrical Engineering', 'Electrical Engineering Technology', 'Elementary Education', 'English', 'Environmental Studies', 'Exercise Science', 'Finance', 'Fire Safety Engineering Technology', 'French', 'Geography', 'Geology', 'German', 'History', 'International Business', 'International Studies', 'Japanese', 'Latin American Studies', 'Management', 'Management Information Systems', 'Marketing', 'Mathematics', 'Mathematics for Business', 'Mechanical Engineering', 'Meteorology', 'Middle Grades Education', 'Music', 'Neurodiagnostics and Sleep Science', 'Nursing', 'Operations and Supply Chain Management', 'Philosophy', 'Physics', 'Political Science', 'Psychology', 'Public Health', 'Religious Studies', 'Respiratory Therapy', 'Social Work', 'Sociology', 'Spanish', 'Special Education', 'Systems Engineering', 'Theatre']
+    @grad_month = ['Fall', 'Summer', 'Spring']
+    @grad_year = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025']
   end
 
   # GET /guests/1
@@ -29,11 +36,11 @@ class GuestsController < ApplicationController
     respond_to do |format|
       if @guest.save
         #Send the new_member_email after saving
-        if @guest.type == 'corporate'
-          GuestMailer.corporate_email(@guest).deliver_later
-        elsif @guest.type == 'member'
+        #if @guest.type == 'corporate'
+          #GuestMailer.corporate_email(@guest).deliver_later
+        #elsif @guest.type == 'member'
           GuestMailer.new_member_email(@guest).deliver_later
-        end
+        #end
         format.html { redirect_to @guest, notice: 'Your message was sent!' }
         format.json { render :show, status: :created, location: @guest }
       else

@@ -17,9 +17,10 @@ class MembersController < ApplicationController
   end
 
   def form_vars
-    @majors = ['Computer Science', 'Mechanical Engineering']
-    @executive = [[1, 'President'], [2, 'Vice President'], [3, 'Treasurer'], [4, 'Director of Programs'], [5, 'Director of Strategic Partnerships'], [6, 'Director of Public Relations'], [7, 'Director of Publications'], [8, 'Director of Community Service'], [9, 'Director of Fundraising'], [10, 'Historian'], [11, 'Digital Administrator']]
-    @grad_year = [[1, 'Fall 2016'], [2, 'Spring 2016']]
+    @majors = ['Accounting', 'Africana Studies', 'Anthropology', 'Architecture', 'Art', 'Art History', 'Athletic Training', 'Biology', 'Chemistry', 'Child and Family Development', 'Civil Engineering', 'Civil Engineering Technology', 'Computer Science', 'Computer Engineering', 'Construction Management', 'Criminal Justice', 'Dance', 'Earth and Environmental Sciences', 'Economics', 'Electrical Engineering', 'Electrical Engineering Technology', 'Elementary Education', 'English', 'Environmental Studies', 'Exercise Science', 'Finance', 'Fire Safety Engineering Technology', 'French', 'Geography', 'Geology', 'German', 'History', 'International Business', 'International Studies', 'Japanese', 'Latin American Studies', 'Management', 'Management Information Systems', 'Marketing', 'Mathematics', 'Mathematics for Business', 'Mechanical Engineering', 'Meteorology', 'Middle Grades Education', 'Music', 'Neurodiagnostics and Sleep Science', 'Nursing', 'Operations and Supply Chain Management', 'Philosophy', 'Physics', 'Political Science', 'Psychology', 'Public Health', 'Religious Studies', 'Respiratory Therapy', 'Social Work', 'Sociology', 'Spanish', 'Special Education', 'Systems Engineering', 'Theatre']
+    @executive = ['President', 'Vice President', 'Treasurer', 'Director of Programs', 'Director of Strategic Partnerships', 'Director of Public Relations', 'Director of Publications', 'Director of Community Service', 'Director of Fundraising', 'Historian', 'Digital Administrator']
+    @grad_month = ['January', 'Februrary', 'March', 'April', 'May',  'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    @grad_year = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025']
   end
 
   def new

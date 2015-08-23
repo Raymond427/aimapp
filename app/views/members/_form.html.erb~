@@ -3,7 +3,7 @@
   <%= member.text_field :first_name %><br>
   <%= member.label :last_name %><br>
   <%= member.text_field :last_name %><br>
-  <a href="https://developer.linkedin.com/plugins/member-profile">Click here</a> to add a link to the executive's LinkedIn Profile<br>
+  Enter the executive's public LinkedIn address to add a link to the executive's LinkedIn Profile<br>
   <%= member.text_area :linkedinurl %><br>
   <%= member.label :thumburl %><br>
   <%= member.text_area :thumburl %><br>
