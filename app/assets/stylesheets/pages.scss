@@ -3,16 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html {
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
-}
-main p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px !important;
 }
 nav {
   background-color: #FFFFFF !important;
   border-bottom: solid 3px #65A933 !important;
-  padding-bottom: 0 !important;
+  padding-bottom: 10px !important;
   color: #919191;
 }
 .nav_img {
@@ -20,7 +15,7 @@ nav {
   margin-top: 5px;
 }
 .nav_img img {
-  height: 36px;
+  height: 48px;
 }
 .navbar, .navbar-default, .navbar-static-top{
   margin-bottom: 0 !important;
@@ -29,8 +24,13 @@ nav {
   background-color: #FFFFFF !important;
   border: none !important;
 }
-body {
-  height: 100%;
+#dropdownMenu2
+{
+  border-color: #65A933 !important;
+  margin-top: 10px !important;
+  margin-right: 10px !important;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #919191;
 }
 form {
   display: block;
@@ -61,9 +61,6 @@ footer ul li {
   display: inline;
   padding: 0 10px 0 10px;
 }
-.navbar {
-  margin-bottom: 0;
-}
 a:link
 {
     text-decoration: none;
@@ -73,7 +70,7 @@ a:link
 #mobile_img {
   padding-left: 10px !important;
   margin-top: 5px;
-  height: 36px;
+  height: 48px;
   display: inline !important;
   position: absolute;
 }
