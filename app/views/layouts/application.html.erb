@@ -1,14 +1,113 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Advancing</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- This is the title shown in your browser's title bar -->
+    <title>Advancing Innovative Minds</title>
+    <!-- Update keywords and description to help get picked up by search engines -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta name="keywords" content="Advancing Innovative Minds, AIM, UNCC AIM, AIM UNCC, aim uncc, unccaim, aimuncc, Charlotte, Entrepreneur, Entrepreneurship" />
+    <meta name="description" content="Advancing Innovative Minds (AIM) is UNC Charlotte's most active and dedicated entrepreneurial club. We plan on using the booming development of the Charlotte area as a catalyst to create truly effective ideas that will culminate into thriving businesses." />
+    <!-- This is a favicon (the icon you see when you bookmark a website). Favicons must have .ico extension. -->
+    <link rel="icon" src="favicon.ico" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css"/>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="hidden-sm visible-xs">
+            <%= image_tag 'logo.jpg', :id => 'mobile_img', :alt => 'logo' %>
+          </div>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class= "icon-bar"></span>
+            <span class= "icon-bar"></span>
+            <span class= "icon-bar"></span>
+          </button>
+        </div>
+        <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
+          <li>
+            <a class="nav_img hidden-xs" href= "/" title= "AIM | Home">
+              <%= image_tag 'logo.jpg', :alt => 'logo' %> 
+            </a>
+          </li>
+          <li><%= link_to "HOME", :controller => 'pages', :action => 'home' %></li>
+          <li><%= link_to "EXECUTIVE BOARD", :controller => 'members', :action => 'executives' %></li>
+          <!-- <li><%= link_to "MEMBERS", :controller => 'members', :action => 'index' %></li> -->
+          <li><%= link_to "NEWS", :controller => 'news', :action => 'index' %></li>
+          <li><%= link_to "CALENDAR", :controller => 'pages', :action => 'calendar' %></li>
+          <li><%= link_to "SPONSORSHIP", :controller => 'pages', :action => 'sponsorship' %></li>
+        </ul>
+        <div class="nav navbar-nav navbar-right collapse navbar-collapse">
+        <% if current_user %>
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= current_user.user_name %>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><%= link_to 'Mail Database', :controller => 'guests', :action => 'index' %></li>
+                <li><%= link_to 'Log Out', logout_path, method: 'delete' %></li>
+              </ul>
+            </div>
+          </li>
+        <% else %>
+          <li><%= link_to "Administrator Log In", :controller => 'sessions', :action => 'new' %></li>
+     <!-- <li><%= link_to "Sign Up", 'signup' %></li> -->
+        <% end %>  
+          <li>
+            <a class="nav_img hidden-sm hidden-xs" href= "https://www.uncc.edu" title= "Visit UNCC">
+              <%= image_tag 'school.gif', :alt => 'school' %>
+            </a>
+          </li>
+        </div>
+      </div>
+    </nav>
+  </head>
+  <body>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <div class="notice">
+          <%= flash[:notice] %>
+        </div>
+      </div>
+    <% end %>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
+  <footer>
+    <h4>
+      Find AIM On
+    <h4><br/>
+    <ul>
+      <li>
+        <a href= "https://www.facebook.com/aimuncc" title= "Like AIM on Facebook!">
+          <%= image_tag 'facebook.png', :alt => 'FB' %>
+        </a>
+      </li>
+      <li>
+        <a href= "https://www.linkedin.com/groups/Advancing-Innovative-Minds-8104445/about" title= "Join AIM on LinkedIn!">
+          <%= image_tag 'LinkedIn.png', :alt => 'LI' %>
+        </a>
+      </li>
+      <li>
+        <a href= "https://twitter.com/aimuncc" title= "Follow AIM on Twitter!">
+          <%= image_tag 'Twitter.png', :alt => 'T' %>
+        </a>
+      </li>
+      <li>
+        <a href= "http://instagram.com/uncc_aim" title= "Follow AIM on Instagram!">
+          <%= image_tag 'Instagram.png', :alt => 'IG' %>
+        </a>
+      </li>
+      <li>
+        <a href= "https://www.youtube.com/channel/UCrY4YxyA9gU0dPxcWLgTaYw" title= "Subscribe to AIM's YouTube channel!">
+          <%= image_tag 'YouTube.png', :alt => 'YT' %>
+        </a>
+      </li>
+    </ul>
+  </footer>
 </html>

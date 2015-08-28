@@ -5,4 +5,3 @@
   </h1>
 </header>
 <%= render 'form' %>
-<%= link_to "Label", :controller => :news, :action => :index %>

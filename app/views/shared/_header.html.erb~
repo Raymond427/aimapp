@@ -5,6 +5,9 @@
     <!-- This is the title shown in your browser's title bar -->
     <title>Advancing Innovative Minds</title>
     <!-- Update keywords and description to help get picked up by search engines -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
     <meta name="keywords" content="Advancing Innovative Minds, AIM, UNCC AIM, AIM UNCC, aim uncc, unccaim, aimuncc, Charlotte, Entrepreneur, Entrepreneurship" />
     <meta name="description" content="Advancing Innovative Minds (AIM) is UNC Charlotte's most active and dedicated entrepreneurial club. We plan on using the booming development of the Charlotte area as a catalyst to create truly effective ideas that will culminate into thriving businesses." />
     <!-- This is a favicon (the icon you see when you bookmark a website). Favicons must have .ico extension. -->
@@ -42,7 +45,7 @@
           <li>
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%= current_user.email %>
+                <%= current_user.user_name %>
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -64,7 +67,6 @@
       </div>
     </nav>
   </head>
-</html>
 <body>
 <% if flash[:notice] %>
   <div class="flash">
@@ -73,3 +75,8 @@
     </div>
   </div>
 <% end %>
+
+<%= yield %>
+
+</body>
+</html>

@@ -26,7 +26,7 @@ nav {
 }
 #dropdownMenu2
 {
-  border: #65A933 !important;
+  border-color: #65A933 !important;
   margin-top: 10px !important;
   margin-right: 10px !important;
   font-family: 'Open Sans', sans-serif !important;

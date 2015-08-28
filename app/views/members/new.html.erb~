@@ -4,5 +4,4 @@
     New Executive
   </h1>
 </header>
-<%= link_to "Label", :controller => :members, :action => :executives %>
 <%= render 'form' %>

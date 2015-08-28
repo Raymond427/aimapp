@@ -5,7 +5,6 @@
   </h1>
 </header>
 <%= render 'form' %>
-<%= link_to "Label", :controller => :news, :action => :index %>
 <% if flash[:notice] %>
     <div id="notice"><%= flash[:notice] %></div>
 <% end %>

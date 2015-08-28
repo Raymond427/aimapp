@@ -10,5 +10,5 @@
   <%= f.label :password %></br>
   <%= f.password_field :password %></br></br>
   <%= f.submit "Log In", class: "btn-submit" %>
-  <%= button_to "Cancel", :controller => :pages %>
+  <%= button_to "Cancel" %>
 <% end %>

@@ -3,9 +3,9 @@
   <h1>
     Join AIM Now!
   </h1>
-  <p>
+  <h3>
     Send us your email address and phone number to join our mailing list and GroupMe!
-  </p>
+  </h3>
 </header>
 <%= render 'form' %>
 
