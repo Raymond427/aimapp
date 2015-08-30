@@ -10,8 +10,9 @@ class CreateGuests < ActiveRecord::Migration
       t.string :message
       t.string :major
       t.string :grad_date
+      t.string :type
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end

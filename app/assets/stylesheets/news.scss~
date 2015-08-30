@@ -1,3 +1,44 @@
 // Place all the styles related to the news controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.news_head
+{
+    width: 90%;
+    top: 75px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #66AA33;
+}
+
+.event
+{
+    margin-top: 25px;
+    border-radius: 3px;
+    background-color: #66AA33;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+#event_pic
+{
+    width: 250px;
+    height: 250px;
+}
+
+#event_desc
+{
+    float: right;
+    font-size: 18px;
+    text-align: left;
+    width: 60%
+}

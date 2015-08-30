@@ -10,7 +10,7 @@ class GuestsController < ApplicationController
 
   def form_vars
     @majors = ['Accounting', 'Africana Studies', 'Anthropology', 'Architecture', 'Art', 'Art History', 'Athletic Training', 'Biology', 'Chemistry', 'Child and Family Development', 'Civil Engineering', 'Civil Engineering Technology', 'Computer Science', 'Computer Engineering', 'Construction Management', 'Criminal Justice', 'Dance', 'Earth and Environmental Sciences', 'Economics', 'Electrical Engineering', 'Electrical Engineering Technology', 'Elementary Education', 'English', 'Environmental Studies', 'Exercise Science', 'Finance', 'Fire Safety Engineering Technology', 'French', 'Geography', 'Geology', 'German', 'History', 'International Business', 'International Studies', 'Japanese', 'Latin American Studies', 'Management', 'Management Information Systems', 'Marketing', 'Mathematics', 'Mathematics for Business', 'Mechanical Engineering', 'Meteorology', 'Middle Grades Education', 'Music', 'Neurodiagnostics and Sleep Science', 'Nursing', 'Operations and Supply Chain Management', 'Philosophy', 'Physics', 'Political Science', 'Psychology', 'Public Health', 'Religious Studies', 'Respiratory Therapy', 'Social Work', 'Sociology', 'Spanish', 'Special Education', 'Systems Engineering', 'Theatre']
-    @grad_month = ['January', 'Februrary', 'March', 'April', 'May',  'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    @grad_season = ['Fall', 'Summer', 'Spring']
     @grad_year = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025']
   end
 
@@ -82,6 +82,6 @@ class GuestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guest_params
-      params.require(:guest).permit(:first_name, :last_name, :email, :phone_number, :company, :subject, :message, :major, :grad_date, :type)
+      params.require(:guest).permit(:first_name, :last_name, :email, :phone_number, :company, :subject, :message, :major, :grad_season, :grad_year, :type)
     end
 end

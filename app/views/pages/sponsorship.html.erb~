@@ -1,4 +1,3 @@
-<%= render 'shared/header'%>
 <header>
   <h1>
     Let AIM Represent You!
@@ -11,12 +10,10 @@
     <button id="corporate_button" href="https://orgsync.com/83120/files/627107/download">
   Download the 2015-2016 AIM Corporate Partnership Packet
     </button></br></br>
-    <p>Please send us a message if you have any questions regarding our sponsorhsip plans</p>
-      <%= button_to "Contact Us", {:controller => :guests, :action => :new}, {:method => :get } %>
-    </p>
+    <p>Please email any of our executives if you have any questions regarding our sponsorhsip plans</p>
     <p>You can donate securely through PayPal using this link:</p>
     <button>
-     Dontate
+     PayPal link coming soon!
     </button>
   </article>
 </main>

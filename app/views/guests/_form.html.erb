@@ -16,20 +16,20 @@
   <%= f.text_field :last_name %>
   <%= f.label :major %><br>
   <%= f.select(:major) do %>
-  <% @majors.each do |c| %>
-    <%= content_tag(:option, c, value: c) %>
-  <% end %>
+    <% @majors.each do |c| %>
+      <%= content_tag(:option, c, value: c) %>
+    <% end %>
   <% end %>
   <b><%= 'Graduation Date' %></b><br>
-  <%= f.select(:grad_date) do %>
-  <% @grad_month.each do |c| %>
-    <%= content_tag(:option, c, value: c) %>
+  <%= f.select(:grad_season) do %>
+    <% @grad_season.each do |c| %>
+      <%= content_tag(:option, c, value: c) %>
+    <% end %>
   <% end %>
-  <% end %>
-  <%= f.select(:grad_date) do %>
-  <% @grad_year.each do |c| %>
-    <%= content_tag(:option, c, value: c) %>
-  <% end %>
+  <%= f.select(:grad_year) do %>
+    <% @grad_year.each do |c| %>
+      <%= content_tag(:option, c, value: c) %>
+    <% end %>
   <% end %><br>
   <b><%= 'Email' %></b> <%= 'UNCC studnet emails only (****@uncc.edu)' %><br>
   <%= f.text_field :email %>

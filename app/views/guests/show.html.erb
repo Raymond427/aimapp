@@ -41,8 +41,8 @@
 </p>
 
 <p>
-  <strong>Grad date:</strong>
-  <%= @guest.grad_date %>
+  <strong>Graduation Date:</strong>
+  <%= @guest.grad_season + ' ' + @guest.grad_year %>
 </p>
 
 <%= link_to 'Edit', edit_guest_path(@guest) %> |

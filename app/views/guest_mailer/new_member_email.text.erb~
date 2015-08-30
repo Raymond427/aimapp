@@ -1,0 +1,14 @@
+<%= @guest.first_name + ' ' + @guest.last_name %> wants to join Advancing Innovative Minds!
+===============================================
+ 
+E-Mail: <%= @guest.email %>
+
+Major: <%= @guest.major %>
+
+Graduation Date: <%= @guest.grad_season %> + ' ' + <%= @guest.grad_year %>
+
+Phone Number: <%= @guest.phone_number %>
+
+<%= @guest.message %>
+
+Add <%= @guest.first_name %> to our GroupMe and master email list.

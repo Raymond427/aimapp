@@ -16,19 +16,6 @@ ActiveRecord::Schema.define(version: 20150821170459) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "aim_mailers", force: :cascade do |t|
-    t.string   "type"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "major"
-    t.string   "subject"
-    t.string   "message"
-    t.string   "company"
-    t.string   "phone_number"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "guests", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -38,9 +25,11 @@ ActiveRecord::Schema.define(version: 20150821170459) do
     t.string   "subject"
     t.string   "message"
     t.string   "major"
-    t.string   "grad_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "grad_season"
+    t.string   "grad_year"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "members", force: :cascade do |t|
