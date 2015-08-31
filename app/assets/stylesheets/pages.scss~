@@ -2,7 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
+}
+html p {
+  font-size: 14px !important;
 }
 header h3 {
   color: #919191;
@@ -12,6 +15,14 @@ nav {
   border-bottom: solid 3px #65A933 !important;
   padding-bottom: 10px !important;
   color: #919191;
+}
+.navbar-nav li a {
+  margin-top: 10px !important;
+  padding-left: 7px !important;
+  padding-right: 7px !important;
+}
+.navbar-nav li a:hover {
+  color: #65A933 !important;
 }
 .nav_img {
   padding: 0 !important;
@@ -68,6 +79,13 @@ a:link
   height: 48px;
   display: inline !important;
   position: absolute;
+}
+#dropdownMenu2 {
+  border-color: #65A933 !important;
+  margin-top: 10px !important;
+  margin-right: 10px !important;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #919191;
 }
 /*HOME*/
 
@@ -132,10 +150,6 @@ a:link
 }
 
 /*HOME*/
-
-/*EVENTS*/
-
-/*EVENTS*/
 
 /*EXECUTIVE BOARD*/
 section
@@ -285,7 +299,7 @@ table {
 th, td {
   border: solid 1px #919191;
   text-decoration: none;
-  padding: 3px !important;
+  padding: 5px !important;
   color: #919191 !important;
 }
 
