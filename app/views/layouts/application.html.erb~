@@ -10,6 +10,7 @@
     <%= csrf_meta_tags %>
     <meta name="keywords" content="Advancing Innovative Minds, AIM, UNCC AIM, AIM UNCC, aim uncc, unccaim, aimuncc, Charlotte, Entrepreneur, Entrepreneurship" />
     <meta name="description" content="Advancing Innovative Minds (AIM) is UNC Charlotte's most active and dedicated entrepreneurial club. We plan on using the booming development of the Charlotte area as a catalyst to create truly effective ideas that will culminate into thriving businesses." />
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
     <!-- This is a favicon (the icon you see when you bookmark a website). Favicons must have .ico extension. -->
     <link rel="icon" src="favicon.ico" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css"/>
@@ -17,7 +18,7 @@
       <div class="container">
         <div class="navbar-header">
           <div class="hidden-sm visible-xs">
-            <%= image_tag 'logo.jpg', :id => 'logo_img', :alt => 'logo' %>
+            <%= image_tag 'logo.jpg', :id => 'mobile_img', :alt => 'logo' %>
           </div>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle Navigation</span>
@@ -26,10 +27,12 @@
             <span class= "icon-bar"></span>
           </button>
         </div>
-        <a class="nav_img hidden-xs" id="logo_img" href= "/" title= "AIM | Home">
-          <%= image_tag 'logo.jpg', :alt => 'logo' %> 
-        </a>
         <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
+          <li>
+            <a class="nav_img hidden-xs" href= "/" title= "AIM | Home">
+              <%= image_tag 'logo.jpg', :alt => 'logo' %> 
+            </a>
+          </li>
           <li><%= link_to "HOME", :controller => 'pages', :action => 'home' %></li>
           <li><%= link_to "EXECUTIVE BOARD", :controller => 'members', :action => 'executives' %></li>
           <!-- <li><%= link_to "MEMBERS", :controller => 'members', :action => 'index' %></li> -->
