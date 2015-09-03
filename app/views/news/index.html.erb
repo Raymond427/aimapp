@@ -23,7 +23,7 @@
     <figure>
       <% if news.mediatype == 'Image' %>
         <img src= <%= news.thumburl %> />
-      <% else %>
+      <% elsif news.mediatype == 'Video' %>
         <iframe src=<%= news.thumburl %> frameborder="0" allowfullscreen></iframe>
       <% end %>
       <figcaption>

@@ -55,7 +55,7 @@
             </div>
           </li>
         <% else %>
-          <li><%= link_to "Administrator Log In", :controller => 'sessions', :action => 'new' %></li>
+          <li><%= link_to "Admin Log In", :controller => 'sessions', :action => 'new' %></li>
      <!-- <li><%= link_to "Sign Up", 'signup' %></li> -->
         <% end %>  
           <li>
@@ -69,10 +69,8 @@
   </head>
   <body>
     <% if flash[:notice] %>
-      <div class="flash">
-        <div class="notice">
-          <%= flash[:notice] %>
-        </div>
+      <div id="notice">
+        <%= notice %>
       </div>
     <% end %>
 
@@ -82,7 +80,7 @@
   <footer>
     <h4>
       Find AIM On
-    <h4><br/>
+    </h4><br/>
     <ul>
       <li>
         <a href= "https://www.facebook.com/aimuncc" title= "Like AIM on Facebook!">

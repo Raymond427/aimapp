@@ -17,7 +17,7 @@ class MembersController < ApplicationController
   end
 
   def form_vars
-    @majors = ['Accounting', 'Africana Studies', 'Anthropology', 'Architecture', 'Art', 'Art History', 'Athletic Training', 'Biology', 'Chemistry', 'Child and Family Development', 'Civil Engineering', 'Civil Engineering Technology', 'Computer Science', 'Computer Engineering', 'Construction Management', 'Criminal Justice', 'Dance', 'Earth and Environmental Sciences', 'Economics', 'Electrical Engineering', 'Electrical Engineering Technology', 'Elementary Education', 'English', 'Environmental Studies', 'Exercise Science', 'Finance', 'Fire Safety Engineering Technology', 'French', 'Geography', 'Geology', 'German', 'History', 'International Business', 'International Studies', 'Japanese', 'Latin American Studies', 'Management', 'Management Information Systems', 'Marketing', 'Mathematics', 'Mathematics for Business', 'Mechanical Engineering', 'Meteorology', 'Middle Grades Education', 'Music', 'Neurodiagnostics and Sleep Science', 'Nursing', 'Operations and Supply Chain Management', 'Philosophy', 'Physics', 'Political Science', 'Psychology', 'Public Health', 'Religious Studies', 'Respiratory Therapy', 'Social Work', 'Sociology', 'Spanish', 'Special Education', 'Systems Engineering', 'Theatre']
+    @majors = ['Accounting', 'Africana Studies', 'Anthropology', 'Architecture', 'Art', 'Art History', 'Athletic Training', 'Biology', 'Chemistry', 'Child and Family Development', 'Civil Engineering', 'Civil Engineering Technology', 'Computer Science', 'Computer Engineering', 'Construction Management', 'Criminal Justice', 'Dance', 'Earth and Environmental Sciences', 'Economics', 'Electrical Engineering', 'Electrical Engineering Technology', 'Elementary Education', 'English', 'Environmental Studies', 'Exercise Science', 'Finance', 'Fire Safety Engineering Technology', 'French', 'Geography', 'Geology', 'German', 'History', 'International Business', 'International Studies', 'Japanese', 'Latin American Studies', 'Management', 'Management Information Systems', 'Marketing', 'Mathematics', 'Mathematics for Business', 'Mechanical Engineering', 'Meteorology', 'Middle Grades Education', 'Music', 'Neurodiagnostics and Sleep Science', 'Nursing', 'Operations & Supply Chain Management', 'Pre-Law', 'Philosophy', 'Physics', 'Political Science', 'Psychology', 'Public Health', 'Religious Studies', 'Respiratory Therapy', 'Social Work', 'Sociology', 'Spanish', 'Special Education', 'Systems Engineering', 'Theatre']
     @executive = ['President', 'Vice President', 'Treasurer', 'Director of Programs', 'Director of Strategic Partnerships', 'Director of Public Relations', 'Director of Publications', 'Director of Community Service', 'Director of Fundraising', 'Historian', 'Digital Administrator']
     @grad_month = ['Fall', 'Summer', 'Spring']
     @grad_year = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025']
@@ -28,37 +28,43 @@ class MembersController < ApplicationController
   end
 
   def create
-    @members = Member.new(members_params) #the new Members entry is recreated through the strong params method
-    @members.is_executive = true #Remove for members feature
+    respond_to do |format|
+      @members = Member.new(members_params) #the new Members entry is recreated through the strong params method
+      @members.is_executive = true #Remove for members feature
       if @members.save #if the entry saves
-        redirect_to(:action => 'executives', notice: '#{@member.first_name} #{@member.last_name} has been created') #show all of the present entries
+        format.html { redirect_to :action => 'executives', notice: '#{@member.first_name} #{@member.last_name} has been created!' } #show all of the present entries
         #flash[:notice] => 'Your news entry was saved!'
       else
         render(:action => 'new') #redisplay the create an entry page
         #flash[:notice] => 'There was an error, fill out the form carefully and try again'
       end
+    end
   end
 
   def edit 
   end
 
   def update
+    respond_to do |format|
       if @members.update_attributes(members_params)
         @members.is_executive = true #Remove for members feature
-        redirect_to(:action => 'executives', notice: '#{@member.first_name} #{@member.last_name} has been updated') #change for members
+        format.html { redirect_to :action => 'executives', notice: '#{@member.first_name} #{@member.last_name} has been updated!' }
         #flash[:notice] => 'News post was edited'
       else
         redirect_to(:action => 'executives') #change for members
       end
+    end
   end
 
   def delete
   end
   
   def destroy
-    Member.find(params[:id]).destroy
-    redirect_to(:action => 'executives', notice: '#{@member.first_name} #{@member.last_name} has been destroyed') #change for members
+    respond_to do |format|
+      Member.find(params[:id]).destroy
+      format.html { redirect_to :action => 'executives', notice: '#{@member.first_name} #{@member.last_name} has been updated!' } #change for members
     #flash[:notice] => 'The news post was erased'
+    end
   end
 
   def executives

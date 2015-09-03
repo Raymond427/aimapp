@@ -8,8 +8,9 @@ html {
 html p {
   font-size: 14px !important;
 }
+
 header h3 {
-  color: #919191;
+  color: #919191 !important;
 }
 nav {
   background-color: #FFFFFF !important;
@@ -38,6 +39,12 @@ nav {
 .navbar-toggle, .navbar-toggle:hover{
   background-color: #FFFFFF !important;
   border: none !important;
+}
+#notice {
+  background-color: #65A933;
+  color: #FFFFFF !important;
+  width: 100%;
+  text-align: center;
 }
 form {
   display: block;
@@ -237,7 +244,7 @@ figcaption {
   float: right;
   text-align: left;
   color: #FFFFFF;
-  width: 300px;
+  width: 250px !important;
   padding-top: 30px;
 }
 
@@ -246,7 +253,7 @@ figcaption {
     display: inline-block;
     border-radius: 3px;
     margin: 1%;
-    width: 700px;
+    max-width: 650px !important;
     hieght: 300px;
     background-color: #66AA33;
 }
@@ -257,7 +264,7 @@ article
 {
     margin-top: 3%;
     margin-bottom: 3%;
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     color: #FFFFFF;
@@ -300,11 +307,13 @@ footer
     display: inline-block;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-right: auto;
+    margin-left: auto;
     width: 100%;
     text-align: center;
     border-top: 2px solid #919191;
     background-color: #919191;
-    bottom: 0;
+    bottom: 0 !important;
 }
 footer img {
   height: 36px;

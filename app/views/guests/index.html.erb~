@@ -31,7 +31,7 @@
         <td><%= guest.subject %></td>
         <td><%= guest.message %></td>
         <td><%= guest.major %></td>
-        <td><%= @guest.grad_season + ' ' + @guest.grad_year %></td>
+        <td><%= guest.grad_season + ' ' + guest.grad_year %></td>
         <td><%= link_to 'Show', guest %></td>
         <td><%= link_to 'Edit', edit_guest_path(guest) %></td>
         <td><%= link_to 'Destroy', guest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
