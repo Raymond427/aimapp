@@ -14,7 +14,7 @@
     <!-- This is a favicon (the icon you see when you bookmark a website). Favicons must have .ico extension. -->
     <link rel="icon" src="favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <div class="hidden-sm visible-xs">
@@ -69,10 +69,8 @@
   </head>
   <body>
     <% if flash[:notice] %>
-      <div class="flash">
-        <div class="notice">
-          <%= flash[:notice] %>
-        </div>
+      <div id="notice">
+        <%= notice %>
       </div>
     <% end %>
 

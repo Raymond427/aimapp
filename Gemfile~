@@ -51,10 +51,6 @@ group :development, :test do
   gem 'bootstrap-sass'
   
   gem 'autoprefixer-rails'
-
-  gem 'rails_12factor'
-
-  gem 'ruby', '~> 2.0.0'
   
 end
 

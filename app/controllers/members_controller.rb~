@@ -31,13 +31,13 @@ class MembersController < ApplicationController
     respond_to do |format|
       @members = Member.new(members_params) #the new Members entry is recreated through the strong params method
       @members.is_executive = true #Remove for members feature
-        if @members.save #if the entry saves
-          format.html { redirect_to :action => 'executives', notice: '#{@member.first_name} #{@member.last_name} has been created!' } #show all of the present entries
-          #flash[:notice] => 'Your news entry was saved!'
-        else
-          render(:action => 'new') #redisplay the create an entry page
-          #flash[:notice] => 'There was an error, fill out the form carefully and try again'
-        end
+      if @members.save #if the entry saves
+        format.html { redirect_to :action => 'executives', notice: '#{@member.first_name} #{@member.last_name} has been created!' } #show all of the present entries
+        #flash[:notice] => 'Your news entry was saved!'
+      else
+        render(:action => 'new') #redisplay the create an entry page
+        #flash[:notice] => 'There was an error, fill out the form carefully and try again'
+      end
     end
   end
 
