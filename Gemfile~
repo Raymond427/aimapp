@@ -53,8 +53,6 @@ group :development, :test do
   gem 'autoprefixer-rails'
 
   gem 'figaro'
-
-  gem 'ruby', '~> 2.0.0'
   
 end
 

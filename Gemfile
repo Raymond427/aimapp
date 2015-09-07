@@ -53,6 +53,8 @@ group :development, :test do
   gem 'autoprefixer-rails'
 
   gem 'figaro'
+
+  gem 'rails_12factor'
   
 end
 
