@@ -12,7 +12,7 @@ class GuestsController < ApplicationController
   end
 
   def form_vars
-    @majors = ['Accounting', 'Africana Studies', 'Anthropology', 'Architecture', 'Art', 'Art History', 'Athletic Training', 'Biology', 'Business Administration', 'Chemistry', 'Child and Family Development', 'Civil Engineering', 'Civil Engineering Technology', 'Computer Science', 'Computer Engineering', 'Construction Management', 'Criminal Justice', 'Dance', 'Earth and Environmental Sciences', 'Economics', 'Electrical Engineering', 'Electrical Engineering Technology', 'Elementary Education', 'English', 'Environmental Studies', 'Exercise Science', 'Finance', 'Fire Safety Engineering Technology', 'French', 'Geography', 'Geology', 'German', 'History', 'International Business', 'International Studies', 'Japanese', 'Latin American Studies', 'Management', 'Management Information Systems', 'Marketing', 'Mathematics', 'Mathematics for Business', 'Mechanical Engineering', 'Meteorology', 'Middle Grades Education', 'Music', 'Neurodiagnostics and Sleep Science', 'Nursing', 'Operations & Supply Chain Management', 'Pre-Law', 'Philosophy', 'Physics', 'Political Science', 'Psychology', 'Public Health', 'Religious Studies', 'Respiratory Therapy', 'Social Work', 'Sociology', 'Spanish', 'Special Education', 'Systems Engineering', 'Theatre']
+    @majors = ['Accounting', 'Africana Studies', 'Anthropology', 'Architecture', 'Art', 'Art History', 'Athletic Training', 'Biology', 'Business Administration', 'Chemistry', 'Child and Family Development', 'Civil Engineering', 'Civil Engineering Technology', 'Computer Science', 'Computer Engineering', 'Construction Management', 'Criminal Justice', 'Dance', 'Earth and Environmental Sciences', 'Economics', 'Electrical Engineering', 'Electrical Engineering Technology', 'Elementary Education', 'English', 'Environmental Studies', 'Exercise Science', 'Finance', 'Fire Safety Engineering Technology', 'French', 'Geography', 'Geology', 'German', 'History', 'International Business', 'International Studies', 'Japanese', 'Latin American Studies', 'Management', 'Management Information Systems', 'Marketing', 'Mathematics', 'Mathematics for Business', 'Mechanical Engineering', 'Meteorology', 'Middle Grades Education', 'Music', 'Neurodiagnostics and Sleep Science', 'Nursing', 'Ops & Supply Chain Management', 'Pre-Law', 'Philosophy', 'Physics', 'Political Science', 'Psychology', 'Public Health', 'Religious Studies', 'Respiratory Therapy', 'Social Work', 'Sociology', 'Spanish', 'Special Education', 'Systems Engineering', 'Theatre']
     @grad_season = ['Fall', 'Spring', 'Summer']
     @grad_year = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025']
   end
@@ -42,9 +42,9 @@ class GuestsController < ApplicationController
         #if @guest.type == 'corporate'
           #GuestMailer.corporate_email(@guest).deliver_later
         #elsif @guest.type == 'member'
-          GuestMailer.new_member_email(@guest).deliver_later
+          #GuestMailer.new_member_email(@guest).deliver_later
         #end
-        format.html { redirect_to '/', notice: 'Your message was sent!' }
+        format.html { redirect_to '/', notice: 'We got your message! You will hear from us soon!' }
       else
         format.html { render :new }
         format.json { render json: @guest.errors, status: :unprocessable_entity }
@@ -57,7 +57,7 @@ class GuestsController < ApplicationController
   def update
     respond_to do |format|
       if @guest.update(guest_params)
-        format.html { redirect_to @guest, notice: 'Guest was successfully updated.' }
+        format.html { redirect_to @guest, notice: 'Message was successfully updated.' }
         format.json { render :show, status: :ok, location: @guest }
       else
         format.html { render :edit }
@@ -71,7 +71,7 @@ class GuestsController < ApplicationController
   def destroy
     @guest.destroy
     respond_to do |format|
-      format.html { redirect_to guests_url, notice: 'Guest was successfully destroyed.' }
+      format.html { redirect_to guests_url, notice: 'Message was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

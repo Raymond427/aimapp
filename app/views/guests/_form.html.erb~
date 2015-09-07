@@ -11,7 +11,7 @@
     </div>
   <% end %>
   <b><%= 'First Name' %></b><br>
-  <%= f.text_field :first_name %>
+  <%= f.text_field :first_name %><br>
   <b><%= 'Last Name' %></b><br>
   <%= f.text_field :last_name %>
   <%= f.label :major %><br>

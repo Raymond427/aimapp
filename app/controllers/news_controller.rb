@@ -3,16 +3,9 @@ class NewsController < ApplicationController
   before_action :require_editor, only: [:new, :show, :edit]
   before_action :require_admin, only: [:delete, :destroy]
   before_action :find_news, only: [:edit, :update, :delete, :destroy]
-  before_filter :check_for_cancel, only: [:create, :update]
 
   def find_news
     @news = News.find(params[:id])
-  end
-
-  def check_for_cancel
-    if params[:commit] == "Cancel"
-      redirect_to(:action => 'news')
-    end
   end
 
   def index
@@ -29,11 +22,9 @@ class NewsController < ApplicationController
   def create
     @news = News.new(news_params) #the new News entry is recreated through the strong params method
       if @news.save #if the entry saves
-        redirect_to(:action => 'index') #show all of the present entries
-        #flash[:notice] => "Your news entry was saved!"
+        redirect_to({ action: 'index' }, notice: @news.title + ' has been created!') #show all of the present entries
       else
-        render('new') #redisplay the create an entry page
-        #flash[:notice] => "There was an error, fill out the form carefully and try again"
+        redirect_to({ action: 'new' }, alert: 'There was an error, fill out the form carefully and try again')
       end
   end
 
@@ -42,8 +33,7 @@ class NewsController < ApplicationController
 
   def update
       if @news.update_attributes(news_params)
-        redirect_to(:action => 'index')
-        #flash[:notice] => "News post was edited"
+        redirect_to({ action: 'index' }, notice: @news.title + ' has been updated!')
       else
         render(:action => 'index')
       end
@@ -54,8 +44,7 @@ class NewsController < ApplicationController
 
   def destroy
     @news.destroy
-    redirect_to(:action => 'index')
-    #flash[:notice] => "The news post was erased"
+    redirect_to({ action: 'index' }, alert: 'The news post has been deleted!')
   end
   
   private

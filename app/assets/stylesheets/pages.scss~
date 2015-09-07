@@ -45,10 +45,17 @@ nav {
   width: 100%;
   text-align: center;
 }
+#alert {
+  background-color: #C52F24;
+  color: #FFFFFF !important;
+  width: 100%;
+  text-align: center;
+}
 form {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 10%;
   width: 200px;
   font-family: 'Open Sans', sans-serif;
 }
@@ -176,7 +183,7 @@ a:link
   }
 }
 
-@media screen and (max-width: 550px) 
+@media screen and (max-width: 505px) 
 {
   .board_member { /*All Exec blocks*/
     width: 70% !important;
@@ -190,6 +197,7 @@ a:link
   .board_member figure figcaption {
     float: none !important;
     width: auto !important;
+    padding-bottom: 5% !important;
   }
 }
 
@@ -294,6 +302,10 @@ figcaption {
 }
 /*NEWS*/
 
+.Events{
+  padding-bottom: 10%;
+}
+
 /*SPONSORSHIP*/
 article
 {
@@ -341,7 +353,6 @@ footer
     color: #FFFFFF;
     display: inline-block;
     padding-top: 5px;
-    padding-left: 0px !important;
     padding-bottom: 5px;
     margin-right: auto;
     margin-left: auto;
@@ -350,6 +361,9 @@ footer
     border-top: 2px solid #919191;
     background-color: #919191;
     bottom: 0 !important;
+}
+footer ul {
+    padding-left: 0px !important;
 }
 footer img {
   height: 36px;
