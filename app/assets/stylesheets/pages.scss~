@@ -186,7 +186,7 @@ a:link
 @media screen and (max-width: 505px) 
 {
   .board_member { /*All Exec blocks*/
-    width: 70% !important;
+    width: 50% !important;
   }
 
   .board_member figure img {
@@ -305,6 +305,8 @@ figcaption {
 .Events{
   width: 90%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 10%;
 }
 
