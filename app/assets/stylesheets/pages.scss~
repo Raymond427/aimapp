@@ -169,7 +169,7 @@ a:link
   .news figure img, iframe {
     float: none;
     width: 100% !important;
-    height: 300px !important;
+    height: 100% !important;
   }
 
   .news figcaption {
@@ -179,14 +179,14 @@ a:link
   }
 
   .news { /*All News blocks*/
-    width: 90% !important;
+    width: 80% !important;
   }
 }
 
 @media screen and (max-width: 505px) 
 {
   .board_member { /*All Exec blocks*/
-    width: 50% !important;
+    width: 60% !important;
   }
 
   .board_member figure img {
@@ -198,6 +198,14 @@ a:link
     float: none !important;
     width: auto !important;
     padding-bottom: 5% !important;
+  }
+
+  .board_member figure figcaption p {
+    font-size: 90% !important;
+  }
+  
+  .home_mid img {
+    width: 290px !important;
   }
 }
 
@@ -287,8 +295,8 @@ figcaption {
   float: right;
   text-align: left;
   color: #FFFFFF;
-  width: 250px !important;
-  padding-top: 30px;
+  padding-top: 0px !important;
+  width: 250px;
 }
 
 .news /*All News blocks*/
@@ -308,6 +316,11 @@ figcaption {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 10%;
+}
+.Events iframe {
+  padding-bottom: 10%;
+  height: 820px !important;
+  min-height: 30% !important;
 }
 
 /*SPONSORSHIP*/
