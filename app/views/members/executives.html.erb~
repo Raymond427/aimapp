@@ -11,6 +11,7 @@
   <%= button_to "New Executive", new_member_path, :class => "button", :method => :get  %></br>
 <% end %>
 <% @members.each do |member| %>
+  @executive_position.each do |a|
   <% full_name = member.first_name + member.last_name %>
   <section class="board_member">
     <figure>
@@ -26,7 +27,7 @@
           </p>
         <% else %>
           <p>
-            <%= member.first_name + " " %> <%= member.last_name %>
+            <b><%= member.first_name + " " %> <%= member.last_name %></b>
           </p>
         <% end %>
         <p>
