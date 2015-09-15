@@ -217,62 +217,66 @@ a:link {
 /*EXECUTIVE BOARD*/
 @media screen and (max-width: 700px) {
   /* line 169, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+  .new figure {
+    margin-top: -20px;
+    width: 100%;
+  }
+
+  /* line 173, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
   .news figure img, iframe {
+    height: 300px;
+    width: 100%;
     float: none;
-    width: 100% !important;
-    height: 100% !important;
   }
 
-  /* line 175, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+  /* line 179, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
   .news figcaption {
-    padding: 1%;
     float: none !important;
-    width: 90% !important;
   }
 
-  /* line 181, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+  /* line 183, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
   .news {
     /*All News blocks*/
     width: 80% !important;
   }
 }
 @media screen and (max-width: 505px) {
-  /* line 188, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+  /* line 190, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
   .board_member {
     /*All Exec blocks*/
     width: 60% !important;
   }
 
-  /* line 192, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+  /* line 194, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
   .board_member figure img {
     float: none !important;
     width: 100% !important;
     height: 100% !important;
   }
 
-  /* line 197, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+  /* line 199, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
   .board_member figure figcaption {
     float: none !important;
     width: auto !important;
     padding-bottom: 5% !important;
   }
 
-  /* line 203, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+  /* line 205, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
   .board_member figure figcaption p {
     font-size: 90% !important;
   }
 
-  /* line 207, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+  /* line 209, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
   .home_mid img {
     width: 290px !important;
   }
 }
-/* line 212, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 214, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 section {
   width: 100%;
 }
 
-/* line 217, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 219, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 header {
   margin-top: 15px;
   width: 90%;
@@ -283,20 +287,20 @@ header {
   color: #66AA33;
 }
 
-/* line 228, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 230, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 header p {
   font-size: 24px;
   color: #919191;
 }
 
-/* line 233, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 235, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 main {
   padding: -5px;
   display: inline;
   text-align: center;
 }
 
-/* line 240, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 242, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 .board_member {
   display: inline-block;
   border-radius: 3px;
@@ -305,7 +309,7 @@ main {
   background-color: #66AA33;
 }
 
-/* line 249, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 251, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 .board_member figure img {
   float: left;
   width: 50%;
@@ -313,7 +317,7 @@ main {
   width: 200px;
 }
 
-/* line 256, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 258, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 figcaption {
   float: right;
   margin-left: auto;
@@ -326,7 +330,7 @@ figcaption {
 
 /*EXECUTIVE BOARD*/
 /*NEWS*/
-/* line 270, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 272, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 .RECESS {
   background-image: url(/images/concert.jpg);
   background-size: cover;
@@ -338,7 +342,7 @@ figcaption {
   margin-bottom: 15px;
 }
 
-/* line 280, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 282, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 .shade {
   position: relative;
   background-color: rgba(0, 0, 0, 0.3);
@@ -347,7 +351,7 @@ figcaption {
   padding: 5%;
 }
 
-/* line 287, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 289, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 .news figure img, iframe {
   float: left;
   width: 50%;
@@ -355,7 +359,7 @@ figcaption {
   width: 375px;
 }
 
-/* line 294, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 296, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 .news figcaption {
   float: right;
   text-align: left;
@@ -364,7 +368,7 @@ figcaption {
   width: 250px !important;
 }
 
-/* line 302, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 304, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 .news {
   display: inline-block;
   border-radius: 3px;
@@ -375,7 +379,7 @@ figcaption {
 }
 
 /*NEWS*/
-/* line 313, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 315, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 .Events {
   width: 90%;
   height: auto;
@@ -384,7 +388,7 @@ figcaption {
   padding-bottom: 10%;
 }
 
-/* line 320, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 322, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 .Events iframe {
   padding-bottom: 10%;
   height: 820px !important;
@@ -392,7 +396,7 @@ figcaption {
 }
 
 /*SPONSORSHIP*/
-/* line 327, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 329, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 article {
   margin-top: 3%;
   margin-bottom: 3%;
@@ -404,12 +408,12 @@ article {
   background-color: #66AA33;
 }
 
-/* line 338, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 340, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 article p, ol {
   text-align: left;
 }
 
-/* line 341, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 343, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 #corporate_button {
   width: 200px;
   margin-left: auto;
@@ -422,13 +426,13 @@ article p, ol {
 
 /*SPONSORSHIP*/
 /*Mail Database */
-/* line 354, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 356, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 table {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 358, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 360, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 th, td {
   border: solid 1px #919191;
   text-decoration: none;
@@ -437,7 +441,7 @@ th, td {
 }
 
 /*STUDENT & BUSINESSES*/
-/* line 367, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 369, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 footer {
   clear: both;
   color: #FFFFFF;
@@ -453,12 +457,12 @@ footer {
   bottom: 0 !important;
 }
 
-/* line 382, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 384, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 footer ul {
   padding-left: 0px !important;
 }
 
-/* line 385, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
+/* line 387, /home/raymond/Documents/MyApps/AIM_2.0/Advancing/app/assets/stylesheets/pages.scss */
 footer img {
   height: 36px;
 }

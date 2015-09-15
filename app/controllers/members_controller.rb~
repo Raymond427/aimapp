@@ -54,7 +54,7 @@ class MembersController < ApplicationController
   
   def destroy
     Member.find(params[:id]).destroy
-    redirect_to({ action: 'executives' }, alert: @members.first_name + ' ' + @members.last_name + ' has been deleted!') #change for members
+    redirect_to({ action: 'executives' }, alert: 'The member has been deleted!') #change for members
   end
 
   def executives
