@@ -8,13 +8,9 @@
   <%= member.label :thumburl %><br>
   <%= member.text_area :thumburl %><br>
   <%= member.label :major %><br>
-  <%= member.select(:major) do %>
-  <% @majors.each do |major| %>
-    <%= content_tag(:option, major, value: major) %>
-  <% end %>
-<% end %></br>
+  <%= member.select(:major, @majors, {:selected => @members.major}) %>
   <%= member.label :email %><br>
-  <%= member.text_field :email %><br>
+  <%= member.text_field :email, placeholder: 'email' %><br>
   <%= member.label :graduation_date %><br>
   <%= member.select(:graduation_date) do %>
   <% [[1, 'Fall 2016'], [2, 'Spring 2016']].each do |c| %>
@@ -24,11 +20,7 @@
   <!-- <%= member.label(:is_executive, "Is this member an executive?") %>
   <%= member.check_box(:is_executive) %></br> -->
   <%= member.label :executive_position %><br>
-  <%= member.select(:executive_position, member_id) do %>
-  <% @executive.each do |c| %>
-    <%= content_tag(:option, c, value: c) %>
-  <% end %>
-<% end %></br>
+  <%= member.select(:executive_position, @executive, selected: @members.executive_position) %>
   <br><%= member.submit %>
 <%= link_to "Cancel", '/members/executives' %>
 <% end %>
