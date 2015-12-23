@@ -24,7 +24,7 @@
   <!-- <%= member.label(:is_executive, "Is this member an executive?") %>
   <%= member.check_box(:is_executive) %></br> -->
   <%= member.label :executive_position %><br>
-  <%= member.select(:executive_position) do %>
+  <%= member.select(:executive_position, member_id) do %>
   <% @executive.each do |c| %>
     <%= content_tag(:option, c, value: c) %>
   <% end %>
