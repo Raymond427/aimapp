@@ -14,16 +14,16 @@
   <section class="news">
     <figure>
       <% if news.mediatype == 'Image' %>
-        <img src= <%= news.thumburl %> />
+				<%= image_tag news.thumbnail.url(:preview), alt: news.title %>
       <% elsif news.mediatype == 'Video' %>
-        <iframe src=<%= news.thumburl %> frameborder="0" allowfullscreen></iframe>
+        <iframe src=<%= news.youtubeurl %> frameborder="0" allowfullscreen></iframe>
       <% end %>
       <figcaption>
         <p>
-          <h1><%= news.title %></h1>
+          <h2><%= news.title %></h2>
         </p>
         <p>
-          <%= news.date %>
+          <%= news.date.to_date.to_formatted_s(:long_ordinal) %>
         </p>
         <p>
           <%= news.description %>

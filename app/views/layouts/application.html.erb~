@@ -72,6 +72,10 @@
       <div id="notice">
         <%= notice %>
       </div>
+    <% elsif flash[:alert] %>
+      <div id="alert">
+        <%= alert %>
+      </div>
     <% end %>
 
     <%= yield %>

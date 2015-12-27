@@ -11,19 +11,18 @@
   <%= button_to "New Executive", new_member_path, :class => "button", :method => :get  %></br>
 <% end %>
 <% @members.each do |member| %>
-  @executive_position.each do |a|
   <% full_name = member.first_name + member.last_name %>
   <section class="board_member">
     <figure>
-      <img src= "<%= member.thumburl %>" alt= "<%= member.first_name + " " %> <%= member.last_name %>" height="90" width="110" />
+			<%= image_tag member.avatar.url(:preview), alt: member.first_name + ' ' + member.last_name %>
       <figcaption>
         <p>
           <b><%= member.executive_position %></b>
         </p>
         <% if member.linkedinurl.include? 'http' %>
           <p>
-            <b><script id= "linkedin" src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-            <script type="IN/MemberProfile" data-id="<%= member.linkedinurl %>" data-format="hover" data-text="<%= member.first_name + " " %> <%= member.last_name %>" data-related="false"></script></b>
+            <script id= "linkedin" src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+            <script type="IN/MemberProfile" data-id="<%= member.linkedinurl %>" data-format="hover" data-text="<%= member.first_name + " " %> <%= member.last_name %>" data-related="false"></script>
           </p>
         <% else %>
           <p>

@@ -2,11 +2,13 @@
   <%= news.label :title %><br>
   <%= news.text_field :title %><br>
   <%= news.label :date %><br>
-  <%= news.text_field :date %><br>
+  <%= news.date_field :date, value: @news.date %><br>
   <%= news.radio_button :mediatype, 'Image' %><%= news.label :mediatype, 'Image' %>
   <%= news.radio_button :mediatype, 'Video' %><%= news.label :mediatype, 'Video' %><br/>
-  <b>Put the Image URL, or the YouTube video URL here:</b></br>
-  <%= news.text_area :thumburl %><br>
+	<%= news.label :thumbnail, id: 'image_input' %><br>
+	<%= news.file_field :thumbnail, id: 'image_input' %><br>
+  <b id="video_input">Paste the YouTube video URL here:</b></br>
+  <%= news.text_area :youtubeurl, id: 'video_input' %><br>
   <%= news.label :description %><br>
   <%= news.text_area :description %><br>
   <br><%= news.submit %>

@@ -58,11 +58,11 @@ class MembersController < ApplicationController
   end
 
   def executives
-    @members = Member.where(is_executive: true).sort_by { |member| @executive.index(member.executive_position) }
+    @members = Member.where(is_executive: true).sort_by {|member| @executive.index(member.executive_position)}
   end
 
   private
     def members_params
-      params.require(:member).permit(:first_name, :last_name, :thumburl, :linkedinurl, :major, :email, :graduation_date, :is_executive, :executive_position)
+      params.require(:member).permit(:first_name, :last_name, :linkedinurl, :major, :email, :graduation_date, :is_executive, :executive_position, :avatar)
     end
 end

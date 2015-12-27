@@ -1,0 +1,5 @@
+class RemoveThumbnailFromMembers < ActiveRecord::Migration
+  def change
+    remove_column :member, :thumbnail, :string
+  end
+end

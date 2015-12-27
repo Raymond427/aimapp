@@ -13,4 +13,22 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets"
 @import "bootstrap"
+/*
+@font-face{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+html {
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+}
+html p {
+	font-size: 14px !important;
+}
+header h3 {
+	color: #919191 !important;
+}
+*/

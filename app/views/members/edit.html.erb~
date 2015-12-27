@@ -1,7 +1,7 @@
-<%= render 'shared/header'%>
 <header>
   <h1>
     Edit Executive <%= @members.first_name + " " %> <%= @members.last_name %>
   </h1>
 </header>
+<input type="date" name="date">
 <%= render 'form' %>

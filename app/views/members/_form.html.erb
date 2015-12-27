@@ -5,22 +5,18 @@
   <%= member.text_field :last_name %><br>
   Enter the executive's public LinkedIn address to add a link to the executive's LinkedIn Profile<br>
   <%= member.text_area :linkedinurl %><br>
-  <%= member.label :thumburl %><br>
-  <%= member.text_area :thumburl %><br>
+	<%= member.label :avatar %><br>
+	<%= member.file_field :avatar %><br>
   <%= member.label :major %><br>
   <%= member.select(:major, @majors, {:selected => @members.major}) %>
   <%= member.label :email %><br>
   <%= member.text_field :email, placeholder: 'email' %><br>
   <%= member.label :graduation_date %><br>
-  <%= member.select(:graduation_date) do %>
-  <% [[1, 'Fall 2016'], [2, 'Spring 2016']].each do |c| %>
-    <%= content_tag(:option, c.last, value: c.last) %>
-  <% end %>
-<% end %>
+  <%= member.select(:graduation_date, [[1, 'Fall 2016'], [2, 'Spring 2016']], selected: @members.graduation_date) %><br>
   <!-- <%= member.label(:is_executive, "Is this member an executive?") %>
   <%= member.check_box(:is_executive) %></br> -->
   <%= member.label :executive_position %><br>
-  <%= member.select(:executive_position, @executive, selected: @members.executive_position) %>
-  <br><%= member.submit %>
-<%= link_to "Cancel", '/members/executives' %>
+  <%= member.select(:executive_position, @executive, selected: @members.executive_position) %><br><br>
+	<%= member.submit %>
+	<%= link_to "Cancel", '/members/executives' %>
 <% end %>
