@@ -1,4 +1,3 @@
-<%= render 'shared/header'%>
 <div id="ghost">&nbsp;</div>
 <div class="Exec_head">
 <h1 id="Exec_Head">Members</h1>

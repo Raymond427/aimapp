@@ -49,6 +49,6 @@ class NewsController < ApplicationController
   
   private
     def news_params
-      params.require(:news).permit(:title, :date, :mediatype, :youtubeurl, :thumbnails, :description)
+      params.require(:news).permit(:title, :date, :mediatype, :youtubeurl, :thumbnail, :description)
     end
 end
