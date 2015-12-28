@@ -10,30 +10,18 @@
       </ul>
     </div>
   <% end %>
-  <b><%= 'First Name' %></b><br>
+  <%= f.label :first_name %><br>
   <%= f.text_field :first_name %><br>
-  <b><%= 'Last Name' %></b><br>
-  <%= f.text_field :last_name %>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %><br>
   <%= f.label :major %><br>
-  <%= f.select(:major) do %>
-    <% @majors.each do |c| %>
-      <%= content_tag(:option, c, value: c) %>
-    <% end %>
-  <% end %>
-  <b><%= 'Graduation Date' %></b><br>
-  <%= f.select(:grad_season) do %>
-    <% @grad_season.each do |c| %>
-      <%= content_tag(:option, c, value: c) %>
-    <% end %>
-  <% end %>
-  <%= f.select(:grad_year) do %>
-    <% @grad_year.each do |c| %>
-      <%= content_tag(:option, c, value: c) %>
-    <% end %>
-  <% end %><br>
-  <b><%= 'Email' %></b> <%= 'UNCC student emails only (****@uncc.edu)' %><br>
+  <%= f.select(:major, @majors) %><br>
+  <%= f.label :graduation_date %><br>
+  <%= f.select(:grad_season, @grad_month) %>
+  <%= f.select(:grad_year, Date.today.year..Date.today.year+5) %><br>
+  <%= f.label :email %><%= ' UNCC student emails only (****@uncc.edu)' %>
   <%= f.text_field :email %>
-  <b><%= 'Phone Number' %></b><br>
+  <%= f.label :phone_number %><br>
   <%= f.telephone_field :phone_number %>
   <%= f.label :message %><br>
   <%= f.text_area :message, size: "24x5" %><br><br>
