@@ -8,12 +8,12 @@
 	<%= member.label :avatar %><br>
 	<%= member.file_field :avatar %><br>
   <%= member.label :major %><br>
-  <%= member.select(:major, @majors, {:selected => @members.major}) %>
+  <%= member.select(:major, @majors, selected: @members.major) %>
   <%= member.label :email %><br>
-  <%= member.text_field :email, placeholder: 'email' %><br>
+  <%= member.text_field :email %><br>
   <%= member.label :graduation_date %><br>
   <%= member.select(:graduation_date, @grad_month, selected: @members.graduation_date) %>
-	<%= select_tag options_for_select(Date.today.year-1..Date.today.year+5) %><br>
+	<%= member.select(:graduation_date, Date.today.year..Date.today.year+5) %><br>
   <!-- <%= member.label(:is_executive, "Is this member an executive?") %>
   <%= member.check_box(:is_executive) %></br> -->
   <%= member.label :executive_position %><br>

@@ -60,8 +60,13 @@ form {
   font-family: 'Open Sans', sans-serif;
 }
 form input, textarea, select {
-  border: #919191 solid 1px;
+	padding: 5px;
+  border: #919191 solid 2px;
   border-radius: 5px;
+}
+form input:focus, textarea:focus, select:focus{
+	border-color: #65A933 !important;
+	outline: 0;
 }
 button, .btn-submit, input[type="submit"] {
   border: none;
@@ -146,7 +151,7 @@ a:link
 
 .home_mid h3 {
   text-align: center;
-  padding: 2% 0 2% 0;
+  padding: 0 0 2% 0;
 }
 
 .home_mid img {
@@ -310,7 +315,10 @@ th, td {
   border: solid 1px #919191;
   text-decoration: none;
   padding: 5px !important;
-  color: #919191 !important;
+  color: #919191;
+}
+table a:link{
+	color: #919191;
 }
 
 /*STUDENT & BUSINESSES*/
