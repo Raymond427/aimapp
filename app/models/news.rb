@@ -1,10 +1,10 @@
-class Member < ActiveRecord::Base
+class News < ActiveRecord::Base
   has_attached_file :thumbnail, styles: {
       thumb: ['100x100#',  :jpg, :quality => 70],
       preview: ['480x480#',  :jpg, :quality => 70],
       large:['600>',      :jpg, :quality => 70]
     },
-    :convert_options => {
+    convert_options: {
       thumb: '-set colorspace sRGB -strip',
       preview: '-set colorspace sRGB -strip',
       large: '-set colorspace sRGB -strip'

@@ -8,7 +8,7 @@
 	<%= member.label :avatar %><br>
 	<%= member.file_field :avatar %><br>
   <%= member.label :major %><br>
-  <%= member.select(:major, @majors, selected: @members.major) %>
+  <%= member.select(:major, @majors, selected: @members.major) %><br>
   <%= member.label :email %><br>
   <%= member.text_field :email %><br>
   <%= member.label :graduation_date %><br>
@@ -19,5 +19,5 @@
   <%= member.label :executive_position %><br>
   <%= member.select(:executive_position, @executive, selected: @members.executive_position) %><br><br>
 	<%= member.submit %>
-	<%= link_to "Cancel", '/members/executives' %>
+	<%= link_to "Cancel", '/members/executives', class: 'button' %>
 <% end %>
