@@ -68,7 +68,13 @@ description: 'President Dreu Dixon and the founder of Happzee.com, Zerrick Bynum
 {title: 'New Student Org of the Year!!', 
 date: '2015-04-20', 
 mediatype: 'Image', 
-description: 'AIM was chosen out of 51 new student organizations as the Outstanding New Student Organization of 2015!'}])
+description: 'AIM was chosen out of 51 new student organizations as the Outstanding New Student Organization of 2015!'},
+
+{title: 'Spring 2016 Interest Meeting!', 
+date: '2015-04-20', 
+mediatype: 'Image', 
+description: 'AIM was chosen out of 51 new student organizations as the Outstanding New Student Organization of 2015!'},
+])
 
 Member.create([
 {first_name: 'Raymond', 
