@@ -57,7 +57,7 @@ class MembersController < ApplicationController
   end
 
   def executives
-    @members = Member.where(is_executive: true).sort_by {|member| @executive.index(member.executive_position)}
+    @members = Member.where(is_executive: true)
   end
 
   private

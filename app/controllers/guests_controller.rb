@@ -45,7 +45,7 @@ class GuestsController < ApplicationController
         #end
         format.html { redirect_to '/', notice: 'We got your message! You will hear from us soon!' }
       else
-        format.html { render :new }
+        format.html { render :new, alert: 'There was an error, fill out the form carefully and try again' }
         format.json { render json: @guest.errors, status: :unprocessable_entity }
       end
     end

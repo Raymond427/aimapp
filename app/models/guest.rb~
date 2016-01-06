@@ -1,0 +1,6 @@
+class Guest < ActiveRecord::Base
+	validates_presence_of :first_name, message: 'Please enter your first name'
+	validates_presence_of :last_name, message: 'Please enter your last name'
+	validates_presence_of :major, message: 'Please enter a major'
+	validates_format_of :email, with: /\w+@uncc.edu\Z/, message: 'Please enter a valid email address'
+end

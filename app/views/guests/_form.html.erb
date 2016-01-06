@@ -1,30 +1,23 @@
+<%= @majors %>
 <%= form_for(@guest) do |f| %>
-  <% if @guest.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
-
-      <ul>
-      <% @guest.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <%= f.label :first_name %><br>
+  <%= f.label :first_name %>
+	<%= @guest.errors.get(:first_name).first unless @guest.errors.get(:first_name).nil? %><br>
   <%= f.text_field :first_name %><br>
-  <%= f.label :last_name %><br>
+  <%= f.label :last_name %>
+	<%= @guest.errors.get(:last_name).first unless @guest.errors.get(:last_name).nil? %><br>
   <%= f.text_field :last_name %><br>
   <%= f.label :major %><br>
-  <%= f.select(:major, @majors) %><br>
-  <%= f.label :graduation_date %><br>
-  <%= f.select(:grad_season, @grad_month) %>
-  <%= f.select(:grad_year, Date.today.year..Date.today.year+5) %><br>
-  <%= f.label :email %><%= ' UNCC student emails only (****@uncc.edu)' %>
-  <%= f.text_field :email %>
+  <%= f.select(:major, @majors, prompt: 'Select Major') %><br>
+  <%= f.label :graduation_date %>
+  <%= f.select(:grad_season, @grad_month, prompt: 'Month') %>
+  <%= f.select(:grad_year, Date.today.year..Date.today.year+5, prompt: 'Year') %><br>
+  <%= f.label :email %>
+	<%= @guest.errors.get(:email).first unless @guest.errors.get(:email).nil? %>
+  <%= f.text_field :email, placeholder: '***@uncc.edu' %>
   <%= f.label :phone_number %><br>
   <%= f.telephone_field :phone_number %>
   <%= f.label :message %><br>
-  <%= f.text_area :message, size: "24x5" %><br><br>
+  <%= f.text_area :message, size: '24x5' %><br><br>
   <%= f.submit 'Send Message' %>
-  <%= link_to "Cancel", '/' %>
+  <%= link_to 'Cancel', '/' %>
 <% end %>

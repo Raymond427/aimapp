@@ -7,7 +7,7 @@
   <%= news.radio_button :mediatype, 'Video', id: 'video_input' %><%= news.label :mediatype, 'Video' %><br/>
 	<%= news.label :thumbnail, id: 'image_input', class: 'news_media' %><br>
 	<%= news.file_field :thumbnail, id: 'image_input', class: 'news_media' %><br>
-  <b id="video_input" class="news_media">Paste the YouTube video URL here:</b></br>
+  <label id="video_input" class="news_media">Paste the YouTube video URL here:</label></br>
   <%= news.text_area :youtubeurl, id: 'video_input', class: 'news_media' %><br>
   <%= news.label :description %><br>
   <%= news.text_area :description %><br>
