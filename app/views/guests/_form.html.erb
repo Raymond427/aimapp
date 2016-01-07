@@ -1,4 +1,3 @@
-<%= @majors %>
 <%= form_for(@guest) do |f| %>
   <%= f.label :first_name %>
 	<%= @guest.errors.get(:first_name).first unless @guest.errors.get(:first_name).nil? %><br>
