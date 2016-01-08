@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
 
-  before_action :require_editor, only: [:new, :show, :edit]
+  before_action :require_user, only: [:new, :show, :edit]
   before_action :require_admin, only: [:delete, :destroy]
   before_action :find_news, only: [:edit, :update, :delete, :destroy]
 

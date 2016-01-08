@@ -9,7 +9,7 @@ class NewsController < ApplicationController
   end
 
   def index
-    @news = News.all.sort_by{|news| news.date.to_date} #sorts the news entries so that the latest feeds are on top
+    @news = News.all.sort_by{|news| news.date.to_date}.reverse #sorts the news entries so that the latest feeds are on top
   end
 
   def show #This is form filtering entries, this method won't be needed for news entries

@@ -59,9 +59,6 @@ form {
   width: 200px;
   font-family: 'Open Sans', sans-serif;
 }
-label{
-	font-weight: normal;
-}
 form input, textarea, select {
 	padding: 5px;
   border: #919191 solid 2px;
@@ -77,6 +74,7 @@ form input:focus, textarea:focus, select:focus{
 	outline: 0;
 }
 form label{
+	font-weight: normal;
 	color: #919191;
 }
 button, .btn-submit, input[type="submit"] {

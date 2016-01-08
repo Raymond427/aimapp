@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :guests
+
   get 'aimmailers/index'
+
+  get 'aimmailers/new'
 
   get 'aimmailers/edit'
 

@@ -5,7 +5,7 @@
   <%= news.date_field :date, value: @news.date %><br>
   <%= news.radio_button :mediatype, 'Image', id: 'image_input' %><%= news.label :mediatype, 'Image' %>
   <%= news.radio_button :mediatype, 'Video', id: 'video_input' %><%= news.label :mediatype, 'Video' %><br/>
-	<%= news.label :thumbnail, id: 'image_input', class: 'news_media' %><br>
+	<%= news.label 'Photo', id: 'image_input', class: 'news_media' %><br>
 	<%= news.file_field :thumbnail, id: 'image_input', class: 'news_media' %><br>
   <label id="video_input" class="news_media">Paste the YouTube video URL here:</label></br>
   <%= news.text_area :youtubeurl, id: 'video_input', class: 'news_media' %><br>

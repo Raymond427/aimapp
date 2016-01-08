@@ -1,19 +1,19 @@
 <%= form_for(@guest) do |f| %>
-  <%= f.label :first_name %>
+  <label>First Name</label>
 	<%= @guest.errors.get(:first_name).first unless @guest.errors.get(:first_name).nil? %><br>
   <%= f.text_field :first_name %><br>
-  <%= f.label :last_name %>
+  <label>Last Name</label>
 	<%= @guest.errors.get(:last_name).first unless @guest.errors.get(:last_name).nil? %><br>
   <%= f.text_field :last_name %><br>
-  <%= f.label :major %><br>
+  <label>Major</label><br>
   <%= f.select(:major, @majors, prompt: 'Select Major') %><br>
-  <%= f.label :graduation_date %>
+  <label>Graduation Date</label>
   <%= f.select(:grad_season, @grad_month, prompt: 'Month') %>
   <%= f.select(:grad_year, Date.today.year..Date.today.year+5, prompt: 'Year') %><br>
-  <%= f.label :email %>
+  <label>E-Mail</label>
 	<%= @guest.errors.get(:email).first unless @guest.errors.get(:email).nil? %>
   <%= f.text_field :email, placeholder: '***@uncc.edu' %>
-  <%= f.label :phone_number %><br>
+  <label>Phone Number</label><br>
   <%= f.telephone_field :phone_number %>
   <%= f.label :message %><br>
   <%= f.text_area :message, size: '24x5' %><br><br>
