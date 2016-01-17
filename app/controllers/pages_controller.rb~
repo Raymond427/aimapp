@@ -5,12 +5,12 @@ class PagesController < ApplicationController
   def sponsorship
   end
 
+  def recess
+  end
+
   def calendar
   end
 
   def students
-  end
-
-  def businesses
   end
 end

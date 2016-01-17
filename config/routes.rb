@@ -35,8 +35,6 @@ Rails.application.routes.draw do
 	get 'pages/home' #refers to the controller Pages and the method within it 'home'
   get 'pages/sponsorship'
   get 'pages/calendar'
-  get 'pages/students'
-  get 'pages/businesses'
   get 'pages/recess'
   root 'pages#home' #makes the home page our default webpage
   # The priority is based upon order of creation: first created -> highest priority.

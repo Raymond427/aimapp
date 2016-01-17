@@ -11,9 +11,4 @@ class PagesController < ApplicationController
   def calendar
   end
 
-  def students
-  end
-
-  def businesses
-  end
 end
