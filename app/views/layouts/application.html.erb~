@@ -14,12 +14,12 @@
     <!-- This is a favicon (the icon you see when you bookmark a website). Favicons must have .ico extension. -->
     <link rel="icon" src="favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <div class="hidden-sm visible-xs">
 						<a href="/" title= "Home">
-							<%= image_tag 'logo.jpg', :id => 'mobile_img', :alt => 'logo' %>
+							<%= image_tag 'logo.png', :id => 'mobile_img', :alt => 'logo' %>
 						</a>
           </div>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,7 +32,7 @@
         <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
           <li>
             <a class="nav_img hidden-xs" href= "/" title= "Home">
-              <%= image_tag 'logo.jpg', :alt => 'logo' %> 
+              <%= image_tag 'logo.png', :alt => 'logo' %> 
             </a>
           </li>
           <li><%= link_to 'HOME', :controller => 'pages', :action => 'home' %></li>
@@ -57,7 +57,8 @@
             </div>
           </li>
         <% else %>
-          <li><%= link_to 'ADMIN LOG IN', :controller => 'sessions', :action => 'new' %></li>
+					<li><%= button_to "Join Now", {:controller => :guests, :action => :new}, {:method => :get } %></li>
+     <!-- <li><%= link_to 'ADMIN LOG IN', :controller => 'sessions', :action => 'new' %></li> -->
      <!-- <li><%= link_to "Sign Up", 'signup' %></li> -->
         <% end %>  
           <li>

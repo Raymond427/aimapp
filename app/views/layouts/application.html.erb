@@ -14,7 +14,7 @@
     <!-- This is a favicon (the icon you see when you bookmark a website). Favicons must have .ico extension. -->
     <link rel="icon" src="favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <div class="hidden-sm visible-xs">
@@ -57,6 +57,7 @@
             </div>
           </li>
         <% else %>
+		 <!-- <li><%= button_to "Join Now", {:controller => :guests, :action => :new}, {:method => :get } %></li> -->
           <li><%= link_to 'ADMIN LOG IN', :controller => 'sessions', :action => 'new' %></li>
      <!-- <li><%= link_to "Sign Up", 'signup' %></li> -->
         <% end %>  

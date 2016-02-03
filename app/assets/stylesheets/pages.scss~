@@ -1,8 +1,19 @@
-// Place all the styles related to the Pages controller here.
+/* // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/ */
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url(/fonts/SourceSansPro-Light.ttf);
+}
+@font-face {
+	font-family: Source Sans Pro;
+	font-weight: bold;
+	src: url(/fonts/SourceSansPro-Regular.ttf);
+}
+h1, h2, h3, h4, h5, h6, li, a, figcaption, p, div {
+    font-family: Source Sans Pro !important;
+}
 html {
-  font-family: 'Open Sans', sans-serif !important;
   width: 100%;
 }
 html p {
@@ -11,13 +22,22 @@ html p {
 header h3 {
   color: #919191;
 }
+header {
+	visibility: hidden;
+	animation: fadeNdrop 1s ease-out forwards 0.2s;
+}
+main article, .eboard, .news_feed{
+	visibility: hidden;
+	animation: fadeIn 1s ease-out forwards 0.75s;
+}
 nav {
-  background-color: #FFFFFF !important;
-  border-bottom: solid 3px #65A933 !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  /* border-bottom: solid 3px #65A933 !important; */
   padding-bottom: 10px !important;
   color: #919191 !important;
 }
 .navbar-nav li a {
+	font-size: 16px;
   margin-top: 10px;
   padding-left: 7px !important;
   padding-right: 7px !important;
@@ -57,7 +77,6 @@ form {
   margin-right: auto;
   padding-bottom: 5%;
   width: 200px;
-  font-family: 'Open Sans', sans-serif;
 }
 form input, textarea, select {
 	padding: 5px;
@@ -83,6 +102,13 @@ button, .btn-submit, input[type="submit"] {
   border-radius: 5px;
   background-color: #65A933;
   color: #FFFFFF;
+	transition: background-color 0.5s;
+}
+button:hover, .btn-submit:hover, input[type="submit"]:hover {
+	background-color: #6FBC38;
+}
+button:focus, .btn-submit:focus, input[type="submit"]:focus {
+	background-color: #58952D;
 }
 input[value="Cancel"] {
   background-color: #919191;
@@ -340,6 +366,30 @@ footer ul {
 footer img {
   height: 36px;
 }
+/* <--------------------- KEYFRAMES -------------------> */
+@keyframes fadeNdrop{
+	from { 
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(10px);
+	}
+}
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+		visibility: hidden;
+	}
+	to{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+/* <--------------------- KEYFRAMES -------------------> */
 /* <--------------------- MEDIA QUERIES -------------------> 
    <---------------------    700px      -------------------> */
 
