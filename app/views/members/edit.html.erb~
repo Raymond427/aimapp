@@ -3,5 +3,4 @@
     Edit Executive <%= @members.first_name + " " %> <%= @members.last_name %>
   </h1>
 </header>
-<input type="date" name="date">
 <%= render 'form' %>

@@ -1,15 +1,16 @@
-<header>
-  <h1>
-    Executive Board
-  </h1>
-  <h3>
-  AIM&#39;s team consists of highly talented and creative individuals who are passionate about improving the world through teamwork and innovation.
-  </h3>
-</header>
 <main>
+	<header>
+	  <h1>
+	    Executive Board
+	  </h1>
+	  <h3>
+	  AIM&#39;s team consists of highly talented and creative individuals who are passionate about improving the world through teamwork and innovation.
+	  </h3>
+	</header>
 <% if current_user && current_user.editor? || current_user && current_user.admin? %>
   <%= button_to "New Executive", new_member_path, :class => "button", :method => :get  %></br>
 <% end %>
+	<div class="eboard">
 <% @members.each do |member| %>
   <% full_name = member.first_name + member.last_name %>
   <section class="board_member">
@@ -46,4 +47,5 @@
     </figure>
   </section>
 <% end %>
+	</div>
 </main>

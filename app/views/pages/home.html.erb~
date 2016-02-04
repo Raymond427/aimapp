@@ -32,7 +32,7 @@
     </div>
     <div class= "col-md-4 col-sm-3">
       <figure>
-        <%= image_tag 'CFL.png', :alt => 'Cystic Fibrosis Fundraiser' %>
+        <%= image_tag 'CFL.jpg', :alt => 'Cystic Fibrosis Fundraiser' %>
         <figcaption>
           <h3>Give Back</h3>
           <p>We also have a passion for giving back to the community. AIM also dedicates monthly time to the community through numerous campus outreach events for pre-college students, as well as volunteer work for the less fortunate.</p>

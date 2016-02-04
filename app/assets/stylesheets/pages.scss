@@ -10,21 +10,50 @@
 	font-weight: bold;
 	src: url(/fonts/SourceSansPro-Regular.ttf);
 }
-h1, h2, h3, h4, h5, h6, li, a, figcaption, p, div {
+h1, h2, h3, h4, h5, h6, li, a, figcaption, p, div, form label, form input, textarea, select {
     font-family: Source Sans Pro !important;
-}
-html {
-  width: 100%;
-}
-html p {
-  font-size: 16px;
-}
-header h3 {
-  color: #919191;
+		line-height: 1.5;
 }
 header {
 	visibility: hidden;
 	animation: fadeNdrop 1s ease-out forwards 0.2s;
+	margin-bottom: 15px;
+}
+header h1 {
+	color: #65A933;
+	font-weight: bold;
+}
+nav input[type="submit"] {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 12px;
+	margin-left: 90px;
+}
+nav form {
+	padding-bottom: 0;
+}
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 20px;
+}
+p {
+	font-size: 20px;
+}
+figcaption p {
+	font-size: 20px;
+	line-height: 1.5;
+}
+small {
+	color: #7F7F7F;
+	font-size: 12px;
+}
+main {
+	margin-top: 70px;
 }
 main article, .eboard, .news_feed{
 	visibility: hidden;
@@ -34,11 +63,12 @@ nav {
   background-color: rgba(255, 255, 255, 0.9) !important;
   /* border-bottom: solid 3px #65A933 !important; */
   padding-bottom: 10px !important;
-  color: #919191 !important;
+  color: #7F7F7F !important;
 }
 .navbar-nav li a {
 	font-size: 16px;
   margin-top: 10px;
+	font-weight: bold;
   padding-left: 7px !important;
   padding-right: 7px !important;
 }
@@ -72,6 +102,7 @@ nav {
   text-align: center;
 }
 form {
+	text-align: left;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -80,7 +111,7 @@ form {
 }
 form input, textarea, select {
 	padding: 5px;
-  border: #919191 solid 2px;
+  border: #7F7F7F solid 2px;
   border-radius: 5px;
 	resize: none;
 }
@@ -94,7 +125,7 @@ form input:focus, textarea:focus, select:focus{
 }
 form label{
 	font-weight: normal;
-	color: #919191;
+	color: #7F7F7F;
 }
 button, .btn-submit, input[type="submit"] {
   border: none;
@@ -111,7 +142,7 @@ button:focus, .btn-submit:focus, input[type="submit"]:focus {
 	background-color: #58952D;
 }
 input[value="Cancel"] {
-  background-color: #919191;
+  background-color: #7F7F7F;
   color: #FFFFFF;
 }
 a:link
@@ -130,7 +161,7 @@ a:link
   border-color: #65A933 !important;
   margin-top: 18px !important;
   margin-right: 10px !important;
-  color: #919191;
+  color: #7F7F7F;
 }
 /*HOME*/
 
@@ -138,7 +169,7 @@ a:link
   width: 100% !important;
   padding: none !important;
   margin-left: 0 !important;
-  background-color: #919191 !important;
+  background-color: #7F7F7F !important;
 }
 
 .row div {
@@ -162,9 +193,9 @@ a:link
   height: 400px;
 }
 .home_mid {
-  background-color: #65A933;
+  background-color: #FFFFFF;
   padding: 2% 1% 2% 1%;
-  color: #FFFFFF;
+  color: #7F7F7F;
   padding-bottom: 3%;
   margin-left: auto;
   margin-right: auto;
@@ -181,7 +212,7 @@ a:link
 }
 
 .home_mid header, .home_mid p {
-  color: #FFFFFF;
+  color: #7F7F7F;
 }
 
 .home_mid h3 {
@@ -209,14 +240,12 @@ header
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 25px;
     text-align: center;
     color: #66AA33;
 }
 
-header p {
-  font-size: 24px;
-  color: #919191;
+header {
+  color: #7F7F7F;
 }
 
 main
@@ -249,9 +278,8 @@ figcaption {
   text-align: center;
   color: #FFFFFF;
   width: 300px;
-  padding-top: 25px;
+  padding-top: 20px;
 }
-
 /*EXECUTIVE BOARD*/
 
 /*NEWS*/
@@ -311,6 +339,8 @@ article
 }
 article p, ol {
   text-align: left;
+	font-size: 20px;
+	line-height: 1.5;
 }
 #corporate_button
 {
@@ -330,13 +360,13 @@ table {
   margin-right: auto;
 }
 th, td {
-  border: solid 1px #919191;
+  border: solid 1px #7F7F7F;
   text-decoration: none;
   padding: 5px !important;
-  color: #919191;
+  color: #7F7F7F;
 }
 table a:link{
-	color: #919191;
+	color: #7F7F7F;
 }
 
 /*STUDENT & BUSINESSES*/
@@ -344,7 +374,7 @@ table a:link{
 footer
 {
     clear:both;
-    color: #FFFFFF;
+    color: #919191;
     display: inline-block;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -352,8 +382,7 @@ footer
     margin-left: auto;
     width: 100%;
     text-align: center;
-    border-top: 2px solid #919191;
-    background-color: #919191;
+    background-color: #343434;
     bottom: 0 !important;
 }
 footer ul li {
@@ -433,7 +462,7 @@ footer img {
   }
 
   .board_member figure figcaption p {
-    font-size: 90%;
+    font-size: 16px;
   }
   
   .home_mid img {

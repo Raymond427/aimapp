@@ -57,8 +57,8 @@
             </div>
           </li>
         <% else %>
-					<li><%= button_to "Join Now", {:controller => :guests, :action => :new}, {:method => :get } %></li>
-     <!-- <li><%= link_to 'ADMIN LOG IN', :controller => 'sessions', :action => 'new' %></li> -->
+		 			<li><%= button_to "Join Now", {:controller => :guests, :action => :new}, {:method => :get } %></li>
+     <!-- <li><%= link_to 'ADMIN LOG IN', :controller => 'sessions', :action => 'new' %></li>
      <!-- <li><%= link_to "Sign Up", 'signup' %></li> -->
         <% end %>  
           <li>
@@ -68,10 +68,7 @@
           </li>
         </div>
       </div>
-    </nav>
-  </head>
-  <body>
-    <% if flash[:notice] %>
+<% if flash[:notice] %>
       <div id="notice">
         <%= notice %>
       </div>
@@ -80,6 +77,9 @@
         <%= alert %>
       </div>
     <% end %>
+    </nav>
+  </head>
+  <body>
 
     <%= yield %>
 
