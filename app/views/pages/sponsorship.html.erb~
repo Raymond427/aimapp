@@ -11,6 +11,7 @@
     <button id="corporate_button" href="https://orgsync.com/83120/files/921243/download">
   Download the 2015-2016 AIM Corporate Partnership Packet
     </button>
+		</br>
 		<p class="paypal">You can donate to AIM directly via PayPal!<p>
 		<form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 			<input type="hidden" name="cmd" value="_s-xclick">
