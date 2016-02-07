@@ -1,17 +1,19 @@
-<main>  
-  <div class="row">
-    <div class="col-md-8" id="desktop_img"></div>
-    <div class="col-md-4" id="home_left_div">
-      <h3>
-        Turning Creative Thinkers, Into Business Leaders
-      </h3>
-      <h4>Advancing Innovative Minds (AIM) is one of UNC Charlotte&#39;s most active and dedicated entrepreneurial clubs. Our mission is <b>&quot;to provide visionaries with a business, technology, and networking knowledge base in a means to encourage entrepreneurial influence&quot;</b></h4>
-      <%= button_to "Join Now", {:controller => :guests, :action => :new}, {:method => :get } %>
+<main>
+	<div class="row">
+    <div class="home_banner col-sm-12">
+        <div class="home_overlay">
+            <h1>Turning Creative Thinkers,</h1>
+						</br>
+            <h1>Into Business Leaders</h1>
+						</br>
+            <%= button_to "Join Now", {:controller => :guests, :action => :new}, {:method => :get } %>
+        </div>
     </div>
   </div>
+	<div class="row">
   <section class="home_mid">
-    <h2>Make a Living Doing What You Love, Creating What You Want</h2>
-    <h3>Whether you have an idea for the next big start-up or are just curious about entrepreneurship and self employment, AIM is the right place to start!</h3>
+    <h1>Make a Living Doing What You Love, Creating What You Want</h1>
+    <h2>Whether you have an idea for the next big start-up or are just curious about entrepreneurship and self employment, AIM is the right place to start!</h2>
     <div class="col-md-4 col-sm-6">
       <figure>
         <%= image_tag 'parade.png', :alt => 'Parade' %>
@@ -40,11 +42,21 @@
       </figure>
     </div>
   </section>
-	<section>
+	</div>
+	<div class="row">
+    <div class="home_banner col-sm-12">
+        <div class="home_overlay">
+            <h1>Connect with the Best Entrepreneurs in Charlotte</h1>
+						</br>
+						<h2>AIM also takes pride in volunteering for community Service</h2>
+						</br>
+            <%= button_to "Learn More", {:controller => :news, :action => :index}, {:method => :get } %>
+        </div>
+    </div>
+  </div>
 		<div class="home-banner2">
 			<div class="home-overlay">
 				<h1>Connect with the Best Entrepreneurs in Charlotte</h1>
-				<h2>AIM connects you with successful small business owners that can take you from innovative mind to entrepreneur</h2>
 			</div>
 		</div>
 	</section>
@@ -76,14 +88,5 @@
         </figcaption>
       </figure>
     </div>
-  </section>
-	<section>
-		<div class="home-banner2">
-			<div class="home-overlay">
-				<h1>Give Back to The Community</h1>
-				<h2>AIM also takes pride in volunteering for community Service</h2>
-			</div>
-		</div>
-	</section>
 </main>
 <h4>You can contact AIM via email: <b>aimcharlotte@uncc.edu<b></h4>
