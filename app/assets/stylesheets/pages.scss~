@@ -21,7 +21,6 @@ header {
 }
 header h1 {
 	color: #65A933;
-	font-weight: bold;
 }
 nav input[type="submit"] {
 	font-size: 16px;
@@ -43,6 +42,9 @@ h3 {
 }
 p {
 	font-size: 20px;
+}
+figcaption h3 {
+	color: #65A933;
 }
 figcaption p {
 	font-size: 20px;
@@ -66,9 +68,8 @@ nav {
   color: #7F7F7F !important;
 }
 .navbar-nav li a {
-	font-size: 16px;
+	font-size: 18px;
   margin-top: 10px;
-	font-weight: bold;
   padding-left: 7px !important;
   padding-right: 7px !important;
 }
@@ -86,8 +87,11 @@ nav {
   margin-bottom: 0 !important;
 }
 .navbar-toggle, .navbar-toggle:hover{
-  background-color: #FFFFFF !important;
+  background-color: #65A933 !important;
   border: none !important;
+}
+.icon-bar {
+	color: #FFFFFF !important;
 }
 #notice {
   background-color: #65A933;
@@ -157,10 +161,9 @@ a:link {
   position: absolute;
 }
 #dropdownMenu2 {
-  border-color: #65A933 !important;
   margin-top: 18px !important;
   margin-right: 10px !important;
-  color: #7F7F7F;
+  color: #FFFFFF;
 }
 
 /*HOME*/
@@ -173,7 +176,7 @@ a:link {
 	z-index: 0;
 	height: 500px;
 }
-.home-banner:nth-child(2) {
+#network {
 	background-image: url(/images/network.png);
 }
 .home_overlay {
@@ -203,7 +206,6 @@ a:link {
   width: 100% !important;
   padding: none !important;
   margin-left: 0 !important;
-  background-color: #7F7F7F !important;
 }
 .row div {
   text-align: left;
@@ -235,6 +237,9 @@ a:link {
   clear: both;
 	max-width: 1366px;
 }
+.home_mid figcaption {
+	text-align: justify;
+}
 .row h2 {
 	color: #65A933;
 }
@@ -245,8 +250,14 @@ a:link {
   float: none;
   padding-top: 0;
 }
+.home_mid h1 {
+	color: #65A933;
+}
 .home_mid header, .home_mid p {
   color: #7F7F7F;
+}
+.home_mid h2, home_mid h3 {
+	color: #7F7F7F;
 }
 .home_mid h3 {
   text-align: center;

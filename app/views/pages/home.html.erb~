@@ -18,8 +18,8 @@
       <figure>
         <%= image_tag 'parade.png', :alt => 'Parade' %>
         <figcaption>
-          <h3>Join the Club</h3>
-          <p>Attend our meetings and pay chapter dues to recieve a free AIM teeshirt!</p>
+          <h3>The Most Innovative Minds</h3>
+          <p>AIM collects the most creative minds at UNC Charlotte to discuss innovative business ideas. Even if you don't have an idea, you can join a team that is developing something that piques your interest.</p>
         </figcaption>
       </figure>
     </div>
@@ -44,30 +44,21 @@
   </section>
 	</div>
 	<div class="row">
-    <div class="home_banner col-sm-12">
+    <div class="home_banner col-sm-12" id="network">
         <div class="home_overlay">
             <h1>Connect with the Best Entrepreneurs in Charlotte</h1>
-						</br>
-						<h2>AIM also takes pride in volunteering for community Service</h2>
-						</br>
-            <%= button_to "Learn More", {:controller => :news, :action => :index}, {:method => :get } %>
         </div>
     </div>
   </div>
-		<div class="home-banner2">
-			<div class="home-overlay">
-				<h1>Connect with the Best Entrepreneurs in Charlotte</h1>
-				<h2>AIM connects you with successful small business owners that can take you from innovative mind to entrepreneur</h2>
-			</div>
-		</div>
 	</section>
-	  <section class="home_mid">
+	<section class="home_mid">
+		<h2>Notable Speakers</h2>
     <div class="col-md-4 col-sm-6">
       <figure>
-       f <%= image_tag 'parade.png', :alt => 'Parade' %>
+        <%= image_tag 'parade.png', :alt => 'Parade' %>
         <figcaption>
           <h3>Jeff Brokaw</h3>
-          <p>Attend our meetings and pay chapter dues to recieve a free AIM teeshirt!</p>
+          <p>Director</p>
         </figcaption>
       </figure>
     </div>
@@ -76,7 +67,7 @@
         <%= image_tag 'brokaw.jpg', :alt => 'Jeff Brokaw' %>
         <figcaption>
           <h3>Zerrick Bynum</h3>
-          <p>When attending AIM's Workshops, you'll find out if your idea is something that people will pay for before you invest your time and money into it.</p>
+          <p>Founder</p>
         </figcaption>
       </figure>
     </div>
@@ -85,9 +76,10 @@
         <%= image_tag 'CFL.jpg', :alt => 'Cystic Fibrosis Fundraiser' %>
         <figcaption>
           <h3>Paul Wettenhall</h3>
-          <p class="homep">Once you've mastered AIM's prep skills we'll connect you with entrepreneurial resources that can prepare you for fundraising, legal advice and mentoring.</p>
+          <p>President</p>
         </figcaption>
       </figure>
     </div>
+	</section>
 </main>
 <h4>You can contact AIM via email: <b>aimcharlotte@uncc.edu<b></h4>
