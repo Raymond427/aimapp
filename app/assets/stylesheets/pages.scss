@@ -69,6 +69,7 @@ nav {
 }
 .navbar-nav li a {
 	font-size: 18px;
+	font-weight: bold;
   margin-top: 10px;
   padding-left: 7px !important;
   padding-right: 7px !important;
@@ -87,7 +88,6 @@ nav {
   margin-bottom: 0 !important;
 }
 .navbar-toggle, .navbar-toggle:hover{
-  background-color: #65A933 !important;
   border: none !important;
 }
 .icon-bar {
@@ -105,13 +105,26 @@ nav {
   width: 100%;
   text-align: center;
 }
-form {
+/* form {
 	text-align: left;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 5%;
   width: 200px;
+} */
+.loading {
+	display: block;
+	position: absolute;
+	margin-top: 200px;
+	width: 100%;
+	text-align: center;
+	color: #7F7F7F;
+	height: 40%;
+	z-index: 0 !important;
+}
+.loading img {
+	height: 50px;
 }
 form input, textarea, select {
 	padding: 5px;
@@ -263,6 +276,10 @@ a:link {
   text-align: center;
   padding: 0 0 2% 0;
 }
+.speakers img, .speakers figcaption img  {
+	height: 50%;
+	width: 50%;
+}
 .home_mid img {
   height: 215px;
   width: 315px;
@@ -350,11 +367,13 @@ figcaption {
 }
 /*NEWS*/
 .Events{
+	position: relative;
   width: 90%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 10%;
+	z-index: 1;
 }
 .Events iframe {
   padding-bottom: 10%;
@@ -426,10 +445,13 @@ footer ul li {
   padding: 0 10px 0 10px;
 }
 footer ul {
-    padding-left: 0px !important;
+    padding: 10px 0 10px 0;
 }
 footer img {
   height: 36px;
+}
+.socs ul li a:hover {
+	text-decoration: none;
 }
 /* <--------------------- KEYFRAMES -------------------> */
 @keyframes fadeNdrop{

@@ -1,6 +1,10 @@
-<header>
-  <h1>
-    Edit News
-  </h1>
-</header>
-<%= render 'form' %>
+<main>
+	<header>
+	  <h1>
+	    Edit News
+	  </h1>
+	</header>
+	<div class="form_div">
+		<%= render 'form' %>
+	</div>
+</main>
