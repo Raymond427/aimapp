@@ -59,8 +59,7 @@
         <%= image_tag 'jb.png', :alt => 'Jeff Brokaw' %>
         <figcaption>
           <h3>Jeff Brokaw</h3>
-          <p>Director</p>
-					<%= image_tag 'sug.png', :alt => 'Startup Grind' %>
+          <p>Charlotte Director of Google's Startup Grind</p>
         </figcaption>
       </figure>
     </div>
@@ -69,8 +68,7 @@
         <%= image_tag 'zb.jpg', :alt => 'Zerrick Bynum' %>
         <figcaption>
           <h3>Zerrick Bynum</h3>
-          <p>Founder</p>
-					<%= image_tag 'sug.png', :alt => 'Startup Grind' %>
+          <p>Founder of Happzee</p>
         </figcaption>
       </figure>
     </div>
@@ -79,8 +77,7 @@
         <%= image_tag 'pw.jpg', :alt => 'Paul Wettenhall' %>
         <figcaption>
           <h3>Paul Wettenhall</h3>
-          <p>President</p>
-					<%= image_tag 'vp.png', :alt => 'Ventureprise' %>
+          <p>President of Ventureprise</p>
         </figcaption>
       </figure>
     </div>

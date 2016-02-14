@@ -110,7 +110,9 @@
           <%= image_tag 'YouTube.png', :alt => 'Youtube' %>
         </a>
       </li>
-    </ul>		
-    <h4><b><%= link_to 'Administrator Log In', :controller => 'sessions', :action => 'new' %></b></h4>
+    </ul>
+		<% if !current_user %>		
+    	<h4><b><%= link_to 'Administrator Log In', :controller => 'sessions', :action => 'new' %></b></h4>
+		<% end %>
   </footer>
 </html>
