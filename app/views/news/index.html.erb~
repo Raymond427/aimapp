@@ -3,13 +3,14 @@
   	<h1>
   	  News
   	</h1>
-  	<h3>
+  	<h2>
   	  See what AIM&#39;s been up to!
-  	</h3>
+  	</h2>
 	</header>
 <% if current_user && current_user.editor? || current_user && current_user.admin? %>
   <%= button_to "Post an Update", new_news_path, :class => "button", :method => :get  %></br>
 <% end %>
+<%= params %>
 <div class="news_feed">
 <% @news.each do |news| %>
   <section class="news">

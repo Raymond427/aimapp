@@ -1,13 +1,17 @@
-<header>
-  <h1>
-    Administrator Login
-  </h1>
-</header>
-<%= form_for(:session, url: login_path) do |f| %>
-  <%= f.label :email %></br>
-  <%= f.email_field :email %></br></br>
-  <%= f.label :password %></br>
-  <%= f.password_field :password %></br></br>
-  <%= f.submit "Log In", class: "btn-submit" %>
-  <%= link_to "Cancel", '/' %>
-<% end %>
+<main>
+	<header>
+  	<h1>
+  	  Administrator Login
+  	</h1>
+	</header>
+	<div class="forms">
+		<%= form_for(:session, url: login_path) do |f| %>
+  		<%= f.label :email %></br>
+  		<%= f.email_field :email %></br></br>
+  		<%= f.label :password %></br>
+  		<%= f.password_field :password %></br></br>
+  		<%= f.submit "Log In", class: "btn-submit" %>
+  		<b><%= link_to "Cancel", '/' %></b>
+		<% end %>
+	</div>
+</main>

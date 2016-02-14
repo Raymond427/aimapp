@@ -1,16 +1,18 @@
-<%= form_for(@news) do |news| %>
-  <%= news.label :title %><br>
-  <%= news.text_field :title %><br>
-  <%= news.label :date %><br>
-  <%= news.date_field :date, value: @news.date %><br>
-  <%= news.radio_button :mediatype, 'Image', id: 'image_input' %><%= news.label :mediatype, 'Image' %>
-  <%= news.radio_button :mediatype, 'Video', id: 'video_input' %><%= news.label :mediatype, 'Video' %><br/>
-	<%= news.label 'Photo', id: 'image_input', class: 'news_media' %><br>
-	<%= news.file_field :thumbnail, id: 'image_input', class: 'news_media' %><br>
-  <label id="video_input" class="news_media">Paste the YouTube video URL here:</label></br>
-  <%= news.text_area :youtubeurl, id: 'video_input', class: 'news_media' %><br>
-  <%= news.label :description %><br>
-  <%= news.text_area :description %><br>
-  <br><%= news.submit %>
-  <%= link_to "Cancel", '/news' %>
-<% end %>
+<div class="forms">
+	<%= form_for(@news) do |news| %>
+  	<%= news.label :title %><br>
+  	<%= news.text_field :title %><br>
+  	<%= news.label :date %><br>
+  	<%= news.date_field :date, value: @news.date %><br>
+  	<%= news.radio_button :mediatype, 'Image', id: 'image_input' %><%= news.label :mediatype, 'Image' %>
+  	<%= news.radio_button :mediatype, 'Video', id: 'video_input' %><%= news.label :mediatype, 'Video' %><br/>
+		<%= news.label 'Photo', id: 'image_input', class: 'news_media' %><br>
+		<%= news.file_field :thumbnail, id: 'image_input', class: 'news_media' %><br>
+  	<label id="video_input" class="news_media">Paste the YouTube video URL here:</label></br>
+  	<%= news.text_area :youtubeurl, id: 'video_input', class: 'news_media' %><br>
+  	<%= news.label :description %><br>
+  	<%= news.text_area :description %><br>
+  	<br><%= news.submit %>
+  	<b><%= link_to "Cancel", '/news' %></b>
+	<% end %>
+</div>

@@ -47,7 +47,7 @@
           <li>
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%= current_user.user_name %>
+                Mail<!-- <%= current_user.user_name %> -->
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -58,7 +58,6 @@
           </li>
         <% else %>
 		 			<li><%= button_to "Join Now", {:controller => :guests, :action => :new}, {:method => :get } %></li>
-     <!-- <li><%= link_to 'ADMIN LOG IN', :controller => 'sessions', :action => 'new' %></li>
      <!-- <li><%= link_to "Sign Up", 'signup' %></li> -->
         <% end %>  
           <li>
@@ -111,6 +110,7 @@
           <%= image_tag 'YouTube.png', :alt => 'Youtube' %>
         </a>
       </li>
-    </ul>
+    </ul>		
+    <h4><b><%= link_to 'Administrator Log In', :controller => 'sessions', :action => 'new' %></b></h4>
   </footer>
 </html>

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/ */
 @font-face {
-	font-family: 'Source Sans Pro';
+	font-family: Source Sans Pro;
 	src: url(/fonts/SourceSansPro-Light.ttf);
 }
 @font-face {
@@ -25,8 +25,6 @@ header h1 {
 nav input[type="submit"] {
 	font-size: 16px;
 	font-weight: bold;
-	margin-top: 12px;
-	margin-left: 90px;
 }
 nav form {
 	padding-bottom: 0;
@@ -62,13 +60,11 @@ main article, .eboard, .news_feed{
 	animation: fadeIn 1s ease-out forwards 0.75s;
 }
 nav {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  /* border-bottom: solid 3px #65A933 !important; */
-  padding-bottom: 10px !important;
+  background-color: #FFFFFF !important;
   color: #7F7F7F !important;
 }
 .navbar-nav li a {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
   margin-top: 10px;
   padding-left: 7px !important;
@@ -88,14 +84,20 @@ nav {
   margin-bottom: 0 !important;
 }
 .navbar-toggle, .navbar-toggle:hover{
-  background-color: rgba(255, 255, 255, 0.9) !important;
   border: none !important;
+}
+.container {
+	padding-bottom: 10px;
 }
 .icon-bar {
 	color: #FFFFFF !important;
 }
+.navbar-fixed-top {
+	border-width: 0 0 0 !important;
+}
 #notice {
   background-color: #65A933;
+	font-size: 16px;
   color: #FFFFFF !important;
   width: 100%;
   text-align: center;
@@ -104,16 +106,9 @@ nav {
   background-color: #C52F24;
   color: #FFFFFF !important;
   width: 100%;
+	font-size: 16px;
   text-align: center;
 }
-/* form {
-	text-align: left;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 5%;
-  width: 200px;
-} */
 .loading {
 	display: block;
 	position: absolute;
@@ -127,11 +122,31 @@ nav {
 .loading img {
 	height: 50px;
 }
+.forms {
+	margin-top: 35px;
+	margin-bottom: 35px;
+	padding: 15px;
+	width: 240px;
+	background-color: #F5F5F5;
+	text-align: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: #7F7F7F solid 2px;
+  border-radius: 5px;
+}
+.forms label {
+	font-weight: bold;
+}
 form input, textarea, select {
-	padding: 5px;
+	padding: 10px;
+	width: 200px;
   border: #7F7F7F solid 2px;
   border-radius: 5px;
 	resize: none;
+}
+#guest_grad_season, #guest_grad_year, #member_graduation_date, #member_graduation_year, .forms [type="radio"] {
+	width: auto;
 }
 .paypal, .paypal input{
 	text-align: center;
@@ -147,22 +162,26 @@ form label{
 }
 button, .btn-submit, input[type="submit"] {
   border: none;
+	width: auto;
   padding: 10px;
+	margin-top: 12px;
+	margin-right: 15px;
   border-radius: 5px;
   background-color: #65A933;
   color: #FFFFFF;
 	transition: background-color 0.5s;
 }
-button:hover, .btn-submit:hover, input[type="submit"]:hover {
+button:hover, input[type="submit"]:hover {
 	background-color: #6FBC38;
 }
-button:focus, .btn-submit:focus, input[type="submit"]:focus {
+button:focus, input[type="submit"]:focus {
 	background-color: #58952D;
 }
-input[value="Cancel"] {
+/*input[value="Cancel"], input[value="Cancel"]:hover, input[value="Cancel"]:focus {
   background-color: #7F7F7F;
   color: #FFFFFF;
-}
+	transition: none;
+} */
 a:link {
     text-decoration: none;
     color: #FFFFFF;
@@ -175,6 +194,9 @@ a:link {
   position: absolute;
 }
 #dropdownMenu2 {
+	border: none;
+	background-color: #65A933;
+	font-size: 16px;
   margin-top: 18px !important;
   margin-right: 10px !important;
   color: #FFFFFF;
@@ -186,7 +208,8 @@ a:link {
 	background-image: url(/images/home.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover; 
+	background-size: cover;
+	padding: 0 0 0 0 !important;
 	z-index: 0;
 	height: 500px;
 }
@@ -194,6 +217,8 @@ a:link {
 	background-image: url(/images/network.png);
 }
 .home_overlay {
+	position: absolute;
+	padding: 100px;
 	background-color: rgba(0, 0, 0, 0.5) !important;
 	width: 100%;
 	height: 100%;
@@ -209,21 +234,25 @@ a:link {
 	visibility: hidden;
 	animation: fadeNrise 1s ease-out forwards 0.75s;
 }
+.home_overlay h2 {
+	color: #FFFFFF !important;
+}
 .home_overlay input[type="submit"] {
 	visibility: hidden;
 	width: 15%;
 	font-size: 20px;
+	min-width: 120px;
 	animation: fadeIn 1s ease-out forwards 1.75s;
 }
 
 .row {
   width: 100% !important;
   padding: none !important;
+	margin-bottom: 20px;
   margin-left: 0 !important;
 }
 .row div {
   text-align: left;
-  padding: 2%;
   color: white;
 }
 .row .button_to {
@@ -233,6 +262,7 @@ a:link {
 .row h2 {
   margin-top: 0;
   padding-top: 2%;
+	line-height: 1.5;
 }
 #desktop_img {
   background-image: url(/images/club.jpg);
@@ -243,7 +273,7 @@ a:link {
 }
 .home_mid {
   background-color: #FFFFFF;
-  padding: 2% 1% 2% 1%;
+  padding: 0 1% 0 1%;
   color: #7F7F7F;
   padding-bottom: 3%;
   margin-left: auto;
@@ -277,9 +307,19 @@ a:link {
   text-align: center;
   padding: 0 0 2% 0;
 }
-.speakers img, .speakers figcaption img  {
-	height: 50%;
-	width: 50%;
+.speakers img {
+	height: 200px !important;
+	width: 200px !important;
+}
+.speakers figcaption img  {
+	height: 70% !important;
+	width: 70% !important;
+}
+.speakers img {
+	height: 40%;
+}
+.speakers figcaption {
+	text-align: center;
 }
 .home_mid img {
   height: 215px;
@@ -434,12 +474,17 @@ footer
     display: inline-block;
     padding-top: 5px;
     padding-bottom: 5px;
+		margin-top: 10px;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
     text-align: center;
     background-color: #343434;
     bottom: 0 !important;
+		font-weight: bold;
+}
+footer a:hover, footer ul li a:hover {
+	text-decoration: none;
 }
 footer ul li {
   display: inline;
@@ -489,10 +534,20 @@ footer img {
 		visibility: visible;
 	}
 }
-/* <--------------------- KEYFRAMES -------------------> */
-/* <--------------------- MEDIA QUERIES -------------------> 
-   <---------------------    700px      -------------------> */
-
+/* <--------------------- MEDIA QUERIES -------------------> */
+/* <---------------------    768px      -------------------> */
+@media screen and (max-width: 768px) {
+	main {
+	margin-top: 59px;
+	}
+	.home_banner {
+		height: 330px;
+	}
+	.home_overlay {
+		padding: 50px;
+	}
+}
+/* <---------------------    700px      -------------------> */
 @media screen and (max-width: 700px) 
 {
   .news figure {
@@ -539,4 +594,10 @@ footer img {
   .home_mid img {
     width: 290px;
   }
+}
+@media screen and (max-width: 480px) 
+{
+	.home_overlay {
+		padding: 5px;
+	}
 }

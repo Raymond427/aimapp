@@ -1,22 +1,24 @@
-<%= form_for(@guest) do |f| %>
-  <label>First Name</label>
-	<%= @guest.errors.get(:first_name).first unless @guest.errors.get(:first_name).nil? %><br>
-  <%= f.text_field :first_name %><br>
-  <label>Last Name</label>
-	<%= @guest.errors.get(:last_name).first unless @guest.errors.get(:last_name).nil? %><br>
-  <%= f.text_field :last_name %><br>
-  <label>Major</label><br>
-  <%= f.select(:major, @majors, prompt: 'Select Major') %><br>
-  <label>Graduation Date</label>
-  <%= f.select(:grad_season, @grad_month, prompt: 'Month') %>
-  <%= f.select(:grad_year, Date.today.year..Date.today.year+5, prompt: 'Year') %><br>
-  <label>E-Mail</label>
-	<%= @guest.errors.get(:email).first unless @guest.errors.get(:email).nil? %>
-  <%= f.text_field :email, placeholder: '***@uncc.edu' %>
-  <label>Phone Number</label><br>
-  <%= f.telephone_field :phone_number %>
-  <%= f.label :message %><br>
-  <%= f.text_area :message, size: '24x5' %><br><br>
-  <%= f.submit 'Send Message' %>
-  <%= link_to 'Cancel', '/' %>
-<% end %>
+<div class="forms">
+	<%= form_for(@guest) do |f| %>
+  	<label>First Name</label>
+		<%= @guest.errors.get(:first_name).first unless @guest.errors.get(:first_name).nil? %><br>
+  	<%= f.text_field :first_name %><br>
+  	<label>Last Name</label>
+		<%= @guest.errors.get(:last_name).first unless @guest.errors.get(:last_name).nil? %><br>
+  	<%= f.text_field :last_name %><br>
+  	<label>Major</label><br>
+  	<%= f.select(:major, @majors, prompt: 'Select Major', class: 'major') %><br>
+  	<label>Graduation Date</label><br>
+  	<%= f.select(:grad_season, @grad_month, prompt: 'Month', class: 'grad_year') %>
+  	<%= f.select(:grad_year, Date.today.year..Date.today.year+5, prompt: 'Year') %><br>
+  	<label>E-Mail</label><br>
+		<%= @guest.errors.get(:email).first unless @guest.errors.get(:email).nil? %>
+  	<%= f.text_field :email, placeholder: '***@uncc.edu' %><br>
+  	<label>Phone Number</label><br>
+  	<%= f.telephone_field :phone_number %><br>
+  	<%= f.label :message %><br>
+  	<%= f.text_area :message, size: '24x5' %><br><br>
+  	<%= f.submit 'Send Message' %>
+  	<b><%= link_to 'Cancel', '/' %></b>
+	<% end %>
+</div>
