@@ -19,7 +19,7 @@
   	<%= member.check_box(:is_executive) %></br> -->
   	<label>Executive Position</label><br>
   	<%= member.select(:executive_position, @executive, selected: @members.executive_position, prompt: 'Select Position') %><br><br>
-		<%= member.submit %><br>
+		<%= member.submit %>
 		<b><%= link_to "Cancel", '/members/executives'%></b>
 	<% end %>
 </div>

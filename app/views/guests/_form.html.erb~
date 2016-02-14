@@ -18,7 +18,7 @@
   	<%= f.telephone_field :phone_number %><br>
   	<%= f.label :message %><br>
   	<%= f.text_area :message, size: '24x5' %><br><br>
-  	<%= f.submit 'Send Message' %><br>
+  	<%= f.submit 'Send Message' %>
   	<b><%= link_to 'Cancel', '/' %></b>
 	<% end %>
 </div>
