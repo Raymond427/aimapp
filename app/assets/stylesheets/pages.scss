@@ -337,6 +337,25 @@ a:link {
 .col-md-4 col-sm-6 p {
 	color: #7F7F7F;
 }
+.sponsors {
+	text-align: center;
+	color: #65A933;
+}
+.sponsors figure, a:hover {
+	width: 200px;
+  height: 225px;
+  margin-left: auto;
+  margin-right: auto;
+	text-decoration: none !important;
+}
+.sponsors img {
+	height: 150px;
+}
+.sponsors figcaption {
+	float: none;
+	width: 200px;
+	color: #7F7F7F;
+}
 /*HOME*/
 
 /*EXECUTIVE BOARD*/
@@ -600,6 +619,7 @@ footer img {
     width: 290px;
   }
 }
+/* <---------------------    480px      -------------------> */
 @media screen and (max-width: 480px) 
 {
 	.home_overlay {

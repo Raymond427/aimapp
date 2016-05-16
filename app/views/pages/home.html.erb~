@@ -47,11 +47,11 @@
     <div class="home_banner col-sm-12" id="network">
         <div class="home_overlay">
             <h1>Connect with the Best Entrepreneurs in Charlotte</h1>
-						<h2>AIM regularly hosts successful small business owners that tell their life story, give advice and recurit members</h2>
+						<h2>AIM regularly hosts successful small business owners that give their secrets to success</h2>
         </div>
     </div>
   </div>
-	</section>
+	<div class="row">
 	<section class="home_mid">
 		<h1>Former Speakers</h1>
     <div class="col-md-4 col-sm-6">
@@ -82,4 +82,18 @@
       </figure>
     </div>
 	</section>
+	</div>
+	<div class="row">
+	<section class="sponsors">
+		<h1>Sponsored By:</h1>
+		<a href="https://www.studypool.com/">
+		<figure>
+			<%= image_tag 'studypool.png', :alt=> 'studypool' %>
+			<figcaption>
+			<p>Studypool, a leader in online homework help</p>
+			</figcaption>
+		</figure>
+		</a>
+	</section>
+	</div>
 </main>
