@@ -341,12 +341,14 @@ a:link {
 	text-align: center;
 	color: #65A933;
 }
-.sponsors figure, a:hover {
+.sponsors figure {
 	width: 200px;
   height: 225px;
   margin-left: auto;
   margin-right: auto;
-	text-decoration: none !important;
+}
+.sponsors figure a {
+	text-decoration: none;
 }
 .sponsors img {
 	height: 150px;
