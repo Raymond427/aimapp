@@ -12,7 +12,7 @@
     <meta name="description" content="Advancing Innovative Minds (AIM) is UNC Charlotte's most active and dedicated entrepreneurial club. We plan on using the booming development of the Charlotte area as a catalyst to create truly effective ideas that will culminate into thriving businesses." />
     <meta name="viewport" content="width=device-width">
     <!-- This is a favicon (the icon you see when you bookmark a website). Favicons must have .ico extension. -->
-    <link rel="icon" src="favicon.ico" />
+    <link rel="icon" src="favicon.ico"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -32,7 +32,7 @@
         <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
           <li>
             <a class="nav_img hidden-xs" href= "/" title= "Home">
-              <%= image_tag 'logo.png', :alt => 'logo' %> 
+              <%= image_tag 'logo.png', :alt => 'logo' %>
             </a>
           </li>
           <li><%= link_to 'HOME', :controller => 'pages', :action => 'home' %></li>
@@ -59,7 +59,7 @@
         <% else %>
 		 			<li><%= button_to "Join Now", {:controller => :guests, :action => :new}, {:method => :get } %></li>
      <!-- <li><%= link_to "Sign Up", 'signup' %></li> -->
-        <% end %>  
+        <% end %>
           <li>
             <a class="nav_img hidden-sm hidden-xs" href= "https://www.uncc.edu" title= "Visit UNCC">
               <%= image_tag 'school.gif', :alt => 'school' %>
@@ -111,7 +111,7 @@
         </a>
       </li>
     </ul>
-		<% if !current_user %>		
+		<% if !current_user %>
     	<h4><b><%= link_to 'Administrator Log In', :controller => 'sessions', :action => 'new' %></b></h4>
 		<% end %>
   </footer>

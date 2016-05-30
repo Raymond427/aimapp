@@ -208,7 +208,7 @@ a:link {
 /*HOME*/
 
 .home_banner {
-	background-image: url(/images/home.jpg);
+	background-image: url(<%= asset_path('home.jpg') %>);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -217,7 +217,7 @@ a:link {
 	height: 500px;
 }
 #network {
-	background-image: url(/images/network.jpg);
+	background-image: url(<%= asset_path('network.jpg') %>);
 }
 .home_overlay {
 	position: absolute;
@@ -268,7 +268,7 @@ a:link {
 	line-height: 1.5;
 }
 #desktop_img {
-  background-image: url(/images/club.jpg);
+  background-image: url(<%= asset_path('club.jpg') %>);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -389,7 +389,7 @@ main {
     margin: 1%;
     width: 500px;
     background-color: #66AA33;
-}	
+}
 .board_member figure img{
   float: left;
   width: 50%;
@@ -527,7 +527,7 @@ footer img {
 }
 /* <--------------------- KEYFRAMES -------------------> */
 @keyframes fadeNdrop{
-	from { 
+	from {
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(-10px);
@@ -539,7 +539,7 @@ footer img {
 	}
 }
 @keyframes fadeNrise{
-	from { 
+	from {
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(10px);
@@ -574,7 +574,7 @@ footer img {
 	}
 }
 /* <---------------------    700px      -------------------> */
-@media screen and (max-width: 700px) 
+@media screen and (max-width: 700px)
 {
   .news figure {
     margin-top: -10px;
@@ -596,7 +596,7 @@ footer img {
   }
 }
 /* <---------------------    505px      -------------------> */
-@media screen and (max-width: 505px) 
+@media screen and (max-width: 505px)
 {
   .board_member { /*All Exec blocks*/
     width: 60%;
@@ -616,13 +616,13 @@ footer img {
   .board_member figure figcaption p {
     font-size: 16px;
   }
-  
+
   .home_mid img {
     width: 290px;
   }
 }
 /* <---------------------    480px      -------------------> */
-@media screen and (max-width: 480px) 
+@media screen and (max-width: 480px)
 {
 	.home_overlay {
 		padding: 5px;
