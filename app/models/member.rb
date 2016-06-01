@@ -1,4 +1,5 @@
 class Member < ActiveRecord::Base
+
   has_attached_file :avatar, styles: {
       thumb: ['100x100#',  :jpg, :quality => 70],
       preview: ['480x480#',  :jpg, :quality => 70],

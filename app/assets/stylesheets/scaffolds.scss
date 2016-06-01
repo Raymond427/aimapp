@@ -22,6 +22,11 @@ a {
   &:visited {
     color: #666;
    }
+  &:hover {
+    color: #666;
+    text-decoration: none;
+  }
+ }
 div {
   &.field, &.actions {
     margin-bottom: 10px;
@@ -30,7 +35,7 @@ div {
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  border-color: red;
   display: table;
 }
 

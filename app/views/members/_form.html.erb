@@ -1,23 +1,24 @@
 <div class="forms">
+	<%= @members.errors.messages.keys %>
 	<%= form_for(@members) do |member| %>
-  	<label>First Name</label><br>
+  	<label>First Name*</label><br>
   	<%= member.text_field :first_name %><br>
-  	<label>Last Name</label><br>
+  	<label>Last Name*</label><br>
   	<%= member.text_field :last_name %><br>
-  	<label>Enter the executive's public LinkedIn address to add a link to the executive's LinkedIn Profile</label><br>
-  	<%= member.text_area :linkedinurl %><br>
-		<label>Photo</label><br>
+  	<label>LinkedIn Profile Address</label><br>
+  	<%= member.url_field :linkedinurl %><br>
+		<label>Photo*</label><br>
 		<%= member.file_field :avatar %><br>
-  	<%= member.label :major %><br>
+  	<%= member.label 'Major*' %><br>
   	<%= member.select(:major, @majors, selected: @members.major, prompt: 'Select Major') %><br>
-  	<label>E-Mail</label><br>
+  	<label>E-Mail*</label><br>
   	<%= member.text_field :email %><br>
   	<label>Graduation Date</label><br>
   	<%= member.select(:graduation_date, @grad_month, selected: @members.graduation_date, prompt: 'Month') %>
 		<%= member.select(:graduation_date, Date.today.year..Date.today.year+5, prompt: 'Year') %><br>
   	<!-- <%= member.label(:is_executive, "Is this member an executive?") %>
   	<%= member.check_box(:is_executive) %></br> -->
-  	<label>Executive Position</label><br>
+  	<label>Executive Position*</label><br>
   	<%= member.select(:executive_position, @executive, selected: @members.executive_position, prompt: 'Select Position') %><br>
 		<%= member.submit %>
 		<b><%= link_to "Cancel", '/members/executives'%></b>
