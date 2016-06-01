@@ -26,11 +26,11 @@ class MembersController < ApplicationController
     if @members.save #if the entry saves
       redirect_to({ action: 'executives' }, notice: @members.first_name + ' ' + @members.last_name + ' has been created!') #show all of the present entries
     else
-      redirect_to({ action: 'new' }, notice: 'There was an error, fill out the form carefully and try again') #redisplay the create an entry page
+      render({ action: 'new' }) #redisplay the create an entry page
     end
   end
 
-  def edit 
+  def edit
   end
 
   def update
@@ -44,10 +44,14 @@ class MembersController < ApplicationController
 
   def delete
   end
-  
+
   def destroy
     @members.destroy
     redirect_to({ action: 'executives' }, alert: 'The member has been deleted!') #change for members
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   def executives

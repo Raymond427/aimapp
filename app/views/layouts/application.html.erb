@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <%= render partial: "partials/google_analytics" %> <!-- attaches Google Universal Analytics -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <!-- This is the title shown in your browser's title bar -->
     <title>Advancing Innovative Minds</title>
@@ -81,6 +82,7 @@
   <body>
 
     <%= yield %>
+    <%= render partial: "partials/google_analytics_pageview" %> <!-- Google Universal Analytics -->
 
   </body>
   <footer>
