@@ -1,6 +1,6 @@
 <div class="forms">
-	<%= @members.errors.messages.keys %>
 	<%= form_for(@members) do |member| %>
+		<small>* = Required</small>
   	<label>First Name*</label><br>
   	<%= member.text_field :first_name %><br>
   	<label>Last Name*</label><br>

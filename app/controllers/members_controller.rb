@@ -48,10 +48,6 @@ class MembersController < ApplicationController
   def destroy
     @members.destroy
     redirect_to({ action: 'executives' }, alert: 'The member has been deleted!') #change for members
-
-    respond_to do |format|
-      format.js
-    end
   end
 
   def executives
