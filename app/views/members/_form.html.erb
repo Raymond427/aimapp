@@ -10,7 +10,7 @@
 		<label>Photo*</label><br>
 		<%= member.file_field :avatar %><br>
   	<%= member.label 'Major*' %><br>
-  	<%= member.select(:major, @majors, selected: @members.major, prompt: 'Select Major') %><br>
+  	<%= member.select(:major, @major, selected: @members.major, prompt: 'Select Major') %><br>
   	<label>E-Mail*</label><br>
   	<%= member.text_field :email %><br>
   	<label>Graduation Date</label><br>
