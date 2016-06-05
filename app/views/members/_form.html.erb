@@ -1,25 +1,40 @@
 <div class="forms">
 	<%= form_for(@members) do |member| %>
-		<small>* = Required</small>
+		<small>* = Required</small><br>
   	<label>First Name*</label><br>
+		<% if !@members.errors.get(:first_name).nil? %>
+		<small><%= @members.errors.get(:first_name).first unless @members.errors.get(:first_name).nil? %></small><br>
+		<% end %>
   	<%= member.text_field :first_name %><br>
   	<label>Last Name*</label><br>
+		<% if !@members.errors.get(:last_name).nil? %>
+		<small><%= @members.errors.get(:last_name).first %></small><br>
+		<% end %>
   	<%= member.text_field :last_name %><br>
   	<label>LinkedIn Profile Address</label><br>
-  	<%= member.url_field :linkedinurl %><br>
+  	<%= member.url_field :linkedinurl %><br><br>
 		<label>Photo*</label><br>
+		<% if !@members.errors.get(:avatar).nil? %>
+		<small><%= @members.errors.get(:avatar).first unless @members.errors.get(:avatar).nil? %></small><br>
+		<% end %>
 		<%= member.file_field :avatar %><br>
   	<%= member.label 'Major*' %><br>
-  	<%= member.select(:major, @major, selected: @members.major, prompt: 'Select Major') %><br>
+		<% if !@members.errors.get(:major).nil? %>
+		<small><%= @members.errors.get(:major).first unless @members.errors.get(:major).nil? %></small><br>
+		<% end %>
+  	<%= member.select(:major, Member::MAJORS, selected: @members.major, prompt: 'Select Major') %><br>
   	<label>E-Mail*</label><br>
   	<%= member.text_field :email %><br>
   	<label>Graduation Date</label><br>
-  	<%= member.select(:graduation_date, @grad_month, selected: @members.graduation_date, prompt: 'Month') %>
-		<%= member.select(:graduation_date, Date.today.year..Date.today.year+5, prompt: 'Year') %><br>
+  	<%= member.select(:graduation_date, Member::GRAD_MONTHS, selected: @members.graduation_date, prompt: 'Month') %>
+		<%= member.select(:graduation_date, Date.today.year..Date.today.year+5, prompt: 'Year') %><br><br>
   	<!-- <%= member.label(:is_executive, "Is this member an executive?") %>
   	<%= member.check_box(:is_executive) %></br> -->
   	<label>Executive Position*</label><br>
-  	<%= member.select(:executive_position, @executive, selected: @members.executive_position, prompt: 'Select Position') %><br>
+		<% if !@members.errors.get(:executive_position).nil? %>
+		<small><%= @members.errors.get(:executive_position).first unless @members.errors.get(:executive_position).nil? %></small><br>
+		<% end %>
+  	<%= member.select(:executive_position, Member::POSITIONS, selected: @members.executive_position, prompt: 'Select Position') %><br>
 		<%= member.submit %>
 		<b><%= link_to "Cancel", '/members/executives'%></b>
 	<% end %>

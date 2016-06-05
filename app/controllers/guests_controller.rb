@@ -1,9 +1,8 @@
 class GuestsController < ApplicationController
-  
+
   before_action :require_user, only: [:show, :edit, :index]
   before_action :require_admin, only: [:delete, :destroy]
   before_action :set_guest, only: [:show, :edit, :update, :destroy]
-  before_action :form_vars, only: [:new, :edit]
 
   # GET /guests
   # GET /guests.json

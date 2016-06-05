@@ -3,7 +3,6 @@ class MembersController < ApplicationController
   before_action :find_member, only: [:edit, :update, :delete, :destroy]
   before_action :require_user, only: [:new, :show, :edit]
   before_action :require_admin, only: [:delete, :destroy]
-  before_action :form_vars, only: [:new, :edit, :executives]
 
   def find_member
     @members = Member.find(params[:id])
@@ -51,7 +50,7 @@ class MembersController < ApplicationController
   end
 
   def executives
-    @members = Member.where(is_executive: true).sort_by {|member| @executive.index(member.executive_position)}
+    @members = Member.where(is_executive: true).sort_by {|member| Member::POSITIONS.index(member.executive_position)}
   end
 
   private
